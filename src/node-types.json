@@ -1,0 +1,936 @@
+[
+  {
+    "type": "assignment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_aexpr",
+          "named": true
+        },
+        {
+          "type": "eq_tok",
+          "named": true
+        },
+        {
+          "type": "fcall",
+          "named": true
+        },
+        {
+          "type": "int_array",
+          "named": true
+        },
+        {
+          "type": "int_scalar",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "let_tok",
+          "named": true
+        },
+        {
+          "type": "str_array",
+          "named": true
+        },
+        {
+          "type": "str_scalar",
+          "named": true
+        },
+        {
+          "type": "str_slice",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_aexpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binary_aexpr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "and_tok",
+          "named": true
+        },
+        {
+          "type": "binary_aexpr",
+          "named": true
+        },
+        {
+          "type": "div_tok",
+          "named": true
+        },
+        {
+          "type": "eq_tok",
+          "named": true
+        },
+        {
+          "type": "fcall",
+          "named": true
+        },
+        {
+          "type": "gtr_tok",
+          "named": true
+        },
+        {
+          "type": "gtreq_tok",
+          "named": true
+        },
+        {
+          "type": "int_array",
+          "named": true
+        },
+        {
+          "type": "int_scalar",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "less_tok",
+          "named": true
+        },
+        {
+          "type": "lesseq_tok",
+          "named": true
+        },
+        {
+          "type": "lessgtr_tok",
+          "named": true
+        },
+        {
+          "type": "minus_tok",
+          "named": true
+        },
+        {
+          "type": "mod_tok",
+          "named": true
+        },
+        {
+          "type": "n_tok",
+          "named": true
+        },
+        {
+          "type": "or_tok",
+          "named": true
+        },
+        {
+          "type": "plus_tok",
+          "named": true
+        },
+        {
+          "type": "pow_tok",
+          "named": true
+        },
+        {
+          "type": "str_array",
+          "named": true
+        },
+        {
+          "type": "str_scalar",
+          "named": true
+        },
+        {
+          "type": "str_slice",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "times_tok",
+          "named": true
+        },
+        {
+          "type": "unary_aexpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fcall",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "absp_tok",
+          "named": true
+        },
+        {
+          "type": "ascp_tok",
+          "named": true
+        },
+        {
+          "type": "binary_aexpr",
+          "named": true
+        },
+        {
+          "type": "fcall",
+          "named": true
+        },
+        {
+          "type": "int_array",
+          "named": true
+        },
+        {
+          "type": "int_scalar",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "lenp_tok",
+          "named": true
+        },
+        {
+          "type": "pdlp_tok",
+          "named": true
+        },
+        {
+          "type": "peekp_tok",
+          "named": true
+        },
+        {
+          "type": "rndp_tok",
+          "named": true
+        },
+        {
+          "type": "scrnp_tok",
+          "named": true
+        },
+        {
+          "type": "sgnp_tok",
+          "named": true
+        },
+        {
+          "type": "str_array",
+          "named": true
+        },
+        {
+          "type": "str_scalar",
+          "named": true
+        },
+        {
+          "type": "str_slice",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_aexpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "int_array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "subscript",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "int_scalar",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "linenum",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "slice",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_aexpr",
+          "named": true
+        },
+        {
+          "type": "fcall",
+          "named": true
+        },
+        {
+          "type": "int_array",
+          "named": true
+        },
+        {
+          "type": "int_scalar",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "unary_aexpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment",
+          "named": true
+        },
+        {
+          "type": "at_tok",
+          "named": true
+        },
+        {
+          "type": "binary_aexpr",
+          "named": true
+        },
+        {
+          "type": "call_tok",
+          "named": true
+        },
+        {
+          "type": "coloreq_tok",
+          "named": true
+        },
+        {
+          "type": "comment_text",
+          "named": true
+        },
+        {
+          "type": "dim_tok",
+          "named": true
+        },
+        {
+          "type": "dsp_tok",
+          "named": true
+        },
+        {
+          "type": "end_tok",
+          "named": true
+        },
+        {
+          "type": "eq_tok",
+          "named": true
+        },
+        {
+          "type": "fcall",
+          "named": true
+        },
+        {
+          "type": "for_tok",
+          "named": true
+        },
+        {
+          "type": "gosub_tok",
+          "named": true
+        },
+        {
+          "type": "goto_tok",
+          "named": true
+        },
+        {
+          "type": "gr_tok",
+          "named": true
+        },
+        {
+          "type": "hlin_tok",
+          "named": true
+        },
+        {
+          "type": "if_tok",
+          "named": true
+        },
+        {
+          "type": "inn_tok",
+          "named": true
+        },
+        {
+          "type": "input_tok",
+          "named": true
+        },
+        {
+          "type": "int_array",
+          "named": true
+        },
+        {
+          "type": "int_scalar",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "linenum",
+          "named": true
+        },
+        {
+          "type": "list_tok",
+          "named": true
+        },
+        {
+          "type": "next_tok",
+          "named": true
+        },
+        {
+          "type": "nodsp_tok",
+          "named": true
+        },
+        {
+          "type": "notrace_tok",
+          "named": true
+        },
+        {
+          "type": "plot_tok",
+          "named": true
+        },
+        {
+          "type": "poke_tok",
+          "named": true
+        },
+        {
+          "type": "pop_tok",
+          "named": true
+        },
+        {
+          "type": "print_tok",
+          "named": true
+        },
+        {
+          "type": "prn_tok",
+          "named": true
+        },
+        {
+          "type": "rem_tok",
+          "named": true
+        },
+        {
+          "type": "return_tok",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "step_tok",
+          "named": true
+        },
+        {
+          "type": "str_array",
+          "named": true
+        },
+        {
+          "type": "str_scalar",
+          "named": true
+        },
+        {
+          "type": "str_slice",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "tab_tok",
+          "named": true
+        },
+        {
+          "type": "text_tok",
+          "named": true
+        },
+        {
+          "type": "then_tok",
+          "named": true
+        },
+        {
+          "type": "to_tok",
+          "named": true
+        },
+        {
+          "type": "trace_tok",
+          "named": true
+        },
+        {
+          "type": "unary_aexpr",
+          "named": true
+        },
+        {
+          "type": "vlin_tok",
+          "named": true
+        },
+        {
+          "type": "vtab_tok",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "str_array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "subscript",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "str_scalar",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "str_slice",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "slice",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subscript",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_aexpr",
+          "named": true
+        },
+        {
+          "type": "fcall",
+          "named": true
+        },
+        {
+          "type": "int_array",
+          "named": true
+        },
+        {
+          "type": "int_scalar",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "unary_aexpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unary_aexpr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_aexpr",
+          "named": true
+        },
+        {
+          "type": "fcall",
+          "named": true
+        },
+        {
+          "type": "int_array",
+          "named": true
+        },
+        {
+          "type": "int_scalar",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "minus_tok",
+          "named": true
+        },
+        {
+          "type": "not_tok",
+          "named": true
+        },
+        {
+          "type": "plus_tok",
+          "named": true
+        },
+        {
+          "type": "unary_aexpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "$",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "absp_tok",
+    "named": true
+  },
+  {
+    "type": "and_tok",
+    "named": true
+  },
+  {
+    "type": "ascp_tok",
+    "named": true
+  },
+  {
+    "type": "at_tok",
+    "named": true
+  },
+  {
+    "type": "call_tok",
+    "named": true
+  },
+  {
+    "type": "coloreq_tok",
+    "named": true
+  },
+  {
+    "type": "comment_text",
+    "named": true
+  },
+  {
+    "type": "dim_tok",
+    "named": true
+  },
+  {
+    "type": "div_tok",
+    "named": true
+  },
+  {
+    "type": "dsp_tok",
+    "named": true
+  },
+  {
+    "type": "end_tok",
+    "named": true
+  },
+  {
+    "type": "eq_tok",
+    "named": true
+  },
+  {
+    "type": "for_tok",
+    "named": true
+  },
+  {
+    "type": "gosub_tok",
+    "named": true
+  },
+  {
+    "type": "goto_tok",
+    "named": true
+  },
+  {
+    "type": "gr_tok",
+    "named": true
+  },
+  {
+    "type": "gtr_tok",
+    "named": true
+  },
+  {
+    "type": "gtreq_tok",
+    "named": true
+  },
+  {
+    "type": "hlin_tok",
+    "named": true
+  },
+  {
+    "type": "if_tok",
+    "named": true
+  },
+  {
+    "type": "inn_tok",
+    "named": true
+  },
+  {
+    "type": "input_tok",
+    "named": true
+  },
+  {
+    "type": "integer",
+    "named": true
+  },
+  {
+    "type": "lenp_tok",
+    "named": true
+  },
+  {
+    "type": "less_tok",
+    "named": true
+  },
+  {
+    "type": "lesseq_tok",
+    "named": true
+  },
+  {
+    "type": "lessgtr_tok",
+    "named": true
+  },
+  {
+    "type": "let_tok",
+    "named": true
+  },
+  {
+    "type": "linenum",
+    "named": true
+  },
+  {
+    "type": "list_tok",
+    "named": true
+  },
+  {
+    "type": "minus_tok",
+    "named": true
+  },
+  {
+    "type": "mod_tok",
+    "named": true
+  },
+  {
+    "type": "n_tok",
+    "named": true
+  },
+  {
+    "type": "next_tok",
+    "named": true
+  },
+  {
+    "type": "nodsp_tok",
+    "named": true
+  },
+  {
+    "type": "not_tok",
+    "named": true
+  },
+  {
+    "type": "notrace_tok",
+    "named": true
+  },
+  {
+    "type": "or_tok",
+    "named": true
+  },
+  {
+    "type": "pdlp_tok",
+    "named": true
+  },
+  {
+    "type": "peekp_tok",
+    "named": true
+  },
+  {
+    "type": "plot_tok",
+    "named": true
+  },
+  {
+    "type": "plus_tok",
+    "named": true
+  },
+  {
+    "type": "poke_tok",
+    "named": true
+  },
+  {
+    "type": "pop_tok",
+    "named": true
+  },
+  {
+    "type": "pow_tok",
+    "named": true
+  },
+  {
+    "type": "print_tok",
+    "named": true
+  },
+  {
+    "type": "prn_tok",
+    "named": true
+  },
+  {
+    "type": "rem_tok",
+    "named": true
+  },
+  {
+    "type": "return_tok",
+    "named": true
+  },
+  {
+    "type": "rndp_tok",
+    "named": true
+  },
+  {
+    "type": "scrnp_tok",
+    "named": true
+  },
+  {
+    "type": "sgnp_tok",
+    "named": true
+  },
+  {
+    "type": "step_tok",
+    "named": true
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "tab_tok",
+    "named": true
+  },
+  {
+    "type": "text_tok",
+    "named": true
+  },
+  {
+    "type": "then_tok",
+    "named": true
+  },
+  {
+    "type": "times_tok",
+    "named": true
+  },
+  {
+    "type": "to_tok",
+    "named": true
+  },
+  {
+    "type": "trace_tok",
+    "named": true
+  },
+  {
+    "type": "vlin_tok",
+    "named": true
+  },
+  {
+    "type": "vtab_tok",
+    "named": true
+  }
+]

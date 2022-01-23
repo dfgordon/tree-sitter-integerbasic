@@ -1,0 +1,302 @@
+{
+    "scopeName": "source.bas",
+    "patterns": [
+        {
+            "name": "comment",
+            "match": "R *E *M.*$"
+        },
+        {
+            "name": "keyword.control",
+            "match": "L *O *A *D"
+        },
+        {
+            "name": "keyword.control",
+            "match": "S *A *V *E"
+        },
+        {
+            "name": "keyword.control",
+            "match": "C *O *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "R *U *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "R *U *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "D *E *L"
+        },
+        {
+            "name": "keyword.control",
+            "match": "N *E *W"
+        },
+        {
+            "name": "keyword.control",
+            "match": "C *L *R"
+        },
+        {
+            "name": "keyword.control",
+            "match": "A *U *T *O"
+        },
+        {
+            "name": "keyword.control",
+            "match": "M *A *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "H *I *M *E *M *:"
+        },
+        {
+            "name": "keyword.control",
+            "match": "L *O *M *E *M *:"
+        },
+        {
+            "name": "keyword.control",
+            "match": "> *="
+        },
+        {
+            "name": "keyword.control",
+            "match": "< *="
+        },
+        {
+            "name": "keyword.control",
+            "match": "< *>"
+        },
+        {
+            "name": "keyword.control",
+            "match": "A *N *D"
+        },
+        {
+            "name": "keyword.control",
+            "match": "O *R"
+        },
+        {
+            "name": "keyword.control",
+            "match": "M *O *D"
+        },
+        {
+            "name": "keyword.control",
+            "match": "T *H *E *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "T *H *E *N"
+        },
+        {
+            "name": "support.function",
+            "match": "P *E *E *K *\\("
+        },
+        {
+            "name": "support.function",
+            "match": "R *N *D *\\("
+        },
+        {
+            "name": "support.function",
+            "match": "S *G *N *\\("
+        },
+        {
+            "name": "support.function",
+            "match": "A *B *S *\\("
+        },
+        {
+            "name": "support.function",
+            "match": "P *D *L *\\("
+        },
+        {
+            "name": "keyword.control",
+            "match": "N *O *T"
+        },
+        {
+            "name": "support.function",
+            "match": "L *E *N *\\("
+        },
+        {
+            "name": "support.function",
+            "match": "A *S *C *\\("
+        },
+        {
+            "name": "support.function",
+            "match": "S *C *R *N *\\("
+        },
+        {
+            "name": "keyword.control",
+            "match": "T *E *X *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "G *R"
+        },
+        {
+            "name": "keyword.control",
+            "match": "C *A *L *L"
+        },
+        {
+            "name": "keyword.control",
+            "match": "D *I *M"
+        },
+        {
+            "name": "keyword.control",
+            "match": "D *I *M"
+        },
+        {
+            "name": "keyword.control",
+            "match": "T *A *B"
+        },
+        {
+            "name": "keyword.control",
+            "match": "E *N *D"
+        },
+        {
+            "name": "keyword.control",
+            "match": "I *N *P *U *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "I *N *P *U *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "I *N *P *U *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "F *O *R"
+        },
+        {
+            "name": "keyword.control",
+            "match": "T *O"
+        },
+        {
+            "name": "keyword.control",
+            "match": "S *T *E *P"
+        },
+        {
+            "name": "keyword.control",
+            "match": "N *E *X *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "R *E *T *U *R *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "G *O *S *U *B"
+        },
+        {
+            "name": "keyword.control",
+            "match": "R *E *M"
+        },
+        {
+            "name": "keyword.control",
+            "match": "L *E *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "G *O *T *O"
+        },
+        {
+            "name": "keyword.control",
+            "match": "I *F"
+        },
+        {
+            "name": "keyword.control",
+            "match": "P *R *I *N *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "P *R *I *N *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "P *R *I *N *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "P *O *K *E"
+        },
+        {
+            "name": "keyword.control",
+            "match": "C *O *L *O *R *="
+        },
+        {
+            "name": "keyword.control",
+            "match": "P *L *O *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "H *L *I *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "A *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "V *L *I *N"
+        },
+        {
+            "name": "keyword.control",
+            "match": "A *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "V *T *A *B"
+        },
+        {
+            "name": "keyword.control",
+            "match": "L *I *S *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "L *I *S *T"
+        },
+        {
+            "name": "keyword.control",
+            "match": "P *O *P"
+        },
+        {
+            "name": "keyword.control",
+            "match": "N *O *D *S *P"
+        },
+        {
+            "name": "keyword.control",
+            "match": "N *O *D *S *P"
+        },
+        {
+            "name": "keyword.control",
+            "match": "N *O *T *R *A *C *E"
+        },
+        {
+            "name": "keyword.control",
+            "match": "D *S *P"
+        },
+        {
+            "name": "keyword.control",
+            "match": "D *S *P"
+        },
+        {
+            "name": "keyword.control",
+            "match": "T *R *A *C *E"
+        },
+        {
+            "name": "keyword.control",
+            "match": "P *R *#"
+        },
+        {
+            "name": "keyword.control",
+            "match": "I *N *#"
+        },
+        {
+            "name": "string",
+            "begin": "\"",
+            "end": "\""
+        },
+        {
+            "name": "variable",
+            "match": "[A-Z][A-Z0-9]*[$]?"
+        }
+    ]
+}

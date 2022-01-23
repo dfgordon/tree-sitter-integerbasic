@@ -1,0 +1,13 @@
+10 GOSUB 100: GOSUB 200
+20 END
+
+100 P RI  NT "HELLO WORLD": REM ignores spaces
+110 REM test REM: PRINT "I am not a statement"
+120 FOR I = LOFT OR LEFT TO 15: REM finds error
+130 TAB 2: PRINT I: NEXT I: RETURN: REM left parenthesis part of token
+
+200 X = 5000
+220 PRINT SGN(RND(-X)+RND(X)): RETURN
+221 REM   ^ function.builtin
+222 REM           ^ operator
+223 REM                   ^ variable

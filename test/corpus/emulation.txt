@@ -1,0 +1,86 @@
+===================
+Hidden token 1
+===================
+
+10 FOR A = (LOFT) OR LEFT TO 15: REM OK
+20 FOR A = LOFT OR LEFT TO 15: REM ERR
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(for_tok) (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (or_tok) (int_scalar)) (to_tok) (integer))
+		(statement
+			(rem_tok) (comment_text)))
+	(line
+		(linenum)
+		(statement
+			(for_tok) (int_scalar) (eq_tok) (int_scalar) (to_tok) (int_scalar))
+		(ERROR (to_tok) (integer))
+		(statement
+			(rem_tok) (comment_text))))
+
+===================
+Hidden token 2
+===================
+
+10 IF B = A THEN 100: REM no problem for Integer
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(if_tok) (binary_aexpr (int_scalar) (eq_tok) (int_scalar)) (then_tok) (integer))
+		(statement
+			(rem_tok) (comment_text))))
+
+===================
+Disjoint tokens
+===================
+
+10 AB = 1 0 : P RI NT AB
+20 IFX1THEN20
+30 I F X 1 T H E N 3 0
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(assignment (int_scalar) (eq_tok) (integer)))
+		(statement
+			(print_tok) (int_scalar)))
+	(line
+		(linenum)
+		(statement (if_tok) (int_scalar) (then_tok) (integer)))
+	(line
+		(linenum)
+		(statement (if_tok) (int_scalar) (then_tok) (integer))))
+
+===================
+AT and TO
+===================
+
+100 FOR I = (A) TO B: REM OK
+100 FOR I = A TO B: REM ALSO OK
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(for_tok) (int_scalar) (eq_tok) (int_scalar) (to_tok) (int_scalar))
+		(statement
+			(rem_tok) (comment_text)))
+	(line
+		(linenum)
+		(statement
+			(for_tok) (int_scalar) (eq_tok) (int_scalar) (to_tok) (int_scalar))
+		(statement
+			(rem_tok) (comment_text))))

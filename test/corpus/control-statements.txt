@@ -1,0 +1,110 @@
+===================
+For Loop 1
+===================
+
+10 FOR I = 1 TO 2000 : NEXT I
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(for_tok) (int_scalar) (eq_tok) (integer) (to_tok) (integer))
+		(statement
+			(next_tok) (int_scalar))))
+
+===================
+For Loop 2
+===================
+
+10 FOR I = 1 TO 5 : FOR J = 2 TO 4 : NEXT J,I
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(for_tok) (int_scalar) (eq_tok) (integer) (to_tok) (integer))
+		(statement
+			(for_tok) (int_scalar) (eq_tok) (integer) (to_tok) (integer))
+		(statement
+			(next_tok) (int_scalar) (int_scalar))))
+
+===================
+Goto
+===================
+
+10 GOTO 10
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (goto_tok) (integer))))
+
+===================
+Gosub
+===================
+
+10 GOSUB 100
+20 END
+100 RETURN
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (gosub_tok) (integer)))
+	(line
+		(linenum)
+		(statement (end_tok)))
+	(line
+		(linenum)
+		(statement (return_tok))))
+
+===================
+If-then 1
+===================
+
+10 IF X > Y THEN 10
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (if_tok) (binary_aexpr (int_scalar) (gtr_tok) (int_scalar)) (then_tok) (integer))))
+
+===================
+If-then 2
+===================
+
+10 IF X(A) < > Y THEN GOTO 10
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (if_tok) (binary_aexpr (int_array (subscript (int_scalar))) (lessgtr_tok) (int_scalar)) (then_tok)
+			(statement (goto_tok) (integer)))))
+
+===================
+If-then 3
+===================
+
+10 IF X > Y(2) THEN PRINT "X IS BIGGER"
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (if_tok)
+			(binary_aexpr (int_scalar) (gtr_tok) (int_array (subscript (integer))))
+			(then_tok)
+			(statement (print_tok) (string)))))

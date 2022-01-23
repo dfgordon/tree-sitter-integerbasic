@@ -1,0 +1,89 @@
+===================
+Redirection
+===================
+
+10 PR# 1 : IN# 1
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (prn_tok) (integer))
+		(statement (inn_tok) (integer))))
+
+===================
+Input
+===================
+
+10 INPUT DAY,PRICE
+20 INPUT "ENTER PASSWORD: ",PA$
+30 INPUT "", X
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (input_tok) (int_scalar) (int_scalar)))
+	(line
+		(linenum)
+		(statement (input_tok) (string) (str_scalar)))
+	(line
+		(linenum)
+		(statement (input_tok) (string) (int_scalar))))
+
+===================
+Paddles
+===================
+
+10 X = PDL(0): Y = PDL(1)
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (fcall (pdlp_tok) (integer))))
+		(statement (assignment (int_scalar) (eq_tok) (fcall (pdlp_tok) (integer))))))
+
+===================
+Print
+===================
+
+10 PRINT "*";A$;X-Y;: PRINT: PRINT
+20 PRINT A,B,C
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (print_tok)
+			(string)
+			(str_scalar)
+			(binary_aexpr (int_scalar) (minus_tok) (int_scalar)))
+		(statement (print_tok))
+		(statement (print_tok)))
+	(line
+	 (linenum)
+	 (statement (print_tok) (int_scalar) (int_scalar) (int_scalar))))
+
+===================
+Formatting
+===================
+
+10 TEXT
+20 TAB 5: VTAB X: PRINT Y
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (text_tok)))
+	(line
+		(linenum)
+		(statement (tab_tok) (integer))
+		(statement (vtab_tok) (int_scalar))
+		(statement (print_tok) (int_scalar))))

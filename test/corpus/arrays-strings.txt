@@ -1,0 +1,83 @@
+===================
+Arrays
+===================
+
+10 DIM X(10),Y(10): DIM Z(10)
+20 X(1) = Y(9): Z = X(Z(3)) + Y(Z(5))
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(dim_tok)
+				(int_array (subscript (integer)))
+				(int_array (subscript (integer))))
+		(statement
+			(dim_tok)
+				(int_array (subscript (integer)))))
+	(line
+		(linenum)
+		(statement
+			(assignment (int_array (subscript (integer))) (eq_tok) (int_array (subscript (integer)))))
+		(statement
+			(assignment (int_scalar) (eq_tok)
+				(binary_aexpr
+					(int_array (subscript (int_array (subscript (integer)))))
+					(plus_tok)
+					(int_array (subscript (int_array (subscript (integer))))))))))
+
+===================
+Strings
+===================
+
+10 DIM A$(10),B$(20): LET A$ = "APPLE JUICE" : B$ = A$(1,5)
+20 B$(LEN(B$)+1) = " ]["
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (dim_tok) (str_array (subscript (integer))) (str_array (subscript (integer))))
+		(statement (assignment (let_tok) (str_scalar) (eq_tok) (string)))
+		(statement (assignment (str_scalar) (eq_tok) (str_slice (slice (integer) (integer))))))
+	(line
+		(linenum)
+		(statement
+			(assignment (str_array (subscript
+				(binary_aexpr
+					(fcall (lenp_tok) (str_scalar))
+					(plus_tok)
+					(integer))))
+				(eq_tok)
+				(string)))))
+
+===================
+Strings 2
+===================
+
+10 DIM A$(10): A$ = B$(2): L = LEN(A$)
+20 IF A$ # "ABC" THEN END
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(dim_tok) (str_array (subscript (integer))))
+		(statement
+			(assignment
+				(str_scalar) (eq_tok) (str_array (subscript (integer)))))
+		(statement
+			(assignment
+				(int_scalar) (eq_tok) (fcall (lenp_tok) (str_scalar)))))
+	(line
+		(linenum)
+		(statement
+			(if_tok)
+			(binary_aexpr (str_scalar) (n_tok) (string))
+			(then_tok)
+			(statement (end_tok)))))

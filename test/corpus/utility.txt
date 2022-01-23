@@ -1,0 +1,59 @@
+===================
+Peek and Poke
+===================
+
+10 V1 = PEEK(A*16 + 5) : V2 = PEEK(255)
+20 POKE A1,V1 : POKE A*16 + 5,V2*2 / Y
+30 POKE 255,0
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(assignment (int_scalar) (eq_tok) (fcall (peekp_tok)
+				(binary_aexpr (binary_aexpr (int_scalar) (times_tok) (integer)) (plus_tok) (integer)))))
+		(statement
+			(assignment (int_scalar) (eq_tok) (fcall (peekp_tok) (integer)))))
+	(line
+		(linenum)
+		(statement (poke_tok) (int_scalar) (int_scalar))
+		(statement (poke_tok)
+			(binary_aexpr (binary_aexpr (int_scalar) (times_tok) (integer)) (plus_tok) (integer))
+			(binary_aexpr (binary_aexpr (int_scalar) (times_tok) (integer)) (div_tok) (int_scalar))))
+	(line
+		(linenum)
+		(statement (poke_tok) (integer) (integer))))
+
+===================
+Call
+===================
+
+10 CALL 54915
+20 CALL -936
+30 CALL ROUTINE (J)
+
+---
+
+(source_file
+	(line (linenum) (statement (call_tok) (integer)))
+	(line (linenum) (statement (call_tok) (integer)))
+	(line (linenum) (statement (call_tok) (int_array (subscript (int_scalar))))))
+
+===================
+Debugging
+===================
+
+10 TRACE
+20 NOTRACE
+30 DSP A
+40 NODSP A
+
+---
+
+(source_file
+	(line (linenum) (statement (trace_tok)))
+	(line (linenum) (statement (notrace_tok)))
+	(line (linenum) (statement (dsp_tok) (int_scalar)))
+	(line (linenum) (statement (nodsp_tok) (int_scalar))))

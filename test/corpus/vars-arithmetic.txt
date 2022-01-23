@@ -1,0 +1,232 @@
+===================
+Variables
+===================
+
+10 A = 100: B = 010
+20 LET A$ = "Howard Phillips Lovecraft"
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (integer)))
+		(statement (assignment (int_scalar) (eq_tok) (integer))))
+	(line
+		(linenum)
+		(statement (assignment (let_tok) (str_scalar) (eq_tok) (string)))))
+
+===================
+Unary Operators
+===================
+
+10 X = +Y
+20 X = -Y
+30 X = NOT Y
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (unary_aexpr (plus_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (unary_aexpr (minus_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (unary_aexpr (not_tok) (int_scalar))))))
+
+===================
+Binary Operators
+===================
+
+10 X = X + Y
+20 X = X - Y
+30 X = X * Y
+40 X = X / Y
+50 X = X ^ Y
+60 X = X = Y
+70 X = X < Y
+80 X = X > Y
+90 X = X <= Y
+100 X = X >= Y
+130 X = X <> Y
+150 X = X AND Y
+160 X = X OR Y
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (plus_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (minus_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (times_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (div_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (pow_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (eq_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (less_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (gtr_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (lesseq_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (gtreq_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (lessgtr_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (and_tok) (int_scalar)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (or_tok) (int_scalar))))))
+
+
+===================
+Precedence Test 1
+===================
+
+10 X = A+B*C
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(assignment
+				(int_scalar) (eq_tok)
+				(binary_aexpr
+					(int_scalar) (plus_tok)
+					(binary_aexpr (int_scalar) (times_tok) (int_scalar)))))))
+
+===================
+Precedence Test 2
+===================
+
+10 X = (A+B)*C
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(assignment
+				(int_scalar) (eq_tok)
+				(binary_aexpr
+					(binary_aexpr (int_scalar) (plus_tok) (int_scalar))
+					(times_tok)
+					(int_scalar))))))
+
+===================
+Precedence Test 3
+===================
+
+10 X = A <= B + C
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(assignment
+				(int_scalar) (eq_tok)
+				(binary_aexpr
+					(int_scalar)
+					(lesseq_tok)
+					(binary_aexpr (int_scalar) (plus_tok) (int_scalar)))))))
+
+===================
+Math Functions
+===================
+
+10 XA = ABS(X1+X2)
+20 Y = SGN(X)
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(assignment
+				(int_scalar) (eq_tok)
+				(fcall
+					(absp_tok)
+					(binary_aexpr (int_scalar) (plus_tok) (int_scalar))))))
+	(line (linenum) (statement (assignment (int_scalar) (eq_tok) (fcall (sgnp_tok) (int_scalar))))))
+
+===================
+Random Numbers
+===================
+
+10 X = RND(-5)
+20 X = RND ( 0 )
+30 X = RND(99)
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (fcall (rndp_tok) (integer)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (fcall (rndp_tok) (integer)))))
+	(line
+		(linenum)
+		(statement (assignment (int_scalar) (eq_tok) (fcall (rndp_tok) (integer))))))
+
+
+===================
+Nested Expressions
+===================
+
+10 X = ((1-5)*ABS(ZA) + SGN(AB))/((1+5)*PEEK(X+Y)-(ZB+A*B))
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement
+			(assignment
+				(int_scalar) (eq_tok)
+				(binary_aexpr
+					(binary_aexpr
+						(binary_aexpr
+							(binary_aexpr (integer) (minus_tok) (integer))
+							(times_tok)
+							(fcall (absp_tok) (int_scalar)))
+						(plus_tok)
+						(fcall (sgnp_tok) (int_scalar)))
+					(div_tok)
+					(binary_aexpr
+						(binary_aexpr
+							(binary_aexpr (integer) (plus_tok) (integer))
+							(times_tok)
+							(fcall (peekp_tok) (binary_aexpr (int_scalar) (plus_tok) (int_scalar))))
+						(minus_tok)
+						(binary_aexpr
+							(int_scalar)
+							(plus_tok)
+							(binary_aexpr (int_scalar) (times_tok) (int_scalar)))))))))

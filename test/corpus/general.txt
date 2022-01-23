@@ -1,0 +1,31 @@
+===================
+Remark
+===================
+
+10 REM HERE IS A REMARK: THIS IS STILL A REMARK
+20 PRINT "HELLO"
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (rem_tok) (comment_text)))
+	(line
+		(linenum)
+		(statement (print_tok) (string))))
+
+===================
+Other
+===================
+
+20 LIST : LIST 10: LIST 10,20
+
+---
+
+(source_file
+	(line
+		(linenum)
+		(statement (list_tok))
+		(statement (list_tok) (linenum))
+		(statement (list_tok) (linenum) (linenum))))

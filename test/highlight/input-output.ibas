@@ -1,0 +1,5 @@
+10 A$ = "HELLO"
+11 REM^ operator
+12 REM   ^ string
+20 PRINT A$;" ";"WORLD"
+21 REM   ^ variable
