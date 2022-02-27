@@ -8,6 +8,8 @@ Mappings:
 `scanner-src.cc` to `../src/scanner.cc ` (not used at present)
 Products:
 `../queries/highlights.scm` (Tree-sitter highlighting, also for neovim)
+`../test/corpus/vars-illegal.txt` (tests of variable names)
+`../test/corpus/vars-legal.txt` (tests of variable names)
 `token_list.json` (token data in JSON format)'''
 
 import sys
@@ -37,12 +39,34 @@ while (arg_idx<len(sys.argv)):
 if allow_lower_case==None:
     raise ValueError('--allow-lower-case flag was not set')
 
+# Regarding the forbidden variables, FOR, COLOR, AUTO, and GOTO need not be listed
+# because of embedded TO and OR
+
+# Assigning the following is a syntax error according to Virtual II
+illegal_var = ['end','gr','list','notrace','pop','print','return','text','trace']
+# Assigning the following with leading Z is a syntaz error according to Virtual II
+illegal_var_end = ['and','at','mod','or','step','then','to']
+# Assigning the following with trailing alpha is a syntax error according to Virtual II
+illegal_var_postalpha = ['dsp','end','gr','input','list','next','nodsp','notrace','pop','return','text','trace']
+# Assigning the following with trailing number is a syntax error according to Virtual II
+illegal_var_postnum = ['end','gr','list','notrace','pop','return','text','trace']
+
+all_restrictions = set()
+for r in illegal_var + illegal_var_end + illegal_var_postalpha + illegal_var_postnum:
+    all_restrictions.add(r)
+
 # Following are lexical tokens (rule will be regex)
-# Some of these identified in red book as forbidden within a variable name
-leading_keywords = ['and','at','mod','or','step','then','to']
-# Following are given lexical precedence
-# Some of these identified in red book as forbidden at start of a variable name
-trailing_keywords = ['end','let','rem','print','color=','for','if']
+lexical_tokens = [] # rule will be regex
+lexical_precedence = [] # rule will have precedence 1
+for r in illegal_var_end:
+    lexical_tokens += [r]
+for r in all_restrictions:
+    if r in illegal_var and r in illegal_var_postalpha and r in illegal_var_postnum:
+        lexical_tokens += [r]
+# for r in all_restrictions:
+#     if r in illegal_var or r in illegal_var_postalpha or r in illegal_var_postnum:
+#         lexical_precedence += [r]
+lexical_precedence += ['rem','color=','for','if','print']
 
 # First step is to gather and check the tokens
 # Each row becomes a single dictionary describing the token
@@ -96,15 +120,6 @@ for t in tokens:
     length_histogram[len(lx)] += 1
 
 print()
-
-print('Leading keywords: ')
-print(leading_keywords)
-print()
-
-print('Trailing keywords: ')
-print(trailing_keywords)
-print()
-
 print('Token Histogram:')
 print('length count')
 for l,n in enumerate(length_histogram):
@@ -162,7 +177,7 @@ def tok_regex_json(tok):
 # Build some C++-code for the external scanner
 
 scanner_code = ''
-for t in leading_keywords:
+for t in lexical_tokens:
     scanner_code += '    exclusions.push_back(exclusion("'+t.upper()+'",'+str(len(t))+',1,0));\n'
 
 # Modify the scanner
@@ -183,9 +198,9 @@ with open(pathlib.Path('..')/pathlib.Path('src')/pathlib.Path('scanner.cc'),'w')
 token_rule_string = ''
 for t in tokens:
     if t['rule id']!=None:
-        if t['lexeme'] in leading_keywords or 'op_' in t['rule id']:
+        if t['lexeme'] in lexical_tokens:
             rule_value = tok_regex_js(t['lexeme'])
-        elif t['lexeme'] in trailing_keywords:
+        elif t['lexeme'] in lexical_precedence:
             rule_value = 'prec(1,'+tok_ts_js(t['lexeme'])+')'
         else:
             rule_value = tok_ts_js(t['lexeme'])
@@ -229,13 +244,15 @@ for c in sep_groups:
         conflict_string += ln[:-1] + '],\n'
 conflict_string += '\t\t[$.str_name,$.int_name],\n'
 conflict_string += '\t\t[$.statement_print_str,$.statement_print_int,$.statement_print_null,$.str_name,$.int_name],\n'
-conflict_string += '\t\t[$.open_slice,$.open_str]\n'
+conflict_string += '\t\t[$.open_slice,$.open_str],\n'
+conflict_string += '\t\t[$.op_not,$.str_name,$.int_name]\n'
 
 # Create the grammar from the working file
 
 with open('grammar-src.js','r') as f:
     grammar = f.read()
     # Multiple sweeps, order matters
+    # First sweep substitutes rules inside a particular statement or fcall
     for t in tokens:
         if t['rule id']!=None:
             lx = t['lexeme']
@@ -250,6 +267,7 @@ with open('grammar-src.js','r') as f:
                             trig = "'" + leading.upper() + "'"
                         patt = '('+re.escape("seq("+trig)+".*)'"+re.escape(lx.upper())+"'"
                         grammar = re.sub(patt,'\\1$.'+id,grammar)
+    # Second sweep substitutes rules at root or first level
     for t in tokens:
         if t['rule id']!=None:
             lx = t['lexeme']
@@ -261,6 +279,7 @@ with open('grammar-src.js','r') as f:
                 if len(encl)==1:
                     patt = '('+re.escape(encl[0]+':')+'.*)'+"'"+re.escape(lx.upper())+"'"
                     grammar = re.sub(patt,'\\1$.'+id,grammar)
+    # Third sweep substitutes rules for statements that must match a pattern
     for t in tokens:
         if t['rule id']!=None:
             lx = t['lexeme']
@@ -284,12 +303,12 @@ with open('grammar-src.js','r') as f:
                             if el!=t['pattern'].split('.')[-1]:
                                 patt += '[ \t]*,[ \t]*'
                                 repl += ','
-                        print(patt,repl)
+                        #print(patt,repl)
                         grammar = re.sub(patt,repl,grammar)
     grammar = grammar.replace('\t\t// token rules go here DO NOT EDIT this line',token_rule_string)
     grammar = re.sub('allow_lower_case\s*=\s*\w+','allow_lower_case = '+str(allow_lower_case).lower(),grammar)
     grammar = re.sub('conflicts:\s*\$\s*=>\s*\[',conflict_string,grammar)
-with open('../grammar.js','w') as f:
+with open(pathlib.Path('..') / pathlib.Path('grammar.js'),'w') as f:
     f.write(grammar)
 
 # Create the highlighting queries
@@ -312,10 +331,65 @@ for t in tokens:
             highlights += '('+t['rule id']+') @keyword.builtin\n'
         if 'fcall_' in t['rule id']:
             highlights += '('+t['rule id']+') @function.builtin\n'
-with open('../queries/highlights.scm','w') as f:
+with open(pathlib.Path('..')/pathlib.Path('queries')/pathlib.Path('highlights.scm'),'w') as f:
     f.write(highlights)
 
 # Write out the token data for use elsewhere
 
 with open('token_list.json','w') as f:
     f.write(json.dumps(tokens,sort_keys=True,indent=4))
+
+# Write out the illegal variable tests
+
+test_code =  '==========\n'
+test_code += 'Standalone\n'
+test_code += '==========\n\n'
+for i,l in enumerate(illegal_var):
+    test_code += str(i) + ' ' + l.upper() + ' = 1\n'
+test_code += '\n---\n\n'
+test_code += '(source_file\n'
+for l in illegal_var:
+    if l=='print':
+        test_code += '(line (linenum) (statement (statement_print_int) (ERROR) (integer)))\n'
+    else:
+        test_code += '(line (linenum) (statement (statement_' + l + ')) (ERROR (integer)))\n'
+test_code += ')\n\n'
+
+test_code +=  '==========\n'
+test_code += 'Postnumber\n'
+test_code += '==========\n\n'
+for i,l in enumerate(illegal_var_postnum):
+    test_code += str(i) + ' ' + l.upper() + '1 = 1\n'
+test_code += '\n---\n\n'
+test_code += '(source_file\n'
+for l in illegal_var_postnum:
+    if l=='list':
+        test_code += '(line (linenum) (statement (statement_list_line) (linenum)) (ERROR (integer)))\n'
+    else:
+        test_code += '(line (linenum) (statement (statement_' + l + ')) (ERROR (integer) (integer)))\n'
+test_code += ')'
+
+with open(pathlib.Path('..') / pathlib.Path('test') / pathlib.Path('corpus') / 'vars-illegal.txt', 'w') as f:
+    f.write(test_code)
+
+# Write out the legal variable tests
+
+test_code =  '==========\n'
+test_code += 'Standalone\n'
+test_code += '==========\n\n'
+legal_var = set()
+for t in tokens:
+    lx = t['lexeme']
+    if lx.isalpha() and lx not in illegal_var and lx not in ['rem','for','goto']:
+        legal_var.add(lx)
+legal_var = sorted(legal_var)
+for i,l in enumerate(legal_var):
+    test_code += str(i) + ' ' + l.upper() + ' = 1\n'
+test_code += '\n---\n\n'
+test_code += '(source_file\n'
+for l in legal_var:
+    test_code += '(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer))))\n'
+test_code += ')\n\n'
+
+with open(pathlib.Path('..') / pathlib.Path('test') / pathlib.Path('corpus') / 'vars-legal.txt', 'w') as f:
+    f.write(test_code)

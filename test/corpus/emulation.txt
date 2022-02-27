@@ -89,21 +89,3 @@ AT and TO
 		(sep_statement)
 		(statement
 			(statement_rem) (comment_text))))
-
-========================
-Assignments and Keywords
-========================
-
-100 PRINT = 1
-101 INPUT = 1
-102 TO = 1
-
----
-
-(source_file
-	(line
-		(linenum) (statement (statement_print_int) (ERROR) (integer)))
-	(line
-		(linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer))))
-	(line
-		(linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))

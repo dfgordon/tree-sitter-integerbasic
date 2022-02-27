@@ -129,20 +129,47 @@
       "value": "#"
     },
     "op_gtreq": {
-      "type": "PATTERN",
-      "value": "> *="
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": ">"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        }
+      ]
     },
     "op_gtr": {
       "type": "STRING",
       "value": ">"
     },
     "op_lesseq": {
-      "type": "PATTERN",
-      "value": "< *="
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        }
+      ]
     },
     "op_neq": {
-      "type": "PATTERN",
-      "value": "< *>"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<"
+        },
+        {
+          "type": "STRING",
+          "value": ">"
+        }
+      ]
     },
     "op_less": {
       "type": "STRING",
@@ -306,8 +333,21 @@
       "value": "-"
     },
     "op_not": {
-      "type": "PATTERN",
-      "value": "N *O *T"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "N"
+        },
+        {
+          "type": "STRING",
+          "value": "O"
+        },
+        {
+          "type": "STRING",
+          "value": "T"
+        }
+      ]
     },
     "open_aexpr": {
       "type": "STRING",
@@ -437,38 +477,12 @@
       "value": ","
     },
     "statement_text": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "T"
-        },
-        {
-          "type": "STRING",
-          "value": "E"
-        },
-        {
-          "type": "STRING",
-          "value": "X"
-        },
-        {
-          "type": "STRING",
-          "value": "T"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "T *E *X *T"
     },
     "statement_gr": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "G"
-        },
-        {
-          "type": "STRING",
-          "value": "R"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "G *R"
     },
     "statement_call": {
       "type": "SEQ",
@@ -543,25 +557,8 @@
       ]
     },
     "statement_end": {
-      "type": "PREC",
-      "value": 1,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "E"
-          },
-          {
-            "type": "STRING",
-            "value": "N"
-          },
-          {
-            "type": "STRING",
-            "value": "D"
-          }
-        ]
-      }
+      "type": "PATTERN",
+      "value": "E *N *D"
     },
     "statement_input_str": {
       "type": "SEQ",
@@ -697,33 +694,8 @@
       "value": ","
     },
     "statement_return": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "R"
-        },
-        {
-          "type": "STRING",
-          "value": "E"
-        },
-        {
-          "type": "STRING",
-          "value": "T"
-        },
-        {
-          "type": "STRING",
-          "value": "U"
-        },
-        {
-          "type": "STRING",
-          "value": "R"
-        },
-        {
-          "type": "STRING",
-          "value": "N"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "R *E *T *U *R *N"
     },
     "statement_gosub": {
       "type": "SEQ",
@@ -772,25 +744,21 @@
       }
     },
     "statement_let": {
-      "type": "PREC",
-      "value": 1,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "L"
-          },
-          {
-            "type": "STRING",
-            "value": "E"
-          },
-          {
-            "type": "STRING",
-            "value": "T"
-          }
-        ]
-      }
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "L"
+        },
+        {
+          "type": "STRING",
+          "value": "E"
+        },
+        {
+          "type": "STRING",
+          "value": "T"
+        }
+      ]
     },
     "statement_goto": {
       "type": "SEQ",
@@ -1092,67 +1060,20 @@
       "value": ")"
     },
     "statement_list_line": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "L"
-        },
-        {
-          "type": "STRING",
-          "value": "I"
-        },
-        {
-          "type": "STRING",
-          "value": "S"
-        },
-        {
-          "type": "STRING",
-          "value": "T"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "L *I *S *T"
     },
     "sep_list": {
       "type": "STRING",
       "value": ","
     },
     "statement_list": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "L"
-        },
-        {
-          "type": "STRING",
-          "value": "I"
-        },
-        {
-          "type": "STRING",
-          "value": "S"
-        },
-        {
-          "type": "STRING",
-          "value": "T"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "L *I *S *T"
     },
     "statement_pop": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "P"
-        },
-        {
-          "type": "STRING",
-          "value": "O"
-        },
-        {
-          "type": "STRING",
-          "value": "P"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "P *O *P"
     },
     "statement_nodsp_str": {
       "type": "SEQ",
@@ -1205,37 +1126,8 @@
       ]
     },
     "statement_notrace": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "N"
-        },
-        {
-          "type": "STRING",
-          "value": "O"
-        },
-        {
-          "type": "STRING",
-          "value": "T"
-        },
-        {
-          "type": "STRING",
-          "value": "R"
-        },
-        {
-          "type": "STRING",
-          "value": "A"
-        },
-        {
-          "type": "STRING",
-          "value": "C"
-        },
-        {
-          "type": "STRING",
-          "value": "E"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "N *O *T *R *A *C *E"
     },
     "statement_dsp_str": {
       "type": "SEQ",
@@ -1272,29 +1164,8 @@
       ]
     },
     "statement_trace": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "T"
-        },
-        {
-          "type": "STRING",
-          "value": "R"
-        },
-        {
-          "type": "STRING",
-          "value": "A"
-        },
-        {
-          "type": "STRING",
-          "value": "C"
-        },
-        {
-          "type": "STRING",
-          "value": "E"
-        }
-      ]
+      "type": "PATTERN",
+      "value": "T *R *A *C *E"
     },
     "statement_prn": {
       "type": "SEQ",
@@ -3721,6 +3592,11 @@
     [
       "open_slice",
       "open_str"
+    ],
+    [
+      "op_not",
+      "str_name",
+      "int_name"
     ]
   ],
   "precedences": [],

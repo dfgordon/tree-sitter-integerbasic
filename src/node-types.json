@@ -452,12 +452,42 @@
     "fields": {}
   },
   {
+    "type": "op_gtr",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_gtreq",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "op_hlin_at",
     "named": true,
     "fields": {}
   },
   {
+    "type": "op_less",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_lesseq",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "op_minus",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_neq",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_not",
     "named": true,
     "fields": {}
   },
@@ -994,11 +1024,6 @@
     "fields": {}
   },
   {
-    "type": "statement_end",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "statement_for",
     "named": true,
     "fields": {}
@@ -1010,11 +1035,6 @@
   },
   {
     "type": "statement_goto",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "statement_gr",
     "named": true,
     "fields": {}
   },
@@ -1079,22 +1099,12 @@
     "fields": {}
   },
   {
-    "type": "statement_notrace",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "statement_plot",
     "named": true,
     "fields": {}
   },
   {
     "type": "statement_poke",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "statement_pop",
     "named": true,
     "fields": {}
   },
@@ -1124,17 +1134,7 @@
     "fields": {}
   },
   {
-    "type": "statement_return",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "statement_tab",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "statement_text",
     "named": true,
     "fields": {}
   },
@@ -1145,11 +1145,6 @@
   },
   {
     "type": "statement_then_line",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "statement_trace",
     "named": true,
     "fields": {}
   },
@@ -1432,7 +1427,15 @@
     "named": false
   },
   {
+    "type": "<",
+    "named": false
+  },
+  {
     "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
     "named": false
   },
   {
@@ -1568,31 +1571,7 @@
     "named": true
   },
   {
-    "type": "op_gtr",
-    "named": true
-  },
-  {
-    "type": "op_gtreq",
-    "named": true
-  },
-  {
-    "type": "op_less",
-    "named": true
-  },
-  {
-    "type": "op_lesseq",
-    "named": true
-  },
-  {
     "type": "op_mod",
-    "named": true
-  },
-  {
-    "type": "op_neq",
-    "named": true
-  },
-  {
-    "type": "op_not",
     "named": true
   },
   {
@@ -1617,6 +1596,34 @@
   },
   {
     "type": "sep_statement",
+    "named": true
+  },
+  {
+    "type": "statement_end",
+    "named": true
+  },
+  {
+    "type": "statement_gr",
+    "named": true
+  },
+  {
+    "type": "statement_notrace",
+    "named": true
+  },
+  {
+    "type": "statement_pop",
+    "named": true
+  },
+  {
+    "type": "statement_return",
+    "named": true
+  },
+  {
+    "type": "statement_text",
+    "named": true
+  },
+  {
+    "type": "statement_trace",
     "named": true
   }
 ]

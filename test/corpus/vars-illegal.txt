@@ -1,0 +1,53 @@
+==========
+Standalone
+==========
+
+0 END = 1
+1 GR = 1
+2 LIST = 1
+3 NOTRACE = 1
+4 POP = 1
+5 PRINT = 1
+6 RETURN = 1
+7 TEXT = 1
+8 TRACE = 1
+
+---
+
+(source_file
+(line (linenum) (statement (statement_end)) (ERROR (integer)))
+(line (linenum) (statement (statement_gr)) (ERROR (integer)))
+(line (linenum) (statement (statement_list)) (ERROR (integer)))
+(line (linenum) (statement (statement_notrace)) (ERROR (integer)))
+(line (linenum) (statement (statement_pop)) (ERROR (integer)))
+(line (linenum) (statement (statement_print_int) (ERROR) (integer)))
+(line (linenum) (statement (statement_return)) (ERROR (integer)))
+(line (linenum) (statement (statement_text)) (ERROR (integer)))
+(line (linenum) (statement (statement_trace)) (ERROR (integer)))
+)
+
+==========
+Postnumber
+==========
+
+0 END1 = 1
+1 GR1 = 1
+2 LIST1 = 1
+3 NOTRACE1 = 1
+4 POP1 = 1
+5 RETURN1 = 1
+6 TEXT1 = 1
+7 TRACE1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (statement_end)) (ERROR (integer) (integer)))
+(line (linenum) (statement (statement_gr)) (ERROR (integer) (integer)))
+(line (linenum) (statement (statement_list_line) (linenum)) (ERROR (integer)))
+(line (linenum) (statement (statement_notrace)) (ERROR (integer) (integer)))
+(line (linenum) (statement (statement_pop)) (ERROR (integer) (integer)))
+(line (linenum) (statement (statement_return)) (ERROR (integer) (integer)))
+(line (linenum) (statement (statement_text)) (ERROR (integer) (integer)))
+(line (linenum) (statement (statement_trace)) (ERROR (integer) (integer)))
+)

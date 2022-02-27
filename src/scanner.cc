@@ -77,6 +77,14 @@ struct Scanner
     exclusions.push_back(exclusion("STEP",4,1,0));
     exclusions.push_back(exclusion("THEN",4,1,0));
     exclusions.push_back(exclusion("TO",2,1,0));
+    exclusions.push_back(exclusion("END",3,1,0));
+    exclusions.push_back(exclusion("POP",3,1,0));
+    exclusions.push_back(exclusion("TRACE",5,1,0));
+    exclusions.push_back(exclusion("TEXT",4,1,0));
+    exclusions.push_back(exclusion("RETURN",6,1,0));
+    exclusions.push_back(exclusion("GR",2,1,0));
+    exclusions.push_back(exclusion("NOTRACE",7,1,0));
+    exclusions.push_back(exclusion("LIST",4,1,0));
 
   }
 
