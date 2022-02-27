@@ -10,11 +10,12 @@ Variables
 (source_file
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (integer)))
-		(statement (assignment (int_scalar) (eq_tok) (integer))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+		(sep_statement)
+		(statement (assignment_int (int_name) (op_eq_assign_int) (integer))))
 	(line
 		(linenum)
-		(statement (assignment (let_tok) (str_scalar) (eq_tok) (string)))))
+		(statement (assignment_str (statement_let) (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ===================
 Unary Operators
@@ -29,13 +30,13 @@ Unary Operators
 (source_file
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (unary_aexpr (plus_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (unary_aexpr (op_unary_plus) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (unary_aexpr (minus_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (unary_aexpr (op_unary_minus) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (unary_aexpr (not_tok) (int_scalar))))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (unary_aexpr (op_not) (int_name))))))
 
 ===================
 Binary Operators
@@ -60,43 +61,43 @@ Binary Operators
 (source_file
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (plus_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_plus) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (minus_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_minus) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (times_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_times) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (div_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_div) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (pow_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_pow) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (eq_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_aeq) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (less_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_less) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (gtr_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_gtr) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (lesseq_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_lesseq) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (gtreq_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_gtreq) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (lessgtr_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_neq) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (and_tok) (int_scalar)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_and) (int_name)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (binary_aexpr (int_scalar) (or_tok) (int_scalar))))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (binary_aexpr (int_name) (op_or) (int_name))))))
 
 
 ===================
@@ -111,11 +112,11 @@ Precedence Test 1
 	(line
 		(linenum)
 		(statement
-			(assignment
-				(int_scalar) (eq_tok)
+			(assignment_int
+				(int_name) (op_eq_assign_int)
 				(binary_aexpr
-					(int_scalar) (plus_tok)
-					(binary_aexpr (int_scalar) (times_tok) (int_scalar)))))))
+					(int_name) (op_plus)
+					(binary_aexpr (int_name) (op_times) (int_name)))))))
 
 ===================
 Precedence Test 2
@@ -129,12 +130,14 @@ Precedence Test 2
 	(line
 		(linenum)
 		(statement
-			(assignment
-				(int_scalar) (eq_tok)
+			(assignment_int
+				(int_name) (op_eq_assign_int)
 				(binary_aexpr
-					(binary_aexpr (int_scalar) (plus_tok) (int_scalar))
-					(times_tok)
-					(int_scalar))))))
+					(open_aexpr)
+					(binary_aexpr (int_name) (op_plus) (int_name))
+					(close)
+					(op_times)
+					(int_name))))))
 
 ===================
 Precedence Test 3
@@ -148,12 +151,12 @@ Precedence Test 3
 	(line
 		(linenum)
 		(statement
-			(assignment
-				(int_scalar) (eq_tok)
+			(assignment_int
+				(int_name) (op_eq_assign_int)
 				(binary_aexpr
-					(int_scalar)
-					(lesseq_tok)
-					(binary_aexpr (int_scalar) (plus_tok) (int_scalar)))))))
+					(int_name)
+					(op_lesseq)
+					(binary_aexpr (int_name) (op_plus) (int_name)))))))
 
 ===================
 Math Functions
@@ -168,12 +171,14 @@ Math Functions
 	(line
 		(linenum)
 		(statement
-			(assignment
-				(int_scalar) (eq_tok)
+			(assignment_int
+				(int_name) (op_eq_assign_int)
 				(fcall
-					(absp_tok)
-					(binary_aexpr (int_scalar) (plus_tok) (int_scalar))))))
-	(line (linenum) (statement (assignment (int_scalar) (eq_tok) (fcall (sgnp_tok) (int_scalar))))))
+					(fcall_abs)
+					(open_fcall)
+					(binary_aexpr (int_name) (op_plus) (int_name))
+					(close)))))
+	(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_sgn) (open_fcall) (int_name) (close))))))
 
 ===================
 Random Numbers
@@ -188,13 +193,13 @@ Random Numbers
 (source_file
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (fcall (rndp_tok) (integer)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_rnd) (open_fcall) (integer) (close)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (fcall (rndp_tok) (integer)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_rnd) (open_fcall) (integer) (close)))))
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (fcall (rndp_tok) (integer))))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_rnd) (open_fcall) (integer) (close))))))
 
 
 ===================
@@ -209,24 +214,34 @@ Nested Expressions
 	(line
 		(linenum)
 		(statement
-			(assignment
-				(int_scalar) (eq_tok)
+			(assignment_int
+				(int_name) (op_eq_assign_int)
 				(binary_aexpr
+					(open_aexpr)
 					(binary_aexpr
 						(binary_aexpr
-							(binary_aexpr (integer) (minus_tok) (integer))
-							(times_tok)
-							(fcall (absp_tok) (int_scalar)))
-						(plus_tok)
-						(fcall (sgnp_tok) (int_scalar)))
-					(div_tok)
+							(open_aexpr)
+							(binary_aexpr (integer) (op_minus) (integer))
+							(close)
+							(op_times)
+							(fcall (fcall_abs) (open_fcall) (int_name) (close)))
+						(op_plus)
+						(fcall (fcall_sgn) (open_fcall) (int_name) (close)))
+					(close)
+					(op_div)
+					(open_aexpr)
 					(binary_aexpr
 						(binary_aexpr
-							(binary_aexpr (integer) (plus_tok) (integer))
-							(times_tok)
-							(fcall (peekp_tok) (binary_aexpr (int_scalar) (plus_tok) (int_scalar))))
-						(minus_tok)
+							(open_aexpr)
+							(binary_aexpr (integer) (op_plus) (integer))
+							(close)
+							(op_times)
+							(fcall (fcall_peek) (open_fcall) (binary_aexpr (int_name) (op_plus) (int_name)) (close)))
+						(op_minus)
+						(open_aexpr)
 						(binary_aexpr
-							(int_scalar)
-							(plus_tok)
-							(binary_aexpr (int_scalar) (times_tok) (int_scalar)))))))))
+							(int_name)
+							(op_plus)
+							(binary_aexpr (int_name) (op_times) (int_name)))
+						(close))
+					(close))))))

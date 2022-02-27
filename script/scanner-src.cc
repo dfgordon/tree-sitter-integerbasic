@@ -22,14 +22,18 @@ class exclusion
   int matches; // how many characters have been matched; don't confuse with token matches
   int len; // length of string
   int start; // offset to first matching character
+  int lead; // number of leading characters required by this exclusion
+  int trail; // number of trailing characters required by this exclusion
 
 public:
 
-  exclusion(const char *tok,int l)
+  exclusion(const char *tok,int length,int leading,int trailing)
   {
     start = 0;
     matches = 0;
-    len = l;
+    len = length;
+    lead = leading;
+    trail = trailing;
     for (int i=0;i<len;i++)
       a2token[i] = tok[i];
   }
@@ -49,9 +53,9 @@ public:
     if (matches==1)
       start = pos;
   }
-  void finish(int& min_start)
+  void finish(int& min_start,int idLength)
   {
-    if (start<min_start && matches==len)
+    if (start>=lead && start+len+trail<=idLength && start<min_start && matches==len)
       min_start = start;
   }
 };
@@ -107,7 +111,7 @@ struct Scanner
 
   bool first_pass(TSLexer *lexer, const bool *valid_symbols)
   {
-    // First pass detects all A2ROM keyword tokens, and saves the position of the
+    // First pass detects excluded keywords, and saves the position of the
     // identifier end, or the first keyword start, whichever is smaller.
 
     int32_t c;  // shorthand for the current lookahead character
@@ -137,7 +141,7 @@ struct Scanner
     id_end = tot_pos;
     // loop to rewind position to left-most keyword match
     for (auto & excl : exclusions)
-      excl.finish(id_end);
+      excl.finish(id_end,id_pos);
     if (id_end>0 && id_pos>0)
     {
       lexer->result_symbol = NAME;

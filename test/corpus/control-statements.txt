@@ -10,9 +10,10 @@ For Loop 1
 	(line
 		(linenum)
 		(statement
-			(for_tok) (int_scalar) (eq_tok) (integer) (to_tok) (integer))
+			(statement_for) (int_name) (op_eq_for) (integer) (op_to) (integer))
+		(sep_statement)
 		(statement
-			(next_tok) (int_scalar))))
+			(statement_next) (int_name))))
 
 ===================
 For Loop 2
@@ -26,11 +27,13 @@ For Loop 2
 	(line
 		(linenum)
 		(statement
-			(for_tok) (int_scalar) (eq_tok) (integer) (to_tok) (integer))
+			(statement_for) (int_name) (op_eq_for) (integer) (op_to) (integer))
+		(sep_statement)
 		(statement
-			(for_tok) (int_scalar) (eq_tok) (integer) (to_tok) (integer))
+			(statement_for) (int_name) (op_eq_for) (integer) (op_to) (integer))
+		(sep_statement)
 		(statement
-			(next_tok) (int_scalar) (int_scalar))))
+			(statement_next) (int_name) (sep_next) (int_name))))
 
 ===================
 Goto
@@ -43,7 +46,7 @@ Goto
 (source_file
 	(line
 		(linenum)
-		(statement (goto_tok) (integer))))
+		(statement (statement_goto) (integer))))
 
 ===================
 Gosub
@@ -58,13 +61,13 @@ Gosub
 (source_file
 	(line
 		(linenum)
-		(statement (gosub_tok) (integer)))
+		(statement (statement_gosub) (integer)))
 	(line
 		(linenum)
-		(statement (end_tok)))
+		(statement (statement_end)))
 	(line
 		(linenum)
-		(statement (return_tok))))
+		(statement (statement_return))))
 
 ===================
 If-then 1
@@ -77,7 +80,7 @@ If-then 1
 (source_file
 	(line
 		(linenum)
-		(statement (if_tok) (binary_aexpr (int_scalar) (gtr_tok) (int_scalar)) (then_tok) (integer))))
+		(statement (statement_if) (binary_aexpr (int_name) (op_gtr) (int_name)) (statement_then_line) (integer))))
 
 ===================
 If-then 2
@@ -90,8 +93,7 @@ If-then 2
 (source_file
 	(line
 		(linenum)
-		(statement (if_tok) (binary_aexpr (int_array (subscript (int_scalar))) (lessgtr_tok) (int_scalar)) (then_tok)
-			(statement (goto_tok) (integer)))))
+		(statement (statement_if) (binary_aexpr (int_array (int_name) (open_int) (int_name) (close)) (op_neq) (int_name)) (statement_then) (statement (statement_goto) (integer)))))
 
 ===================
 If-then 3
@@ -104,7 +106,7 @@ If-then 3
 (source_file
 	(line
 		(linenum)
-		(statement (if_tok)
-			(binary_aexpr (int_scalar) (gtr_tok) (int_array (subscript (integer))))
-			(then_tok)
-			(statement (print_tok) (string)))))
+		(statement (statement_if)
+			(binary_aexpr (int_name) (op_gtr) (int_array (int_name) (open_int) (integer) (close)))
+			(statement_then)
+			(statement (statement_print_str) (string (quote) (unquote))))))

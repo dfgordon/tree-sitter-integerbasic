@@ -22,14 +22,18 @@ class exclusion
   int matches; // how many characters have been matched; don't confuse with token matches
   int len; // length of string
   int start; // offset to first matching character
+  int lead; // number of leading characters required by this exclusion
+  int trail; // number of trailing characters required by this exclusion
 
 public:
 
-  exclusion(const char *tok,int l)
+  exclusion(const char *tok,int length,int leading,int trailing)
   {
     start = 0;
     matches = 0;
-    len = l;
+    len = length;
+    lead = leading;
+    trail = trailing;
     for (int i=0;i<len;i++)
       a2token[i] = tok[i];
   }
@@ -49,9 +53,9 @@ public:
     if (matches==1)
       start = pos;
   }
-  void finish(int& min_start)
+  void finish(int& min_start,int idLength)
   {
-    if (start<min_start && matches==len)
+    if (start>=lead && start+len+trail<=idLength && start<min_start && matches==len)
       min_start = start;
   }
 };
@@ -66,61 +70,13 @@ struct Scanner
   Scanner()
   {
     id_end = -1;
-    exclusions.push_back(exclusion("LOAD",4));
-    exclusions.push_back(exclusion("SAVE",4));
-    exclusions.push_back(exclusion("CON",3));
-    exclusions.push_back(exclusion("RUN",3));
-    exclusions.push_back(exclusion("RUN",3));
-    exclusions.push_back(exclusion("DEL",3));
-    exclusions.push_back(exclusion("NEW",3));
-    exclusions.push_back(exclusion("CLR",3));
-    exclusions.push_back(exclusion("AUTO",4));
-    exclusions.push_back(exclusion("MAN",3));
-    exclusions.push_back(exclusion("AND",3));
-    exclusions.push_back(exclusion("OR",2));
-    exclusions.push_back(exclusion("MOD",3));
-    exclusions.push_back(exclusion("THEN",4));
-    exclusions.push_back(exclusion("THEN",4));
-    exclusions.push_back(exclusion("NOT",3));
-    exclusions.push_back(exclusion("TEXT",4));
-    exclusions.push_back(exclusion("GR",2));
-    exclusions.push_back(exclusion("CALL",4));
-    exclusions.push_back(exclusion("DIM",3));
-    exclusions.push_back(exclusion("DIM",3));
-    exclusions.push_back(exclusion("TAB",3));
-    exclusions.push_back(exclusion("END",3));
-    exclusions.push_back(exclusion("INPUT",5));
-    exclusions.push_back(exclusion("INPUT",5));
-    exclusions.push_back(exclusion("INPUT",5));
-    exclusions.push_back(exclusion("FOR",3));
-    exclusions.push_back(exclusion("TO",2));
-    exclusions.push_back(exclusion("STEP",4));
-    exclusions.push_back(exclusion("NEXT",4));
-    exclusions.push_back(exclusion("RETURN",6));
-    exclusions.push_back(exclusion("GOSUB",5));
-    exclusions.push_back(exclusion("REM",3));
-    exclusions.push_back(exclusion("LET",3));
-    exclusions.push_back(exclusion("GOTO",4));
-    exclusions.push_back(exclusion("IF",2));
-    exclusions.push_back(exclusion("PRINT",5));
-    exclusions.push_back(exclusion("PRINT",5));
-    exclusions.push_back(exclusion("PRINT",5));
-    exclusions.push_back(exclusion("POKE",4));
-    exclusions.push_back(exclusion("PLOT",4));
-    exclusions.push_back(exclusion("HLIN",4));
-    exclusions.push_back(exclusion("AT",2));
-    exclusions.push_back(exclusion("VLIN",4));
-    exclusions.push_back(exclusion("AT",2));
-    exclusions.push_back(exclusion("VTAB",4));
-    exclusions.push_back(exclusion("LIST",4));
-    exclusions.push_back(exclusion("LIST",4));
-    exclusions.push_back(exclusion("POP",3));
-    exclusions.push_back(exclusion("NODSP",5));
-    exclusions.push_back(exclusion("NODSP",5));
-    exclusions.push_back(exclusion("NOTRACE",7));
-    exclusions.push_back(exclusion("DSP",3));
-    exclusions.push_back(exclusion("DSP",3));
-    exclusions.push_back(exclusion("TRACE",5));
+    exclusions.push_back(exclusion("AND",3,1,0));
+    exclusions.push_back(exclusion("AT",2,1,0));
+    exclusions.push_back(exclusion("MOD",3,1,0));
+    exclusions.push_back(exclusion("OR",2,1,0));
+    exclusions.push_back(exclusion("STEP",4,1,0));
+    exclusions.push_back(exclusion("THEN",4,1,0));
+    exclusions.push_back(exclusion("TO",2,1,0));
 
   }
 
@@ -162,7 +118,7 @@ struct Scanner
 
   bool first_pass(TSLexer *lexer, const bool *valid_symbols)
   {
-    // First pass detects all A2ROM keyword tokens, and saves the position of the
+    // First pass detects excluded keywords, and saves the position of the
     // identifier end, or the first keyword start, whichever is smaller.
 
     int32_t c;  // shorthand for the current lookahead character
@@ -192,7 +148,7 @@ struct Scanner
     id_end = tot_pos;
     // loop to rewind position to left-most keyword match
     for (auto & excl : exclusions)
-      excl.finish(id_end);
+      excl.finish(id_end,id_pos);
     if (id_end>0 && id_pos>0)
     {
       lexer->result_symbol = NAME;
@@ -234,26 +190,26 @@ struct Scanner
 
 extern "C" {
 
-void *tree_sitter_integerbasic_external_scanner_create() {
+void *tree_sitter_integerbasiccasesens_external_scanner_create() {
   return new Scanner();
 }
 
-bool tree_sitter_integerbasic_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
+bool tree_sitter_integerbasiccasesens_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   return scanner->scan(lexer, valid_symbols);
 }
 
-unsigned tree_sitter_integerbasic_external_scanner_serialize(void *payload, char *buffer) {
+unsigned tree_sitter_integerbasiccasesens_external_scanner_serialize(void *payload, char *buffer) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   return scanner->serialize(buffer);
 }
 
-void tree_sitter_integerbasic_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
+void tree_sitter_integerbasiccasesens_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   scanner->deserialize(buffer, length);
 }
 
-void tree_sitter_integerbasic_external_scanner_destroy(void *payload) {
+void tree_sitter_integerbasiccasesens_external_scanner_destroy(void *payload) {
   Scanner *scanner = static_cast<Scanner *>(payload);
   delete scanner;
 }

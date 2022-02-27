@@ -1,0 +1,128 @@
+0x00 sol
+0x01 eol
+0x02 internal
+0x03 :      sep_statement
+0x04 load
+0x05 save
+0x06 con
+0x07 run    run_line command.run  this.linenum
+0x08 run    run command.run  this
+0x09 del
+0x0a ,      sep_del command.del  linenum.this.linenum
+0x0b new
+0x0c clr
+0x0d auto
+0x0e ,      sep_auto command.auto  linenum.this.linenum
+0x0f man
+0x10 himem:
+0x11 lomem:
+0x12 +      op_plus binary_aexpr  _aexpr.this._aexpr
+0x13 -      op_minus binary_aexpr  _aexpr.this._aexpr
+0x14 *      op_times
+0x15 /      op_div
+0x16 =      op_aeq _alop  _aexpr.this._aexpr
+0x17 #      op_aneq _alop  _aexpr.this._aexpr
+0x18 >=     op_gtreq
+0x19 >      op_gtr
+0x1a <=     op_lesseq
+0x1b <>     op_neq
+0x1c <      op_less
+0x1d and    op_and
+0x1e or     op_or
+0x1f mod    op_mod
+0x20 ^      op_pow
+0x21
+0x22 (      open_dim_str _dim_str  str_name.this
+0x23 ,      sep_slice str_slice  _aexpr.this._aexpr
+0x24 then   statement_then_line statement.then  this._aexpr
+0x25 then   statement_then statement.then  this.statement
+0x26 ,      sep_input_str _input_next_str  this._svar
+0x27 ,      sep_input_int _input_next_int  this._avar
+0x28 "      quote string  this.'repeat(SCHAR)'
+0x29 "      unquote string  'repeat(SCHAR)'.this
+0x2a (      open_slice str_slice  this._aexpr
+0x2b
+0x2c
+0x2d (      open_int int_array  this._aexpr
+0x2e peek   fcall_peek
+0x2f rnd    fcall_rnd
+0x30 sgn    fcall_sgn
+0x31 abs    fcall_abs
+0x32 pdl    fcall_pdl
+0x33 
+0x34 (      open_dim_int _dim_int  this._aexpr
+0x35 +      op_unary_plus unary_aexpr  this._aexpr
+0x36 -      op_unary_minus unary_aexpr  this._aexpr
+0x37 not    op_not unary_aexpr  this._aexpr
+0x38 (      open_aexpr _parenthesized_aexpr  this._aexpr
+0x39 =      op_seq _slop  _sexpr.this._sexpr
+0x3a #      op_sneq _slop  _sexpr.this._sexpr
+0x3b len(   fcall_lenp
+0x3c asc(   fcall_ascp
+0x3d scrn(  fcall_scrnp
+0x3e ,      sep_scrn fcall.'SCRN('  this._aexpr
+0x3f (      open_fcall fcall.peek|rnd|sgn|abs|pdl  this._aexpr
+0x40 $      dollar
+0x41
+0x42 (      open_str str_array  this._aexpr
+0x43 ,      sep_dim_str _dim_next_str  this._dim_str
+0x44 ,      sep_dim_int _dim_next_int  this._dim_int
+0x45 ;      sep_print_str _print_next_str  this._sexpr
+0x46 ;      sep_print_int _print_next_int  this._aexpr
+0x47 ;      sep_print_null statement.print  this
+0x48 ,      sep_tab_str _tab_next_str  this._sexpr
+0x49 ,      sep_tab_int _tab_next_int  this._aexpr
+0x4a ,      sep_tab_null statement.print  this
+0x4b text   statement_text
+0x4c gr     statement_gr
+0x4d call   statement_call
+0x4e dim    statement_dim_str statement.dim  this._dim_str
+0x4f dim    statement_dim_int statement.dim  this._dim_int
+0x50 tab    statement_tab
+0x51 end    statement_end
+0x52 input  statement_input_str statement.input  this._svar
+0x53 input  statement_input_prompt statement.input  this.'choice'
+0x54 input  statement_input_int statement.input  this._avar
+0x55 for    statement_for
+0x56 =      op_eq_for statement.for  this._aexpr
+0x57 to     op_to
+0x58 step   op_step
+0x59 next   statement_next
+0x5a ,      sep_next statement.next  this.int_name
+0x5b return statement_return
+0x5c gosub  statement_gosub
+0x5d rem    statement_rem
+0x5e let    statement_let
+0x5f goto   statement_goto
+0x60 if     statement_if
+0x61 print  statement_print_str statement.print  this._sexpr
+0x62 print  statement_print_int statement.print  this._aexpr
+0x63 print  statement_print_null statement.print  this.'\n'
+0x64 poke   statement_poke
+0x65 ,      sep_poke statement.poke  this._aexpr
+0x66 color= statement_coloreq
+0x67 plot   statement_plot
+0x68 ,      sep_plot statement.plot  this._aexpr
+0x69 hlin   statement_hlin
+0x6a ,      sep_hlin statement.hlin  this._aexpr
+0x6b at     op_hlin_at statement.hlin  this._aexpr
+0x6c vlin   statement_vlin
+0x6d ,      sep_vlin statement.vlin  this._aexpr
+0x6e at     op_vlin_at statement.vlin  this._aexpr
+0x6f vtab   statement_vtab
+0x70 =      op_eq_assign_str assignment_str
+0x71 =      op_eq_assign_int assignment_int
+0x72 )      close
+0x73
+0x74 list   statement_list_line statement.list  this.'seq'
+0x75 ,      sep_list statement.list  this.linenum
+0x76 list   statement_list statement.list  this.'\n'
+0x77 pop    statement_pop
+0x78 nodsp  statement_nodsp_str statement.nodsp  this.str_name
+0x79 nodsp  statement_nodsp_int statement.nodsp  this.int_name
+0x7a notrace    statement_notrace
+0x7b dsp    statement_dsp_str statement.dsp  this.str_name
+0x7c dsp    statement_dsp_int statement.dsp  this.int_name
+0x7d trace  statement_trace
+0x7e pr#    statement_prn
+0x7f in#    statement_inn

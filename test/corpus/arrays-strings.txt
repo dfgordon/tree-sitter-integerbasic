@@ -11,22 +11,25 @@ Arrays
 	(line
 		(linenum)
 		(statement
-			(dim_tok)
-				(int_array (subscript (integer)))
-				(int_array (subscript (integer))))
+			(statement_dim_int)
+			(int_name) (open_dim_int) (integer) (close)
+			(sep_dim_int)
+			(int_name) (open_dim_int) (integer) (close))
+		(sep_statement)
 		(statement
-			(dim_tok)
-				(int_array (subscript (integer)))))
+			(statement_dim_int)
+			(int_name) (open_dim_int) (integer) (close)))
 	(line
 		(linenum)
 		(statement
-			(assignment (int_array (subscript (integer))) (eq_tok) (int_array (subscript (integer)))))
+			(assignment_int (int_array (int_name) (open_int) (integer) (close)) (op_eq_assign_int) (int_array (int_name) (open_int) (integer) (close))))
+		(sep_statement)
 		(statement
-			(assignment (int_scalar) (eq_tok)
+			(assignment_int (int_name) (op_eq_assign_int)
 				(binary_aexpr
-					(int_array (subscript (int_array (subscript (integer)))))
-					(plus_tok)
-					(int_array (subscript (int_array (subscript (integer))))))))))
+					(int_array (int_name) (open_int) (int_array (int_name) (open_int) (integer) (close)) (close))
+					(op_plus)
+					(int_array (int_name) (open_int) (int_array (int_name) (open_int) (integer) (close)) (close)))))))
 
 ===================
 Strings
@@ -40,19 +43,27 @@ Strings
 (source_file
 	(line
 		(linenum)
-		(statement (dim_tok) (str_array (subscript (integer))) (str_array (subscript (integer))))
-		(statement (assignment (let_tok) (str_scalar) (eq_tok) (string)))
-		(statement (assignment (str_scalar) (eq_tok) (str_slice (slice (integer) (integer))))))
+		(statement (statement_dim_str)
+			(str_name (dollar)) (open_dim_str) (integer) (close)
+			(sep_dim_str)
+			(str_name (dollar)) (open_dim_str) (integer) (close))
+		(sep_statement)
+		(statement (assignment_str (statement_let) (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+		(sep_statement)
+		(statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (str_slice (str_name (dollar)) (open_slice) (integer) (sep_slice) (integer) (close)))))
 	(line
 		(linenum)
 		(statement
-			(assignment (str_array (subscript
-				(binary_aexpr
-					(fcall (lenp_tok) (str_scalar))
-					(plus_tok)
-					(integer))))
-				(eq_tok)
-				(string)))))
+			(assignment_str
+				(str_array (str_name (dollar))
+					(open_str)
+					(binary_aexpr
+						(fcall (fcall_lenp) (str_name (dollar)) (close))
+						(op_plus)
+						(integer))
+					(close))
+				(op_eq_assign_str)
+				(string (quote) (unquote))))))
 
 ===================
 Strings 2
@@ -67,17 +78,19 @@ Strings 2
 	(line
 		(linenum)
 		(statement
-			(dim_tok) (str_array (subscript (integer))))
+			(statement_dim_str) (str_name (dollar)) (open_dim_str) (integer) (close))
+		(sep_statement)
 		(statement
-			(assignment
-				(str_scalar) (eq_tok) (str_array (subscript (integer)))))
+			(assignment_str
+				(str_name (dollar)) (op_eq_assign_str) (str_array (str_name (dollar)) (open_str) (integer) (close))))
+		(sep_statement)
 		(statement
-			(assignment
-				(int_scalar) (eq_tok) (fcall (lenp_tok) (str_scalar)))))
+			(assignment_int
+				(int_name) (op_eq_assign_int) (fcall (fcall_lenp) (str_name (dollar)) (close)))))
 	(line
 		(linenum)
 		(statement
-			(if_tok)
-			(binary_aexpr (str_scalar) (n_tok) (string))
-			(then_tok)
-			(statement (end_tok)))))
+			(statement_if)
+			(binary_aexpr (str_name (dollar)) (op_sneq) (string (quote) (unquote)))
+			(statement_then)
+			(statement (statement_end)))))

@@ -12,19 +12,24 @@ Peek and Poke
 	(line
 		(linenum)
 		(statement
-			(assignment (int_scalar) (eq_tok) (fcall (peekp_tok)
-				(binary_aexpr (binary_aexpr (int_scalar) (times_tok) (integer)) (plus_tok) (integer)))))
+			(assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_peek)
+				(open_fcall)
+				(binary_aexpr (binary_aexpr (int_name) (op_times) (integer)) (op_plus) (integer))
+				(close))))
+		(sep_statement)
 		(statement
-			(assignment (int_scalar) (eq_tok) (fcall (peekp_tok) (integer)))))
+			(assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_peek) (open_fcall) (integer) (close)))))
 	(line
 		(linenum)
-		(statement (poke_tok) (int_scalar) (int_scalar))
-		(statement (poke_tok)
-			(binary_aexpr (binary_aexpr (int_scalar) (times_tok) (integer)) (plus_tok) (integer))
-			(binary_aexpr (binary_aexpr (int_scalar) (times_tok) (integer)) (div_tok) (int_scalar))))
+		(statement (statement_poke) (int_name) (sep_poke) (int_name))
+		(sep_statement)
+		(statement (statement_poke)
+			(binary_aexpr (binary_aexpr (int_name) (op_times) (integer)) (op_plus) (integer))
+			(sep_poke)
+			(binary_aexpr (binary_aexpr (int_name) (op_times) (integer)) (op_div) (int_name))))
 	(line
 		(linenum)
-		(statement (poke_tok) (integer) (integer))))
+		(statement (statement_poke) (integer) (sep_poke) (integer))))
 
 ===================
 Call
@@ -37,9 +42,9 @@ Call
 ---
 
 (source_file
-	(line (linenum) (statement (call_tok) (integer)))
-	(line (linenum) (statement (call_tok) (integer)))
-	(line (linenum) (statement (call_tok) (int_array (subscript (int_scalar))))))
+	(line (linenum) (statement (statement_call) (integer)))
+	(line (linenum) (statement (statement_call) (integer)))
+	(line (linenum) (statement (statement_call) (int_array (int_name) (open_int) (int_name) (close)))))
 
 ===================
 Debugging
@@ -48,12 +53,12 @@ Debugging
 10 TRACE
 20 NOTRACE
 30 DSP A
-40 NODSP A
+40 NODSP A$
 
 ---
 
 (source_file
-	(line (linenum) (statement (trace_tok)))
-	(line (linenum) (statement (notrace_tok)))
-	(line (linenum) (statement (dsp_tok) (int_scalar)))
-	(line (linenum) (statement (nodsp_tok) (int_scalar))))
+	(line (linenum) (statement (statement_trace)))
+	(line (linenum) (statement (statement_notrace)))
+	(line (linenum) (statement (statement_dsp_int) (int_name)))
+	(line (linenum) (statement (statement_nodsp_str) (str_name (dollar)))))

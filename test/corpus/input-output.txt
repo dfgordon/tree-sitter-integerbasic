@@ -9,8 +9,9 @@ Redirection
 (source_file
 	(line
 		(linenum)
-		(statement (prn_tok) (integer))
-		(statement (inn_tok) (integer))))
+		(statement (statement_prn) (integer))
+		(sep_statement)
+		(statement (statement_inn) (integer))))
 
 ===================
 Input
@@ -18,20 +19,20 @@ Input
 
 10 INPUT DAY,PRICE
 20 INPUT "ENTER PASSWORD: ",PA$
-30 INPUT "", X
+30 INPUT PROMPT$(3,6), X
 
 ---
 
 (source_file
 	(line
 		(linenum)
-		(statement (input_tok) (int_scalar) (int_scalar)))
+		(statement (statement_input_int) (int_name) (sep_input_int) (int_name)))
 	(line
 		(linenum)
-		(statement (input_tok) (string) (str_scalar)))
+		(statement (statement_input_prompt) (string (quote) (unquote)) (sep_input_str) (str_name (dollar)) ))
 	(line
 		(linenum)
-		(statement (input_tok) (string) (int_scalar))))
+		(statement (statement_input_prompt) (str_slice (str_name (dollar)) (open_slice) (integer) (sep_slice) (integer) (close)) (sep_input_int) (int_name))))
 
 ===================
 Paddles
@@ -44,8 +45,9 @@ Paddles
 (source_file
 	(line
 		(linenum)
-		(statement (assignment (int_scalar) (eq_tok) (fcall (pdlp_tok) (integer))))
-		(statement (assignment (int_scalar) (eq_tok) (fcall (pdlp_tok) (integer))))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_pdl) (open_fcall) (integer) (close))))
+		(sep_statement)
+		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_pdl) (open_fcall) (integer) (close))))))
 
 ===================
 Print
@@ -53,21 +55,26 @@ Print
 
 10 PRINT "*";A$;X-Y;: PRINT: PRINT
 20 PRINT A,B,C
+30 PRINT A=1
 
 ---
 
 (source_file
 	(line
 		(linenum)
-		(statement (print_tok)
-			(string)
-			(str_scalar)
-			(binary_aexpr (int_scalar) (minus_tok) (int_scalar)))
-		(statement (print_tok))
-		(statement (print_tok)))
+		(statement (statement_print_str) (string (quote) (unquote)) (sep_print_str)
+			(str_name (dollar)) (sep_print_int)
+			(binary_aexpr (int_name) (op_minus) (int_name)) (sep_print_null))
+		(sep_statement)
+		(statement (statement_print_null))
+		(sep_statement)
+		(statement (statement_print_null)))
 	(line
-	 (linenum)
-	 (statement (print_tok) (int_scalar) (int_scalar) (int_scalar))))
+		(linenum)
+		(statement (statement_print_int) (int_name) (sep_tab_int) (int_name) (sep_tab_int) (int_name)))
+	(line
+		(linenum)
+		(statement (statement_print_int) (binary_aexpr (int_name) (op_aeq) (integer)))))
 
 ===================
 Formatting
@@ -81,9 +88,11 @@ Formatting
 (source_file
 	(line
 		(linenum)
-		(statement (text_tok)))
+		(statement (statement_text)))
 	(line
 		(linenum)
-		(statement (tab_tok) (integer))
-		(statement (vtab_tok) (int_scalar))
-		(statement (print_tok) (int_scalar))))
+		(statement (statement_tab) (integer))
+		(sep_statement)
+		(statement (statement_vtab) (int_name))
+		(sep_statement)
+		(statement (statement_print_int) (int_name))))

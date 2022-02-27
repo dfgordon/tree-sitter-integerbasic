@@ -12,17 +12,22 @@ Low Resolution
 (source_file
 	(line
 		(linenum)
-		(statement (gr_tok))
-		(statement (coloreq_tok) (int_array (subscript (int_scalar))))
-		(statement (plot_tok)
-			(binary_aexpr (int_scalar) (plus_tok) (integer))
-			(binary_aexpr (int_scalar) (minus_tok) (integer))))
+		(statement (statement_gr))
+		(sep_statement)
+		(statement (statement_coloreq) (int_array (int_name) (open_int) (int_name) (close)))
+		(sep_statement)
+		(statement (statement_plot)
+			(binary_aexpr (int_name) (op_plus) (integer))
+			(sep_plot)
+			(binary_aexpr (int_name) (op_minus) (integer))))
 	(line
-		(linenum) (statement (hlin_tok) (integer) (integer) (at_tok) (int_scalar)))
+		(linenum) (statement (statement_hlin) (integer) (sep_hlin) (integer) (op_hlin_at) (int_name)))
 	(line
-		(linenum) (statement (vlin_tok) (integer) (int_scalar) (at_tok) (int_scalar)))
+		(linenum) (statement (statement_vlin) (integer) (sep_vlin) (int_name) (op_vlin_at) (int_name)))
 	(line
 		(linenum)
-		(statement (print_tok) (fcall (scrnp_tok)
-			(binary_aexpr (int_scalar) (plus_tok) (integer))
-			(binary_aexpr (int_scalar) (minus_tok) (integer))))))
+		(statement (statement_print_int) (fcall (fcall_scrnp)
+			(binary_aexpr (int_name) (op_plus) (integer))
+			(sep_scrn)
+			(binary_aexpr (int_name) (op_minus) (integer))
+			(close)))))

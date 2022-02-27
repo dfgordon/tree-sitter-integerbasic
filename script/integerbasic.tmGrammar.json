@@ -6,108 +6,172 @@
             "match": "R *E *M.*$"
         },
         {
-            "name": "keyword.control",
-            "match": "L *O *A *D"
+            "name": "",
+            "match": ":"
         },
         {
-            "name": "keyword.control",
-            "match": "S *A *V *E"
-        },
-        {
-            "name": "keyword.control",
-            "match": "C *O *N"
-        },
-        {
-            "name": "keyword.control",
+            "name": "",
             "match": "R *U *N"
         },
         {
-            "name": "keyword.control",
+            "name": "",
             "match": "R *U *N"
         },
         {
-            "name": "keyword.control",
-            "match": "D *E *L"
+            "name": "",
+            "match": ","
         },
         {
-            "name": "keyword.control",
-            "match": "N *E *W"
+            "name": "",
+            "match": ","
         },
         {
-            "name": "keyword.control",
-            "match": "C *L *R"
+            "name": "operator",
+            "match": "+"
         },
         {
-            "name": "keyword.control",
-            "match": "A *U *T *O"
+            "name": "operator",
+            "match": "-"
         },
         {
-            "name": "keyword.control",
-            "match": "M *A *N"
+            "name": "operator",
+            "match": "*"
         },
         {
-            "name": "keyword.control",
-            "match": "H *I *M *E *M *:"
+            "name": "operator",
+            "match": "/"
         },
         {
-            "name": "keyword.control",
-            "match": "L *O *M *E *M *:"
+            "name": "operator",
+            "match": "="
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
+            "match": "#"
+        },
+        {
+            "name": "operator",
             "match": "> *="
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
+            "match": ">"
+        },
+        {
+            "name": "operator",
             "match": "< *="
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
             "match": "< *>"
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
+            "match": "<"
+        },
+        {
+            "name": "operator",
             "match": "A *N *D"
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
             "match": "O *R"
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
             "match": "M *O *D"
         },
         {
-            "name": "keyword.control",
-            "match": "T *H *E *N"
+            "name": "operator",
+            "match": "^"
+        },
+        {
+            "name": "",
+            "match": "("
+        },
+        {
+            "name": "",
+            "match": ","
         },
         {
             "name": "keyword.control",
             "match": "T *H *E *N"
         },
         {
-            "name": "support.function",
-            "match": "P *E *E *K *\\("
-        },
-        {
-            "name": "support.function",
-            "match": "R *N *D *\\("
-        },
-        {
-            "name": "support.function",
-            "match": "S *G *N *\\("
-        },
-        {
-            "name": "support.function",
-            "match": "A *B *S *\\("
-        },
-        {
-            "name": "support.function",
-            "match": "P *D *L *\\("
-        },
-        {
             "name": "keyword.control",
+            "match": "T *H *E *N"
+        },
+        {
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "",
+            "match": "\""
+        },
+        {
+            "name": "",
+            "match": "\""
+        },
+        {
+            "name": "",
+            "match": "("
+        },
+        {
+            "name": "",
+            "match": "("
+        },
+        {
+            "name": "support.function",
+            "match": "P *E *E *K"
+        },
+        {
+            "name": "support.function",
+            "match": "R *N *D"
+        },
+        {
+            "name": "support.function",
+            "match": "S *G *N"
+        },
+        {
+            "name": "support.function",
+            "match": "A *B *S"
+        },
+        {
+            "name": "support.function",
+            "match": "P *D *L"
+        },
+        {
+            "name": "",
+            "match": "("
+        },
+        {
+            "name": "operator",
+            "match": "+"
+        },
+        {
+            "name": "operator",
+            "match": "-"
+        },
+        {
+            "name": "operator",
             "match": "N *O *T"
+        },
+        {
+            "name": "",
+            "match": "("
+        },
+        {
+            "name": "operator",
+            "match": "="
+        },
+        {
+            "name": "operator",
+            "match": "#"
         },
         {
             "name": "support.function",
@@ -120,6 +184,54 @@
         {
             "name": "support.function",
             "match": "S *C *R *N *\\("
+        },
+        {
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "",
+            "match": "("
+        },
+        {
+            "name": "",
+            "match": "$"
+        },
+        {
+            "name": "",
+            "match": "("
+        },
+        {
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "",
+            "match": ";"
+        },
+        {
+            "name": "",
+            "match": ";"
+        },
+        {
+            "name": "",
+            "match": ";"
+        },
+        {
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "",
+            "match": ","
         },
         {
             "name": "keyword.control",
@@ -166,16 +278,24 @@
             "match": "F *O *R"
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
+            "match": "="
+        },
+        {
+            "name": "operator",
             "match": "T *O"
         },
         {
-            "name": "keyword.control",
+            "name": "operator",
             "match": "S *T *E *P"
         },
         {
             "name": "keyword.control",
             "match": "N *E *X *T"
+        },
+        {
+            "name": "",
+            "match": ","
         },
         {
             "name": "keyword.control",
@@ -218,6 +338,10 @@
             "match": "P *O *K *E"
         },
         {
+            "name": "",
+            "match": ","
+        },
+        {
             "name": "keyword.control",
             "match": "C *O *L *O *R *="
         },
@@ -226,11 +350,19 @@
             "match": "P *L *O *T"
         },
         {
+            "name": "",
+            "match": ","
+        },
+        {
             "name": "keyword.control",
             "match": "H *L *I *N"
         },
         {
-            "name": "keyword.control",
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "operator",
             "match": "A *T"
         },
         {
@@ -238,7 +370,11 @@
             "match": "V *L *I *N"
         },
         {
-            "name": "keyword.control",
+            "name": "",
+            "match": ","
+        },
+        {
+            "name": "operator",
             "match": "A *T"
         },
         {
@@ -246,8 +382,24 @@
             "match": "V *T *A *B"
         },
         {
+            "name": "operator",
+            "match": "="
+        },
+        {
+            "name": "operator",
+            "match": "="
+        },
+        {
+            "name": "",
+            "match": ")"
+        },
+        {
             "name": "keyword.control",
             "match": "L *I *S *T"
+        },
+        {
+            "name": "",
+            "match": ","
         },
         {
             "name": "keyword.control",

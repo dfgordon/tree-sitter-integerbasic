@@ -1,0 +1,667 @@
+[
+    {
+        "code": "0x03",
+        "lexeme": ":",
+        "rule id": "sep_statement"
+    },
+    {
+        "code": "0x07",
+        "enclosing rule": "command.run",
+        "lexeme": "run",
+        "pattern": "this.linenum",
+        "rule id": "run_line"
+    },
+    {
+        "code": "0x08",
+        "enclosing rule": "command.run",
+        "lexeme": "run",
+        "pattern": "this",
+        "rule id": "run"
+    },
+    {
+        "code": "0x0a",
+        "enclosing rule": "command.del",
+        "lexeme": ",",
+        "pattern": "linenum.this.linenum",
+        "rule id": "sep_del"
+    },
+    {
+        "code": "0x0e",
+        "enclosing rule": "command.auto",
+        "lexeme": ",",
+        "pattern": "linenum.this.linenum",
+        "rule id": "sep_auto"
+    },
+    {
+        "code": "0x12",
+        "enclosing rule": "binary_aexpr",
+        "lexeme": "+",
+        "pattern": "_aexpr.this._aexpr",
+        "rule id": "op_plus"
+    },
+    {
+        "code": "0x13",
+        "enclosing rule": "binary_aexpr",
+        "lexeme": "-",
+        "pattern": "_aexpr.this._aexpr",
+        "rule id": "op_minus"
+    },
+    {
+        "code": "0x14",
+        "lexeme": "*",
+        "rule id": "op_times"
+    },
+    {
+        "code": "0x15",
+        "lexeme": "/",
+        "rule id": "op_div"
+    },
+    {
+        "code": "0x16",
+        "enclosing rule": "_alop",
+        "lexeme": "=",
+        "pattern": "_aexpr.this._aexpr",
+        "rule id": "op_aeq"
+    },
+    {
+        "code": "0x17",
+        "enclosing rule": "_alop",
+        "lexeme": "#",
+        "pattern": "_aexpr.this._aexpr",
+        "rule id": "op_aneq"
+    },
+    {
+        "code": "0x18",
+        "lexeme": ">=",
+        "rule id": "op_gtreq"
+    },
+    {
+        "code": "0x19",
+        "lexeme": ">",
+        "rule id": "op_gtr"
+    },
+    {
+        "code": "0x1a",
+        "lexeme": "<=",
+        "rule id": "op_lesseq"
+    },
+    {
+        "code": "0x1b",
+        "lexeme": "<>",
+        "rule id": "op_neq"
+    },
+    {
+        "code": "0x1c",
+        "lexeme": "<",
+        "rule id": "op_less"
+    },
+    {
+        "code": "0x1d",
+        "lexeme": "and",
+        "rule id": "op_and"
+    },
+    {
+        "code": "0x1e",
+        "lexeme": "or",
+        "rule id": "op_or"
+    },
+    {
+        "code": "0x1f",
+        "lexeme": "mod",
+        "rule id": "op_mod"
+    },
+    {
+        "code": "0x20",
+        "lexeme": "^",
+        "rule id": "op_pow"
+    },
+    {
+        "code": "0x22",
+        "enclosing rule": "_dim_str",
+        "lexeme": "(",
+        "pattern": "str_name.this",
+        "rule id": "open_dim_str"
+    },
+    {
+        "code": "0x23",
+        "enclosing rule": "str_slice",
+        "lexeme": ",",
+        "pattern": "_aexpr.this._aexpr",
+        "rule id": "sep_slice"
+    },
+    {
+        "code": "0x24",
+        "enclosing rule": "statement.then",
+        "lexeme": "then",
+        "pattern": "this._aexpr",
+        "rule id": "statement_then_line"
+    },
+    {
+        "code": "0x25",
+        "enclosing rule": "statement.then",
+        "lexeme": "then",
+        "pattern": "this.statement",
+        "rule id": "statement_then"
+    },
+    {
+        "code": "0x26",
+        "enclosing rule": "_input_next_str",
+        "lexeme": ",",
+        "pattern": "this._svar",
+        "rule id": "sep_input_str"
+    },
+    {
+        "code": "0x27",
+        "enclosing rule": "_input_next_int",
+        "lexeme": ",",
+        "pattern": "this._avar",
+        "rule id": "sep_input_int"
+    },
+    {
+        "code": "0x28",
+        "enclosing rule": "string",
+        "lexeme": "\"",
+        "pattern": "this.'repeat(SCHAR)'",
+        "rule id": "quote"
+    },
+    {
+        "code": "0x29",
+        "enclosing rule": "string",
+        "lexeme": "\"",
+        "pattern": "'repeat(SCHAR)'.this",
+        "rule id": "unquote"
+    },
+    {
+        "code": "0x2a",
+        "enclosing rule": "str_slice",
+        "lexeme": "(",
+        "pattern": "this._aexpr",
+        "rule id": "open_slice"
+    },
+    {
+        "code": "0x2d",
+        "enclosing rule": "int_array",
+        "lexeme": "(",
+        "pattern": "this._aexpr",
+        "rule id": "open_int"
+    },
+    {
+        "code": "0x2e",
+        "lexeme": "peek",
+        "rule id": "fcall_peek"
+    },
+    {
+        "code": "0x2f",
+        "lexeme": "rnd",
+        "rule id": "fcall_rnd"
+    },
+    {
+        "code": "0x30",
+        "lexeme": "sgn",
+        "rule id": "fcall_sgn"
+    },
+    {
+        "code": "0x31",
+        "lexeme": "abs",
+        "rule id": "fcall_abs"
+    },
+    {
+        "code": "0x32",
+        "lexeme": "pdl",
+        "rule id": "fcall_pdl"
+    },
+    {
+        "code": "0x34",
+        "enclosing rule": "_dim_int",
+        "lexeme": "(",
+        "pattern": "this._aexpr",
+        "rule id": "open_dim_int"
+    },
+    {
+        "code": "0x35",
+        "enclosing rule": "unary_aexpr",
+        "lexeme": "+",
+        "pattern": "this._aexpr",
+        "rule id": "op_unary_plus"
+    },
+    {
+        "code": "0x36",
+        "enclosing rule": "unary_aexpr",
+        "lexeme": "-",
+        "pattern": "this._aexpr",
+        "rule id": "op_unary_minus"
+    },
+    {
+        "code": "0x37",
+        "enclosing rule": "unary_aexpr",
+        "lexeme": "not",
+        "pattern": "this._aexpr",
+        "rule id": "op_not"
+    },
+    {
+        "code": "0x38",
+        "enclosing rule": "_parenthesized_aexpr",
+        "lexeme": "(",
+        "pattern": "this._aexpr",
+        "rule id": "open_aexpr"
+    },
+    {
+        "code": "0x39",
+        "enclosing rule": "_slop",
+        "lexeme": "=",
+        "pattern": "_sexpr.this._sexpr",
+        "rule id": "op_seq"
+    },
+    {
+        "code": "0x3a",
+        "enclosing rule": "_slop",
+        "lexeme": "#",
+        "pattern": "_sexpr.this._sexpr",
+        "rule id": "op_sneq"
+    },
+    {
+        "code": "0x3b",
+        "lexeme": "len(",
+        "rule id": "fcall_lenp"
+    },
+    {
+        "code": "0x3c",
+        "lexeme": "asc(",
+        "rule id": "fcall_ascp"
+    },
+    {
+        "code": "0x3d",
+        "lexeme": "scrn(",
+        "rule id": "fcall_scrnp"
+    },
+    {
+        "code": "0x3e",
+        "enclosing rule": "fcall.'SCRN('",
+        "lexeme": ",",
+        "pattern": "this._aexpr",
+        "rule id": "sep_scrn"
+    },
+    {
+        "code": "0x3f",
+        "enclosing rule": "fcall.peek|rnd|sgn|abs|pdl",
+        "lexeme": "(",
+        "pattern": "this._aexpr",
+        "rule id": "open_fcall"
+    },
+    {
+        "code": "0x40",
+        "lexeme": "$",
+        "rule id": "dollar"
+    },
+    {
+        "code": "0x42",
+        "enclosing rule": "str_array",
+        "lexeme": "(",
+        "pattern": "this._aexpr",
+        "rule id": "open_str"
+    },
+    {
+        "code": "0x43",
+        "enclosing rule": "_dim_next_str",
+        "lexeme": ",",
+        "pattern": "this._dim_str",
+        "rule id": "sep_dim_str"
+    },
+    {
+        "code": "0x44",
+        "enclosing rule": "_dim_next_int",
+        "lexeme": ",",
+        "pattern": "this._dim_int",
+        "rule id": "sep_dim_int"
+    },
+    {
+        "code": "0x45",
+        "enclosing rule": "_print_next_str",
+        "lexeme": ";",
+        "pattern": "this._sexpr",
+        "rule id": "sep_print_str"
+    },
+    {
+        "code": "0x46",
+        "enclosing rule": "_print_next_int",
+        "lexeme": ";",
+        "pattern": "this._aexpr",
+        "rule id": "sep_print_int"
+    },
+    {
+        "code": "0x47",
+        "enclosing rule": "statement.print",
+        "lexeme": ";",
+        "pattern": "this",
+        "rule id": "sep_print_null"
+    },
+    {
+        "code": "0x48",
+        "enclosing rule": "_tab_next_str",
+        "lexeme": ",",
+        "pattern": "this._sexpr",
+        "rule id": "sep_tab_str"
+    },
+    {
+        "code": "0x49",
+        "enclosing rule": "_tab_next_int",
+        "lexeme": ",",
+        "pattern": "this._aexpr",
+        "rule id": "sep_tab_int"
+    },
+    {
+        "code": "0x4a",
+        "enclosing rule": "statement.print",
+        "lexeme": ",",
+        "pattern": "this",
+        "rule id": "sep_tab_null"
+    },
+    {
+        "code": "0x4b",
+        "lexeme": "text",
+        "rule id": "statement_text"
+    },
+    {
+        "code": "0x4c",
+        "lexeme": "gr",
+        "rule id": "statement_gr"
+    },
+    {
+        "code": "0x4d",
+        "lexeme": "call",
+        "rule id": "statement_call"
+    },
+    {
+        "code": "0x4e",
+        "enclosing rule": "statement.dim",
+        "lexeme": "dim",
+        "pattern": "this._dim_str",
+        "rule id": "statement_dim_str"
+    },
+    {
+        "code": "0x4f",
+        "enclosing rule": "statement.dim",
+        "lexeme": "dim",
+        "pattern": "this._dim_int",
+        "rule id": "statement_dim_int"
+    },
+    {
+        "code": "0x50",
+        "lexeme": "tab",
+        "rule id": "statement_tab"
+    },
+    {
+        "code": "0x51",
+        "lexeme": "end",
+        "rule id": "statement_end"
+    },
+    {
+        "code": "0x52",
+        "enclosing rule": "statement.input",
+        "lexeme": "input",
+        "pattern": "this._svar",
+        "rule id": "statement_input_str"
+    },
+    {
+        "code": "0x53",
+        "enclosing rule": "statement.input",
+        "lexeme": "input",
+        "pattern": "this.'choice'",
+        "rule id": "statement_input_prompt"
+    },
+    {
+        "code": "0x54",
+        "enclosing rule": "statement.input",
+        "lexeme": "input",
+        "pattern": "this._avar",
+        "rule id": "statement_input_int"
+    },
+    {
+        "code": "0x55",
+        "lexeme": "for",
+        "rule id": "statement_for"
+    },
+    {
+        "code": "0x56",
+        "enclosing rule": "statement.for",
+        "lexeme": "=",
+        "pattern": "this._aexpr",
+        "rule id": "op_eq_for"
+    },
+    {
+        "code": "0x57",
+        "lexeme": "to",
+        "rule id": "op_to"
+    },
+    {
+        "code": "0x58",
+        "lexeme": "step",
+        "rule id": "op_step"
+    },
+    {
+        "code": "0x59",
+        "lexeme": "next",
+        "rule id": "statement_next"
+    },
+    {
+        "code": "0x5a",
+        "enclosing rule": "statement.next",
+        "lexeme": ",",
+        "pattern": "this.int_name",
+        "rule id": "sep_next"
+    },
+    {
+        "code": "0x5b",
+        "lexeme": "return",
+        "rule id": "statement_return"
+    },
+    {
+        "code": "0x5c",
+        "lexeme": "gosub",
+        "rule id": "statement_gosub"
+    },
+    {
+        "code": "0x5d",
+        "lexeme": "rem",
+        "rule id": "statement_rem"
+    },
+    {
+        "code": "0x5e",
+        "lexeme": "let",
+        "rule id": "statement_let"
+    },
+    {
+        "code": "0x5f",
+        "lexeme": "goto",
+        "rule id": "statement_goto"
+    },
+    {
+        "code": "0x60",
+        "lexeme": "if",
+        "rule id": "statement_if"
+    },
+    {
+        "code": "0x61",
+        "enclosing rule": "statement.print",
+        "lexeme": "print",
+        "pattern": "this._sexpr",
+        "rule id": "statement_print_str"
+    },
+    {
+        "code": "0x62",
+        "enclosing rule": "statement.print",
+        "lexeme": "print",
+        "pattern": "this._aexpr",
+        "rule id": "statement_print_int"
+    },
+    {
+        "code": "0x63",
+        "enclosing rule": "statement.print",
+        "lexeme": "print",
+        "pattern": "this.'\\n'",
+        "rule id": "statement_print_null"
+    },
+    {
+        "code": "0x64",
+        "lexeme": "poke",
+        "rule id": "statement_poke"
+    },
+    {
+        "code": "0x65",
+        "enclosing rule": "statement.poke",
+        "lexeme": ",",
+        "pattern": "this._aexpr",
+        "rule id": "sep_poke"
+    },
+    {
+        "code": "0x66",
+        "lexeme": "color=",
+        "rule id": "statement_coloreq"
+    },
+    {
+        "code": "0x67",
+        "lexeme": "plot",
+        "rule id": "statement_plot"
+    },
+    {
+        "code": "0x68",
+        "enclosing rule": "statement.plot",
+        "lexeme": ",",
+        "pattern": "this._aexpr",
+        "rule id": "sep_plot"
+    },
+    {
+        "code": "0x69",
+        "lexeme": "hlin",
+        "rule id": "statement_hlin"
+    },
+    {
+        "code": "0x6a",
+        "enclosing rule": "statement.hlin",
+        "lexeme": ",",
+        "pattern": "this._aexpr",
+        "rule id": "sep_hlin"
+    },
+    {
+        "code": "0x6b",
+        "enclosing rule": "statement.hlin",
+        "lexeme": "at",
+        "pattern": "this._aexpr",
+        "rule id": "op_hlin_at"
+    },
+    {
+        "code": "0x6c",
+        "lexeme": "vlin",
+        "rule id": "statement_vlin"
+    },
+    {
+        "code": "0x6d",
+        "enclosing rule": "statement.vlin",
+        "lexeme": ",",
+        "pattern": "this._aexpr",
+        "rule id": "sep_vlin"
+    },
+    {
+        "code": "0x6e",
+        "enclosing rule": "statement.vlin",
+        "lexeme": "at",
+        "pattern": "this._aexpr",
+        "rule id": "op_vlin_at"
+    },
+    {
+        "code": "0x6f",
+        "lexeme": "vtab",
+        "rule id": "statement_vtab"
+    },
+    {
+        "code": "0x70",
+        "enclosing rule": "assignment_str",
+        "lexeme": "=",
+        "rule id": "op_eq_assign_str"
+    },
+    {
+        "code": "0x71",
+        "enclosing rule": "assignment_int",
+        "lexeme": "=",
+        "rule id": "op_eq_assign_int"
+    },
+    {
+        "code": "0x72",
+        "lexeme": ")",
+        "rule id": "close"
+    },
+    {
+        "code": "0x74",
+        "enclosing rule": "statement.list",
+        "lexeme": "list",
+        "pattern": "this.'seq'",
+        "rule id": "statement_list_line"
+    },
+    {
+        "code": "0x75",
+        "enclosing rule": "statement.list",
+        "lexeme": ",",
+        "pattern": "this.linenum",
+        "rule id": "sep_list"
+    },
+    {
+        "code": "0x76",
+        "enclosing rule": "statement.list",
+        "lexeme": "list",
+        "pattern": "this.'\\n'",
+        "rule id": "statement_list"
+    },
+    {
+        "code": "0x77",
+        "lexeme": "pop",
+        "rule id": "statement_pop"
+    },
+    {
+        "code": "0x78",
+        "enclosing rule": "statement.nodsp",
+        "lexeme": "nodsp",
+        "pattern": "this.str_name",
+        "rule id": "statement_nodsp_str"
+    },
+    {
+        "code": "0x79",
+        "enclosing rule": "statement.nodsp",
+        "lexeme": "nodsp",
+        "pattern": "this.int_name",
+        "rule id": "statement_nodsp_int"
+    },
+    {
+        "code": "0x7a",
+        "lexeme": "notrace",
+        "rule id": "statement_notrace"
+    },
+    {
+        "code": "0x7b",
+        "enclosing rule": "statement.dsp",
+        "lexeme": "dsp",
+        "pattern": "this.str_name",
+        "rule id": "statement_dsp_str"
+    },
+    {
+        "code": "0x7c",
+        "enclosing rule": "statement.dsp",
+        "lexeme": "dsp",
+        "pattern": "this.int_name",
+        "rule id": "statement_dsp_int"
+    },
+    {
+        "code": "0x7d",
+        "lexeme": "trace",
+        "rule id": "statement_trace"
+    },
+    {
+        "code": "0x7e",
+        "lexeme": "pr#",
+        "rule id": "statement_prn"
+    },
+    {
+        "code": "0x7f",
+        "lexeme": "in#",
+        "rule id": "statement_inn"
+    }
+]
