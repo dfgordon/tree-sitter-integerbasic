@@ -3,7 +3,7 @@ Hidden token 1
 ===================
 
 10 FOR A = (LOFT) OR LEFT TO 15: REM OK
-20 FOR A = LOFT OR LEFT TO 15: REM err must be handled at higher levels
+20 FOR A = LOFT OR LEFT TO 15: REM error
 
 ---
 
@@ -19,6 +19,7 @@ Hidden token 1
 		(linenum)
 		(statement
 			(statement_for) (int_name) (op_eq_for) (int_name) (op_to) (int_name))
+		(ERROR (op_error) (integer))
 		(sep_statement)
 		(statement
 			(statement_rem) (comment_text))))

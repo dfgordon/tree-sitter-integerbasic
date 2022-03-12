@@ -51,7 +51,6 @@ const
 module.exports = grammar({
 	name: language_name,
 	extras: $ => [' '],
-	// externals: $ => [ $._ext_name ],
 	conflicts: $ => [
 	],
 
@@ -115,8 +114,8 @@ module.exports = grammar({
 
 		comment_text: $ => /.+/,
 
-		assignment_str: $ => choice(seq(optional('LET'),$._svar,'=',$._sexpr)),
-		assignment_int: $ => choice(seq(optional('LET'),$._avar,'=',$._aexpr)),
+		assignment_str: $ => seq(optional('LET'),$._svar,'=',$._sexpr),
+		assignment_int: $ => seq(optional('LET'),$._avar,'=',$._aexpr),
 
 		// Numerical functions (integer BASIC has no string functions)
 
@@ -185,17 +184,23 @@ module.exports = grammar({
 
 		// Identifier rules
 
-		str_name: $ => seq(choice(...LETTER_SEQ),prec.right(repeat(choice(...LETTER_SEQ,...NUMBER_SEQ))),'$'),
-		int_name: $ => seq(choice(...LETTER_SEQ),prec.right(repeat(choice(...LETTER_SEQ,...NUMBER_SEQ)))),
-		//str_name: $ => seq(/[A-Z]/,repeat(/[A-Z0-9]/),'$'),
-		//int_name: $ => seq(/[A-Z]/,repeat(/[A-Z0-9]/)),
-		// str_name: $ => seq($._name,'$'),
-		// int_name: $ => seq($._name),
-		// _name: $ => seq($._ext_name,$._ext_name),
+		str_name: $ => prec.left(seq(
+			choice(...LETTER_SEQ),
+			repeat(choice(
+				seq($.op_error,'\u00ff'),
+				...LETTER_SEQ,
+				...NUMBER_SEQ)),
+			'$')),
+		int_name: $ => prec.left(seq(
+			choice(...LETTER_SEQ),
+			repeat(choice(
+				seq($.op_error,'\u00ff'),
+				...LETTER_SEQ,
+				...NUMBER_SEQ)))),
 
 		// Literals
 
-		integer: $ => token(prec(1,INTEGER)),
+		integer: $ => INTEGER,
 		string: $ => seq($.quote,repeat(SCHAR),$.unquote)
 	}
 });

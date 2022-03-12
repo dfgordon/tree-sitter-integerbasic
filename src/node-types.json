@@ -213,6 +213,16 @@
     }
   },
   {
+    "type": "close",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "dollar",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "fcall",
     "named": true,
     "fields": {},
@@ -401,7 +411,17 @@
   {
     "type": "int_name",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "op_error",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "line",
@@ -432,7 +452,17 @@
     "fields": {}
   },
   {
+    "type": "op_and",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "op_aneq",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_div",
     "named": true,
     "fields": {}
   },
@@ -448,6 +478,11 @@
   },
   {
     "type": "op_eq_for",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_error",
     "named": true,
     "fields": {}
   },
@@ -482,6 +517,11 @@
     "fields": {}
   },
   {
+    "type": "op_mod",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "op_neq",
     "named": true,
     "fields": {}
@@ -492,7 +532,17 @@
     "fields": {}
   },
   {
+    "type": "op_or",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "op_plus",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_pow",
     "named": true,
     "fields": {}
   },
@@ -503,6 +553,21 @@
   },
   {
     "type": "op_sneq",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_step",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_times",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "op_to",
     "named": true,
     "fields": {}
   },
@@ -628,6 +693,11 @@
   },
   {
     "type": "sep_slice",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "sep_statement",
     "named": true,
     "fields": {}
   },
@@ -1214,11 +1284,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "dollar",
+          "named": true
+        },
+        {
+          "type": "op_error",
           "named": true
         }
       ]
@@ -1367,7 +1441,19 @@
     "named": false
   },
   {
+    "type": "$",
+    "named": false
+  },
+  {
     "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
     "named": false
   },
   {
@@ -1380,6 +1466,10 @@
   },
   {
     "type": "-",
+    "named": false
+  },
+  {
+    "type": "/",
     "named": false
   },
   {
@@ -1420,6 +1510,10 @@
   },
   {
     "type": "9",
+    "named": false
+  },
+  {
+    "type": ":",
     "named": false
   },
   {
@@ -1543,60 +1637,88 @@
     "named": false
   },
   {
-    "type": "close",
-    "named": true
+    "type": "^",
+    "named": false
+  },
+  {
+    "type": "a",
+    "named": false
+  },
+  {
+    "type": "b",
+    "named": false
+  },
+  {
+    "type": "c",
+    "named": false
   },
   {
     "type": "comment_text",
     "named": true
   },
   {
-    "type": "dollar",
-    "named": true
+    "type": "d",
+    "named": false
+  },
+  {
+    "type": "e",
+    "named": false
+  },
+  {
+    "type": "f",
+    "named": false
+  },
+  {
+    "type": "g",
+    "named": false
+  },
+  {
+    "type": "h",
+    "named": false
+  },
+  {
+    "type": "i",
+    "named": false
   },
   {
     "type": "integer",
     "named": true
   },
   {
+    "type": "k",
+    "named": false
+  },
+  {
+    "type": "l",
+    "named": false
+  },
+  {
     "type": "linenum",
     "named": true
   },
   {
-    "type": "op_and",
-    "named": true
+    "type": "m",
+    "named": false
   },
   {
-    "type": "op_div",
-    "named": true
+    "type": "n",
+    "named": false
   },
   {
-    "type": "op_mod",
-    "named": true
+    "type": "o",
+    "named": false
   },
   {
-    "type": "op_or",
-    "named": true
+    "type": "p",
+    "named": false
   },
   {
-    "type": "op_pow",
-    "named": true
+    "type": "r",
+    "named": false
   },
   {
-    "type": "op_step",
-    "named": true
-  },
-  {
-    "type": "op_times",
-    "named": true
-  },
-  {
-    "type": "op_to",
-    "named": true
-  },
-  {
-    "type": "sep_statement",
-    "named": true
+    "type": "s",
+    "named": false
   },
   {
     "type": "statement_end",
@@ -1625,5 +1747,25 @@
   {
     "type": "statement_trace",
     "named": true
+  },
+  {
+    "type": "t",
+    "named": false
+  },
+  {
+    "type": "u",
+    "named": false
+  },
+  {
+    "type": "v",
+    "named": false
+  },
+  {
+    "type": "x",
+    "named": false
+  },
+  {
+    "type": "ÿ",
+    "named": false
   }
 ]

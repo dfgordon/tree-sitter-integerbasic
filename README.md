@@ -3,7 +3,23 @@ Parser for Integer BASIC
 
 ![unit tests](https://github.com/dfgordon/tree-sitter-integerbasic/actions/workflows/node.js.yml/badge.svg)
 
-This is a comprehensive language description and fast parser for Integer BASIC, the first high level language shipped by Apple Computer.  The parser is built using the [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) system.  The system auto-builds a C-language parser based on a language description contained in the file `grammar.js`.
+This is a comprehensive language description and fast parser for Integer BASIC built using the [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) system.  Bindings are available for several languages.  The following pre-built packages are available:
+
+* [Parsing Integer with JavaScript](https://www.npmjs.com/package/tree-sitter-integerbasic)
+* [Parsing Integer with Rust](https://crates.io/crates/tree-sitter-integerbasic)
+
+Language Extensions
+-------------------
+
+This parser is the basis of language extensions for:
+
+* [Code](https://code.visualstudio.com/), see [vscode-language-integerbasic](https://github.com/dfgordon/vscode-language-integerbasic)
+    - highlights, hovers, completions, diagnostics
+* [Neovim](https://neovim.io), see [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+    - highlights only
+    - language must be [manually installed](https://github.com/nvim-treesitter/nvim-treesitter#advanced-setup)
+
+The Tree-sitter command line interface can highlight a file, see [Tree-sitter highlighting](https://tree-sitter.github.io/tree-sitter/syntax-highlighting).
 
 Tokenization
 -----------------
@@ -27,17 +43,15 @@ will produce the S expression
 ```
 Then, one can apply a simple one-one mapping to produce the tokens.  Notice the lookahead dependence of the `PRINT` and `;` tokens is already resolved.
 
+This is the basis of the tokenization command in the [Code extension](https://github.com/dfgordon/vscode-language-integerbasic)
+
 Emulation
 ---------------
 
-Issues related to emulation are still being worked out.  Ideally the parser should produce a syntax error if the Apple ][ ROM would.  The tricky part concerns what is legal in variable names.  The modern parser tends to be more permissive.  For example, at present the parser will accept
-```bas
-10 MYTO = 1
-```
-The ROM would reject this because `TO` is embedded in the variable name.
+The parser is intended to emulate the behavior of the Apple ][ ROM (A2ROM).  A large number of tests have been constructed to verify this.  The known exception is that the A2ROM forbids assignment (without `LET`) to variables that begin with `DSP`, `NODSP`, `NEXT`, and `INPUT`, while this parser allows such assignments.  Downstream tools can easily check `int_name` and `str_name` nodes to correct for this.
 
 References
 -----------
 
 1. Apple II Reference Manual, 1978
-2. [Disassembly](https://www.callapple.org/docs/ap2/special/integerbasic.pdf) (on Call-A.P.P.L.E.)
+2. [Integer BASIC disassembly](https://www.callapple.org/docs/ap2/special/integerbasic.pdf)

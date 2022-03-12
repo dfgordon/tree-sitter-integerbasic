@@ -4,8 +4,7 @@
 100 P RI  NT "HELLO WORLD": REM ignores spaces
 110 REM test REM: PRINT "I am not a statement"
 120 FOR I = LOFT OR LEFT TO 15: REM finds error
-130 TAB 2: PRINT I: NEXT I: RETURN: REM left parenthesis part of token
-
+130 TAB 2: PRINT I: NEXT I: RETURN
 200 X = 5000
 220 PRINT SGN(RND(-X)+RND(X)): RETURN
 221 REM   ^ function.builtin

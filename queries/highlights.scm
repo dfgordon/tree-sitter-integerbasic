@@ -1,4 +1,7 @@
 (linenum) @tag
+(op_error) @operator
+(statement (statement_gosub) (integer) @tag)
+(statement (statement_goto) (integer) @tag)
 (comment_text) @comment
 (string) @string
 (integer) @number
