@@ -10,7 +10,7 @@ tree-sitter-integerbasic = "~1.0.0"
 Here is a trivial `main.rs` example:
 ```rust
 use tree_sitter;
-use tree_sitter_applesoft;
+use tree_sitter_integerbasic;
 
 fn main() {
     let code = "10 GOTO 10\n";
