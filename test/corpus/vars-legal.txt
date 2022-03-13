@@ -1,114 +1,4 @@
 ==========
-Standlone int peek
-==========
-
-10 PEEK = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str peek
-==========
-
-10 PEEK$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int if
-==========
-
-10 IF = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str if
-==========
-
-10 IF$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int run
-==========
-
-10 RUN = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str run
-==========
-
-10 RUN$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int abs
-==========
-
-10 ABS = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str abs
-==========
-
-10 ABS$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int tab
-==========
-
-10 TAB = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str tab
-==========
-
-10 TAB$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
 Standlone int rem
 ==========
 
@@ -131,10 +21,10 @@ Standlone str rem
 (line (linenum) (statement (statement_rem) (comment_text) )))
 
 ==========
-Standlone int pdl
+Standlone int nodsp
 ==========
 
-10 PDL = 1
+10 NODSP = 1
 
 ---
 
@@ -142,186 +32,10 @@ Standlone int pdl
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Standlone str pdl
+Standlone str nodsp
 ==========
 
-10 PDL$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int rnd
-==========
-
-10 RND = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str rnd
-==========
-
-10 RND$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int at
-==========
-
-10 AT = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str at
-==========
-
-10 AT$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int sgn
-==========
-
-10 SGN = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str sgn
-==========
-
-10 SGN$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int call
-==========
-
-10 CALL = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str call
-==========
-
-10 CALL$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int to
-==========
-
-10 TO = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str to
-==========
-
-10 TO$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int hlin
-==========
-
-10 HLIN = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str hlin
-==========
-
-10 HLIN$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int not
-==========
-
-10 NOT = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str not
-==========
-
-10 NOT$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int dsp
-==========
-
-10 DSP = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str dsp
-==========
-
-10 DSP$ = "1"
+10 NODSP$ = "1"
 
 ---
 
@@ -351,10 +65,10 @@ Standlone str plot
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Standlone int and
+Standlone int call
 ==========
 
-10 AND = 1
+10 CALL = 1
 
 ---
 
@@ -362,10 +76,10 @@ Standlone int and
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Standlone str and
+Standlone str call
 ==========
 
-10 AND$ = "1"
+10 CALL$ = "1"
 
 ---
 
@@ -373,10 +87,10 @@ Standlone str and
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Standlone int poke
+Standlone int tab
 ==========
 
-10 POKE = 1
+10 TAB = 1
 
 ---
 
@@ -384,32 +98,10 @@ Standlone int poke
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Standlone str poke
+Standlone str tab
 ==========
 
-10 POKE$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int next
-==========
-
-10 NEXT = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str next
-==========
-
-10 NEXT$ = "1"
+10 TAB$ = "1"
 
 ---
 
@@ -439,10 +131,10 @@ Standlone str dim
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Standlone int then
+Standlone int peek
 ==========
 
-10 THEN = 1
+10 PEEK = 1
 
 ---
 
@@ -450,10 +142,10 @@ Standlone int then
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Standlone str then
+Standlone str peek
 ==========
 
-10 THEN$ = "1"
+10 PEEK$ = "1"
 
 ---
 
@@ -461,10 +153,10 @@ Standlone str then
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Standlone int vtab
+Standlone int pdl
 ==========
 
-10 VTAB = 1
+10 PDL = 1
 
 ---
 
@@ -472,54 +164,10 @@ Standlone int vtab
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Standlone str vtab
+Standlone str pdl
 ==========
 
-10 VTAB$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int input
-==========
-
-10 INPUT = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str input
-==========
-
-10 INPUT$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Standlone int gosub
-==========
-
-10 GOSUB = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Standlone str gosub
-==========
-
-10 GOSUB$ = "1"
+10 PDL$ = "1"
 
 ---
 
@@ -549,6 +197,248 @@ Standlone str let
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
+Standlone int vlin
+==========
+
+10 VLIN = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str vlin
+==========
+
+10 VLIN$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int poke
+==========
+
+10 POKE = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str poke
+==========
+
+10 POKE$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int if
+==========
+
+10 IF = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str if
+==========
+
+10 IF$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int vtab
+==========
+
+10 VTAB = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str vtab
+==========
+
+10 VTAB$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int at
+==========
+
+10 AT = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str at
+==========
+
+10 AT$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int hlin
+==========
+
+10 HLIN = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str hlin
+==========
+
+10 HLIN$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int sgn
+==========
+
+10 SGN = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str sgn
+==========
+
+10 SGN$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int input
+==========
+
+10 INPUT = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str input
+==========
+
+10 INPUT$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int then
+==========
+
+10 THEN = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str then
+==========
+
+10 THEN$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int and
+==========
+
+10 AND = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str and
+==========
+
+10 AND$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int rnd
+==========
+
+10 RND = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str rnd
+==========
+
+10 RND$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
 Standlone int or
 ==========
 
@@ -564,6 +454,50 @@ Standlone str or
 ==========
 
 10 OR$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int not
+==========
+
+10 NOT = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str not
+==========
+
+10 NOT$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int next
+==========
+
+10 NEXT = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str next
+==========
+
+10 NEXT$ = "1"
 
 ---
 
@@ -593,10 +527,10 @@ Standlone str mod
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Standlone int nodsp
+Standlone int dsp
 ==========
 
-10 NODSP = 1
+10 DSP = 1
 
 ---
 
@@ -604,10 +538,10 @@ Standlone int nodsp
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Standlone str nodsp
+Standlone str dsp
 ==========
 
-10 NODSP$ = "1"
+10 DSP$ = "1"
 
 ---
 
@@ -615,10 +549,10 @@ Standlone str nodsp
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Standlone int vlin
+Standlone int abs
 ==========
 
-10 VLIN = 1
+10 ABS = 1
 
 ---
 
@@ -626,10 +560,54 @@ Standlone int vlin
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Standlone str vlin
+Standlone str abs
 ==========
 
-10 VLIN$ = "1"
+10 ABS$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int run
+==========
+
+10 RUN = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str run
+==========
+
+10 RUN$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Standlone int gosub
+==========
+
+10 GOSUB = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Standlone str gosub
+==========
+
+10 GOSUB$ = "1"
 
 ---
 
@@ -659,10 +637,10 @@ Standlone str step
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postnumber int peek
+Standlone int to
 ==========
 
-10 PEEK1 = 1
+10 TO = 1
 
 ---
 
@@ -670,48 +648,15 @@ Postnumber int peek
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postnumber int if
+Standlone str to
 ==========
 
-10 IF1 = 1
+10 TO$ = "1"
 
 ---
 
 (source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int run
-==========
-
-10 RUN1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int abs
-==========
-
-10 ABS1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int tab
-==========
-
-10 TAB1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
 Postnumber int rem
@@ -725,109 +670,10 @@ Postnumber int rem
 (line (linenum) (statement (statement_rem) (comment_text) )))
 
 ==========
-Postnumber int pdl
-==========
-
-10 PDL1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int rnd
-==========
-
-10 RND1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int at
-==========
-
-10 AT1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int sgn
-==========
-
-10 SGN1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int call
-==========
-
-10 CALL1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int to
-==========
-
-10 TO1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int hlin
-==========
-
-10 HLIN1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
 Postnumber int nodsp
 ==========
 
 10 NODSP1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int not
-==========
-
-10 NOT1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int dsp
-==========
-
-10 DSP1 = 1
 
 ---
 
@@ -846,10 +692,10 @@ Postnumber int plot
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postnumber int and
+Postnumber int call
 ==========
 
-10 AND1 = 1
+10 CALL1 = 1
 
 ---
 
@@ -857,21 +703,10 @@ Postnumber int and
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postnumber int poke
+Postnumber int tab
 ==========
 
-10 POKE1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int next
-==========
-
-10 NEXT1 = 1
+10 TAB1 = 1
 
 ---
 
@@ -890,21 +725,10 @@ Postnumber int dim
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postnumber int print
+Postnumber int peek
 ==========
 
-10 PRINT1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_print_int) (binary_aexpr (integer) (op_aeq) (integer)) )))
-
-==========
-Postnumber int then
-==========
-
-10 THEN1 = 1
+10 PEEK1 = 1
 
 ---
 
@@ -912,32 +736,10 @@ Postnumber int then
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postnumber int vtab
+Postnumber int pdl
 ==========
 
-10 VTAB1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int input
-==========
-
-10 INPUT1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postnumber int gosub
-==========
-
-10 GOSUB1 = 1
+10 PDL1 = 1
 
 ---
 
@@ -956,10 +758,153 @@ Postnumber int let
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
+Postnumber int vlin
+==========
+
+10 VLIN1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int poke
+==========
+
+10 POKE1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int if
+==========
+
+10 IF1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int vtab
+==========
+
+10 VTAB1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int at
+==========
+
+10 AT1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int hlin
+==========
+
+10 HLIN1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int sgn
+==========
+
+10 SGN1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int input
+==========
+
+10 INPUT1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int then
+==========
+
+10 THEN1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int and
+==========
+
+10 AND1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int rnd
+==========
+
+10 RND1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
 Postnumber int or
 ==========
 
 10 OR1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int not
+==========
+
+10 NOT1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int next
+==========
+
+10 NEXT1 = 1
 
 ---
 
@@ -978,10 +923,32 @@ Postnumber int mod
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postnumber int vlin
+Postnumber int dsp
 ==========
 
-10 VLIN1 = 1
+10 DSP1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int abs
+==========
+
+10 ABS1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postnumber int run
+==========
+
+10 RUN1 = 1
 
 ---
 
@@ -1000,6 +967,28 @@ Postnumber int goto
 (line (linenum) (statement (statement_goto) (binary_aexpr (integer) (op_aeq) (integer)) )))
 
 ==========
+Postnumber int print
+==========
+
+10 PRINT1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (statement_print_int) (binary_aexpr (integer) (op_aeq) (integer)) )))
+
+==========
+Postnumber int gosub
+==========
+
+10 GOSUB1 = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
 Postnumber int step
 ==========
 
@@ -1011,59 +1000,15 @@ Postnumber int step
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postnumber str peek
+Postnumber int to
 ==========
 
-10 PEEK1$ = "1"
+10 TO1 = 1
 
 ---
 
 (source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str if
-==========
-
-10 IF1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str run
-==========
-
-10 RUN1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str abs
-==========
-
-10 ABS1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str tab
-==========
-
-10 TAB1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
 Postnumber str rem
@@ -1077,98 +1022,10 @@ Postnumber str rem
 (line (linenum) (statement (statement_rem) (comment_text) )))
 
 ==========
-Postnumber str pdl
+Postnumber str nodsp
 ==========
 
-10 PDL1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str rnd
-==========
-
-10 RND1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str at
-==========
-
-10 AT1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str sgn
-==========
-
-10 SGN1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str call
-==========
-
-10 CALL1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str to
-==========
-
-10 TO1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str hlin
-==========
-
-10 HLIN1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str not
-==========
-
-10 NOT1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str dsp
-==========
-
-10 DSP1$ = "1"
+10 NODSP1$ = "1"
 
 ---
 
@@ -1187,10 +1044,10 @@ Postnumber str plot
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postnumber str and
+Postnumber str call
 ==========
 
-10 AND1$ = "1"
+10 CALL1$ = "1"
 
 ---
 
@@ -1198,21 +1055,10 @@ Postnumber str and
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postnumber str poke
+Postnumber str tab
 ==========
 
-10 POKE1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str next
-==========
-
-10 NEXT1$ = "1"
+10 TAB1$ = "1"
 
 ---
 
@@ -1231,10 +1077,10 @@ Postnumber str dim
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postnumber str then
+Postnumber str peek
 ==========
 
-10 THEN1$ = "1"
+10 PEEK1$ = "1"
 
 ---
 
@@ -1242,32 +1088,10 @@ Postnumber str then
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postnumber str vtab
+Postnumber str pdl
 ==========
 
-10 VTAB1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str input
-==========
-
-10 INPUT1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postnumber str gosub
-==========
-
-10 GOSUB1$ = "1"
+10 PDL1$ = "1"
 
 ---
 
@@ -1286,10 +1110,153 @@ Postnumber str let
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
+Postnumber str vlin
+==========
+
+10 VLIN1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str poke
+==========
+
+10 POKE1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str if
+==========
+
+10 IF1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str vtab
+==========
+
+10 VTAB1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str at
+==========
+
+10 AT1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str hlin
+==========
+
+10 HLIN1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str sgn
+==========
+
+10 SGN1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str input
+==========
+
+10 INPUT1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str then
+==========
+
+10 THEN1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str and
+==========
+
+10 AND1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str rnd
+==========
+
+10 RND1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
 Postnumber str or
 ==========
 
 10 OR1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str not
+==========
+
+10 NOT1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str next
+==========
+
+10 NEXT1$ = "1"
 
 ---
 
@@ -1308,10 +1275,10 @@ Postnumber str mod
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postnumber str nodsp
+Postnumber str dsp
 ==========
 
-10 NODSP1$ = "1"
+10 DSP1$ = "1"
 
 ---
 
@@ -1319,10 +1286,32 @@ Postnumber str nodsp
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postnumber str vlin
+Postnumber str abs
 ==========
 
-10 VLIN1$ = "1"
+10 ABS1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str run
+==========
+
+10 RUN1$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postnumber str gosub
+==========
+
+10 GOSUB1$ = "1"
 
 ---
 
@@ -1341,109 +1330,10 @@ Postnumber str step
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postalpha int peek
+Postnumber str to
 ==========
 
-10 PEEKA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str peek
-==========
-
-10 PEEKA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int if
-==========
-
-10 IFA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str if
-==========
-
-10 IFA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int run
-==========
-
-10 RUNA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str run
-==========
-
-10 RUNA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int abs
-==========
-
-10 ABSA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str abs
-==========
-
-10 ABSA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int tab
-==========
-
-10 TABA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str tab
-==========
-
-10 TABA$ = "1"
+10 TO1$ = "1"
 
 ---
 
@@ -1473,10 +1363,10 @@ Postalpha str rem
 (line (linenum) (statement (statement_rem) (comment_text) )))
 
 ==========
-Postalpha int pdl
+Postalpha int plot
 ==========
 
-10 PDLA = 1
+10 PLOTA = 1
 
 ---
 
@@ -1484,76 +1374,10 @@ Postalpha int pdl
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postalpha str pdl
+Postalpha str plot
 ==========
 
-10 PDLA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int rnd
-==========
-
-10 RNDA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str rnd
-==========
-
-10 RNDA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int at
-==========
-
-10 ATA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str at
-==========
-
-10 ATA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int sgn
-==========
-
-10 SGNA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str sgn
-==========
-
-10 SGNA$ = "1"
+10 PLOTA$ = "1"
 
 ---
 
@@ -1583,10 +1407,10 @@ Postalpha str call
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postalpha int to
+Postalpha int tab
 ==========
 
-10 TOA = 1
+10 TABA = 1
 
 ---
 
@@ -1594,120 +1418,10 @@ Postalpha int to
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postalpha str to
+Postalpha str tab
 ==========
 
-10 TOA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int hlin
-==========
-
-10 HLINA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str hlin
-==========
-
-10 HLINA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int not
-==========
-
-10 NOTA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str not
-==========
-
-10 NOTA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int plot
-==========
-
-10 PLOTA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str plot
-==========
-
-10 PLOTA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int and
-==========
-
-10 ANDA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str and
-==========
-
-10 ANDA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int poke
-==========
-
-10 POKEA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str poke
-==========
-
-10 POKEA$ = "1"
+10 TABA$ = "1"
 
 ---
 
@@ -1737,32 +1451,10 @@ Postalpha str dim
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postalpha int print
+Postalpha int peek
 ==========
 
-10 PRINTA = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_print_int) (binary_aexpr (int_name) (op_aeq) (integer)) )))
-
-==========
-Postalpha str print
-==========
-
-10 PRINTA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_print_int) (binary_aexpr (str_name (dollar)) (op_seq) (string (quote) (unquote))) )))
-
-==========
-Postalpha int then
-==========
-
-10 THENA = 1
+10 PEEKA = 1
 
 ---
 
@@ -1770,10 +1462,10 @@ Postalpha int then
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postalpha str then
+Postalpha str peek
 ==========
 
-10 THENA$ = "1"
+10 PEEKA$ = "1"
 
 ---
 
@@ -1781,10 +1473,10 @@ Postalpha str then
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postalpha int vtab
+Postalpha int pdl
 ==========
 
-10 VTABA = 1
+10 PDLA = 1
 
 ---
 
@@ -1792,32 +1484,10 @@ Postalpha int vtab
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postalpha str vtab
+Postalpha str pdl
 ==========
 
-10 VTABA$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int gosub
-==========
-
-10 GOSUBA = 1
-
----
-
-(source_file
-(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str gosub
-==========
-
-10 GOSUBA$ = "1"
+10 PDLA$ = "1"
 
 ---
 
@@ -1847,6 +1517,226 @@ Postalpha str let
 (line (linenum) (statement (assignment_str (statement_let) (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
+Postalpha int vlin
+==========
+
+10 VLINA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str vlin
+==========
+
+10 VLINA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int poke
+==========
+
+10 POKEA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str poke
+==========
+
+10 POKEA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int if
+==========
+
+10 IFA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str if
+==========
+
+10 IFA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int vtab
+==========
+
+10 VTABA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str vtab
+==========
+
+10 VTABA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int at
+==========
+
+10 ATA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str at
+==========
+
+10 ATA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int hlin
+==========
+
+10 HLINA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str hlin
+==========
+
+10 HLINA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int sgn
+==========
+
+10 SGNA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str sgn
+==========
+
+10 SGNA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int then
+==========
+
+10 THENA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str then
+==========
+
+10 THENA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int and
+==========
+
+10 ANDA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str and
+==========
+
+10 ANDA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int rnd
+==========
+
+10 RNDA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str rnd
+==========
+
+10 RNDA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
 Postalpha int or
 ==========
 
@@ -1862,6 +1752,28 @@ Postalpha str or
 ==========
 
 10 ORA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int not
+==========
+
+10 NOTA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str not
+==========
+
+10 NOTA$ = "1"
 
 ---
 
@@ -1891,10 +1803,10 @@ Postalpha str mod
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Postalpha int vlin
+Postalpha int abs
 ==========
 
-10 VLINA = 1
+10 ABSA = 1
 
 ---
 
@@ -1902,10 +1814,32 @@ Postalpha int vlin
 (line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Postalpha str vlin
+Postalpha str abs
 ==========
 
-10 VLINA$ = "1"
+10 ABSA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Postalpha int run
+==========
+
+10 RUNA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str run
+==========
+
+10 RUNA$ = "1"
 
 ---
 
@@ -1935,6 +1869,50 @@ Postalpha str goto
 (line (linenum) (statement (statement_goto) (binary_aexpr (str_name (dollar)) (op_seq) (string (quote) (unquote))) )))
 
 ==========
+Postalpha int print
+==========
+
+10 PRINTA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (statement_print_int) (binary_aexpr (int_name) (op_aeq) (integer)) )))
+
+==========
+Postalpha str print
+==========
+
+10 PRINTA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (statement_print_int) (binary_aexpr (str_name (dollar)) (op_seq) (string (quote) (unquote))) )))
+
+==========
+Postalpha int gosub
+==========
+
+10 GOSUBA = 1
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Postalpha str gosub
+==========
+
+10 GOSUBA$ = "1"
+
+---
+
+(source_file
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
 Postalpha int step
 ==========
 
@@ -1957,32 +1935,26 @@ Postalpha str step
 (line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Within int peek
+Postalpha int to
 ==========
 
-10 ZPEEKZ = 1: ZPEEK = 1
+10 TOA = 1
 
 ---
 
 (source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+(line (linenum) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Within str peek
+Postalpha str to
 ==========
 
-10 ZPEEKZ$ = "1": ZPEEK$ = "1"
+10 TOA$ = "1"
 
 ---
 
 (source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+(line (linenum) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
 Within int trace
@@ -2003,146 +1975,6 @@ Within str trace
 ==========
 
 10 ZTRACEZ$ = "1": ZTRACE$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int if
-==========
-
-10 ZIFZ = 1: ZIF = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str if
-==========
-
-10 ZIFZ$ = "1": ZIF$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int gr
-==========
-
-10 ZGRZ = 1: ZGR = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str gr
-==========
-
-10 ZGRZ$ = "1": ZGR$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int run
-==========
-
-10 ZRUNZ = 1: ZRUN = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str run
-==========
-
-10 ZRUNZ$ = "1": ZRUN$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int abs
-==========
-
-10 ZABSZ = 1: ZABS = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str abs
-==========
-
-10 ZABSZ$ = "1": ZABS$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int tab
-==========
-
-10 ZTABZ = 1: ZTAB = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str tab
-==========
-
-10 ZTABZ$ = "1": ZTAB$ = "1"
 
 ---
 
@@ -2181,230 +2013,6 @@ Within str rem
     (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Within int pdl
-==========
-
-10 ZPDLZ = 1: ZPDL = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str pdl
-==========
-
-10 ZPDLZ$ = "1": ZPDL$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int rnd
-==========
-
-10 ZRNDZ = 1: ZRND = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str rnd
-==========
-
-10 ZRNDZ$ = "1": ZRND$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int sgn
-==========
-
-10 ZSGNZ = 1: ZSGN = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str sgn
-==========
-
-10 ZSGNZ$ = "1": ZSGN$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int call
-==========
-
-10 ZCALLZ = 1: ZCALL = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str call
-==========
-
-10 ZCALLZ$ = "1": ZCALL$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int return
-==========
-
-10 ZRETURNZ = 1: ZRETURN = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str return
-==========
-
-10 ZRETURNZ$ = "1": ZRETURN$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int list
-==========
-
-10 ZLISTZ = 1: ZLIST = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str list
-==========
-
-10 ZLISTZ$ = "1": ZLIST$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int hlin
-==========
-
-10 ZHLINZ = 1: ZHLIN = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str hlin
-==========
-
-10 ZHLINZ$ = "1": ZHLIN$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int notrace
-==========
-
-10 ZNOTRACEZ = 1: ZNOTRACE = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str notrace
-==========
-
-10 ZNOTRACEZ$ = "1": ZNOTRACE$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
 Within int nodsp
 ==========
 
@@ -2423,62 +2031,6 @@ Within str nodsp
 ==========
 
 10 ZNODSPZ$ = "1": ZNODSP$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int not
-==========
-
-10 ZNOTZ = 1: ZNOT = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str not
-==========
-
-10 ZNOTZ$ = "1": ZNOT$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int dsp
-==========
-
-10 ZDSPZ = 1: ZDSP = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str dsp
-==========
-
-10 ZDSPZ$ = "1": ZDSP$ = "1"
 
 ---
 
@@ -2517,10 +2069,10 @@ Within str plot
     (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Within int poke
+Within int call
 ==========
 
-10 ZPOKEZ = 1: ZPOKE = 1
+10 ZCALLZ = 1: ZCALL = 1
 
 ---
 
@@ -2531,10 +2083,10 @@ Within int poke
     (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Within str poke
+Within str call
 ==========
 
-10 ZPOKEZ$ = "1": ZPOKE$ = "1"
+10 ZCALLZ$ = "1": ZCALL$ = "1"
 
 ---
 
@@ -2545,10 +2097,10 @@ Within str poke
     (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Within int next
+Within int tab
 ==========
 
-10 ZNEXTZ = 1: ZNEXT = 1
+10 ZTABZ = 1: ZTAB = 1
 
 ---
 
@@ -2559,38 +2111,10 @@ Within int next
     (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Within str next
+Within str tab
 ==========
 
-10 ZNEXTZ$ = "1": ZNEXT$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int end
-==========
-
-10 ZENDZ = 1: ZEND = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str end
-==========
-
-10 ZENDZ$ = "1": ZEND$ = "1"
+10 ZTABZ$ = "1": ZTAB$ = "1"
 
 ---
 
@@ -2629,10 +2153,10 @@ Within str dim
     (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
-Within int print
+Within int notrace
 ==========
 
-10 ZPRINTZ = 1: ZPRINT = 1
+10 ZNOTRACEZ = 1: ZNOTRACE = 1
 
 ---
 
@@ -2643,150 +2167,10 @@ Within int print
     (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
 
 ==========
-Within str print
+Within str notrace
 ==========
 
-10 ZPRINTZ$ = "1": ZPRINT$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int vtab
-==========
-
-10 ZVTABZ = 1: ZVTAB = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str vtab
-==========
-
-10 ZVTABZ$ = "1": ZVTAB$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int input
-==========
-
-10 ZINPUTZ = 1: ZINPUT = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str input
-==========
-
-10 ZINPUTZ$ = "1": ZINPUT$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int gosub
-==========
-
-10 ZGOSUBZ = 1: ZGOSUB = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str gosub
-==========
-
-10 ZGOSUBZ$ = "1": ZGOSUB$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int let
-==========
-
-10 ZLETZ = 1: ZLET = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str let
-==========
-
-10 ZLETZ$ = "1": ZLET$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int text
-==========
-
-10 ZTEXTZ = 1: ZTEXT = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Within str text
-==========
-
-10 ZTEXTZ$ = "1": ZTEXT$ = "1"
+10 ZNOTRACEZ$ = "1": ZNOTRACE$ = "1"
 
 ---
 
@@ -2825,6 +2209,118 @@ Within str pop
     (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
+Within int peek
+==========
+
+10 ZPEEKZ = 1: ZPEEK = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str peek
+==========
+
+10 ZPEEKZ$ = "1": ZPEEK$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int list
+==========
+
+10 ZLISTZ = 1: ZLIST = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str list
+==========
+
+10 ZLISTZ$ = "1": ZLIST$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int pdl
+==========
+
+10 ZPDLZ = 1: ZPDL = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str pdl
+==========
+
+10 ZPDLZ$ = "1": ZPDL$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int let
+==========
+
+10 ZLETZ = 1: ZLET = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str let
+==========
+
+10 ZLETZ$ = "1": ZLET$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
 Within int vlin
 ==========
 
@@ -2843,6 +2339,510 @@ Within str vlin
 ==========
 
 10 ZVLINZ$ = "1": ZVLIN$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int poke
+==========
+
+10 ZPOKEZ = 1: ZPOKE = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str poke
+==========
+
+10 ZPOKEZ$ = "1": ZPOKE$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int if
+==========
+
+10 ZIFZ = 1: ZIF = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str if
+==========
+
+10 ZIFZ$ = "1": ZIF$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int vtab
+==========
+
+10 ZVTABZ = 1: ZVTAB = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str vtab
+==========
+
+10 ZVTABZ$ = "1": ZVTAB$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int hlin
+==========
+
+10 ZHLINZ = 1: ZHLIN = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str hlin
+==========
+
+10 ZHLINZ$ = "1": ZHLIN$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int sgn
+==========
+
+10 ZSGNZ = 1: ZSGN = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str sgn
+==========
+
+10 ZSGNZ$ = "1": ZSGN$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int input
+==========
+
+10 ZINPUTZ = 1: ZINPUT = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str input
+==========
+
+10 ZINPUTZ$ = "1": ZINPUT$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int gr
+==========
+
+10 ZGRZ = 1: ZGR = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str gr
+==========
+
+10 ZGRZ$ = "1": ZGR$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int rnd
+==========
+
+10 ZRNDZ = 1: ZRND = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str rnd
+==========
+
+10 ZRNDZ$ = "1": ZRND$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int not
+==========
+
+10 ZNOTZ = 1: ZNOT = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str not
+==========
+
+10 ZNOTZ$ = "1": ZNOT$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int next
+==========
+
+10 ZNEXTZ = 1: ZNEXT = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str next
+==========
+
+10 ZNEXTZ$ = "1": ZNEXT$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int dsp
+==========
+
+10 ZDSPZ = 1: ZDSP = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str dsp
+==========
+
+10 ZDSPZ$ = "1": ZDSP$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int return
+==========
+
+10 ZRETURNZ = 1: ZRETURN = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str return
+==========
+
+10 ZRETURNZ$ = "1": ZRETURN$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int abs
+==========
+
+10 ZABSZ = 1: ZABS = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str abs
+==========
+
+10 ZABSZ$ = "1": ZABS$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int run
+==========
+
+10 ZRUNZ = 1: ZRUN = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str run
+==========
+
+10 ZRUNZ$ = "1": ZRUN$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int print
+==========
+
+10 ZPRINTZ = 1: ZPRINT = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str print
+==========
+
+10 ZPRINTZ$ = "1": ZPRINT$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int end
+==========
+
+10 ZENDZ = 1: ZEND = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str end
+==========
+
+10 ZENDZ$ = "1": ZEND$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int gosub
+==========
+
+10 ZGOSUBZ = 1: ZGOSUB = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str gosub
+==========
+
+10 ZGOSUBZ$ = "1": ZGOSUB$ = "1"
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
+    (sep_statement)
+    (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+
+==========
+Within int text
+==========
+
+10 ZTEXTZ = 1: ZTEXT = 1
+
+---
+
+(source_file
+(line (linenum)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))
+    (sep_statement)
+    (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
+
+==========
+Within str text
+==========
+
+10 ZTEXTZ$ = "1": ZTEXT$ = "1"
 
 ---
 

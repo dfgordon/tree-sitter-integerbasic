@@ -1685,6 +1685,10 @@
     "named": true
   },
   {
+    "type": "j",
+    "named": false
+  },
+  {
     "type": "k",
     "named": false
   },
@@ -1710,6 +1714,10 @@
   },
   {
     "type": "p",
+    "named": false
+  },
+  {
+    "type": "q",
     "named": false
   },
   {
@@ -1761,7 +1769,19 @@
     "named": false
   },
   {
+    "type": "w",
+    "named": false
+  },
+  {
     "type": "x",
+    "named": false
+  },
+  {
+    "type": "y",
+    "named": false
+  },
+  {
+    "type": "z",
     "named": false
   },
   {

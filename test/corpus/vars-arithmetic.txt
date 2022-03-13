@@ -193,7 +193,7 @@ Random Numbers
 (source_file
 	(line
 		(linenum)
-		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_rnd) (open_fcall) (integer) (close)))))
+		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_rnd) (open_fcall) (unary_aexpr (op_unary_minus) (integer)) (close)))))
 	(line
 		(linenum)
 		(statement (assignment_int (int_name) (op_eq_assign_int) (fcall (fcall_rnd) (open_fcall) (integer) (close)))))

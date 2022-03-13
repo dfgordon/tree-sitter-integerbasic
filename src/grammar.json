@@ -2671,11 +2671,35 @@
         "members": [
           {
             "type": "PATTERN",
+            "value": "[Ff] *[Oo] *[Rr]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Aa] *[Nn] *[Dd]"
+          },
+          {
+            "type": "PATTERN",
             "value": "[Tt] *[Hh] *[Ee] *[Nn]"
           },
           {
             "type": "PATTERN",
-            "value": "[Ff] *[Oo] *[Rr]"
+            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Ss] *[Tt] *[Ee] *[Pp]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Oo] *[Rr]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Mm] *[Oo] *[Dd]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Tt] *[Oo]"
           },
           {
             "type": "SEQ",
@@ -2707,30 +2731,6 @@
                 ]
               }
             ]
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Oo] *[Rr]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Aa] *[Nn] *[Dd]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Mm] *[Oo] *[Dd]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Ss] *[Tt] *[Ee] *[Pp]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Tt] *[Oo]"
           }
         ]
       }
@@ -4383,6 +4383,110 @@
               {
                 "type": "STRING",
                 "value": "Z"
+              },
+              {
+                "type": "STRING",
+                "value": "a"
+              },
+              {
+                "type": "STRING",
+                "value": "b"
+              },
+              {
+                "type": "STRING",
+                "value": "c"
+              },
+              {
+                "type": "STRING",
+                "value": "d"
+              },
+              {
+                "type": "STRING",
+                "value": "e"
+              },
+              {
+                "type": "STRING",
+                "value": "f"
+              },
+              {
+                "type": "STRING",
+                "value": "g"
+              },
+              {
+                "type": "STRING",
+                "value": "h"
+              },
+              {
+                "type": "STRING",
+                "value": "i"
+              },
+              {
+                "type": "STRING",
+                "value": "j"
+              },
+              {
+                "type": "STRING",
+                "value": "k"
+              },
+              {
+                "type": "STRING",
+                "value": "l"
+              },
+              {
+                "type": "STRING",
+                "value": "m"
+              },
+              {
+                "type": "STRING",
+                "value": "n"
+              },
+              {
+                "type": "STRING",
+                "value": "o"
+              },
+              {
+                "type": "STRING",
+                "value": "p"
+              },
+              {
+                "type": "STRING",
+                "value": "q"
+              },
+              {
+                "type": "STRING",
+                "value": "r"
+              },
+              {
+                "type": "STRING",
+                "value": "s"
+              },
+              {
+                "type": "STRING",
+                "value": "t"
+              },
+              {
+                "type": "STRING",
+                "value": "u"
+              },
+              {
+                "type": "STRING",
+                "value": "v"
+              },
+              {
+                "type": "STRING",
+                "value": "w"
+              },
+              {
+                "type": "STRING",
+                "value": "x"
+              },
+              {
+                "type": "STRING",
+                "value": "y"
+              },
+              {
+                "type": "STRING",
+                "value": "z"
               }
             ]
           },
@@ -4507,6 +4611,110 @@
                 {
                   "type": "STRING",
                   "value": "Z"
+                },
+                {
+                  "type": "STRING",
+                  "value": "a"
+                },
+                {
+                  "type": "STRING",
+                  "value": "b"
+                },
+                {
+                  "type": "STRING",
+                  "value": "c"
+                },
+                {
+                  "type": "STRING",
+                  "value": "d"
+                },
+                {
+                  "type": "STRING",
+                  "value": "e"
+                },
+                {
+                  "type": "STRING",
+                  "value": "f"
+                },
+                {
+                  "type": "STRING",
+                  "value": "g"
+                },
+                {
+                  "type": "STRING",
+                  "value": "h"
+                },
+                {
+                  "type": "STRING",
+                  "value": "i"
+                },
+                {
+                  "type": "STRING",
+                  "value": "j"
+                },
+                {
+                  "type": "STRING",
+                  "value": "k"
+                },
+                {
+                  "type": "STRING",
+                  "value": "l"
+                },
+                {
+                  "type": "STRING",
+                  "value": "m"
+                },
+                {
+                  "type": "STRING",
+                  "value": "n"
+                },
+                {
+                  "type": "STRING",
+                  "value": "o"
+                },
+                {
+                  "type": "STRING",
+                  "value": "p"
+                },
+                {
+                  "type": "STRING",
+                  "value": "q"
+                },
+                {
+                  "type": "STRING",
+                  "value": "r"
+                },
+                {
+                  "type": "STRING",
+                  "value": "s"
+                },
+                {
+                  "type": "STRING",
+                  "value": "t"
+                },
+                {
+                  "type": "STRING",
+                  "value": "u"
+                },
+                {
+                  "type": "STRING",
+                  "value": "v"
+                },
+                {
+                  "type": "STRING",
+                  "value": "w"
+                },
+                {
+                  "type": "STRING",
+                  "value": "x"
+                },
+                {
+                  "type": "STRING",
+                  "value": "y"
+                },
+                {
+                  "type": "STRING",
+                  "value": "z"
                 },
                 {
                   "type": "STRING",
@@ -4670,6 +4878,110 @@
               {
                 "type": "STRING",
                 "value": "Z"
+              },
+              {
+                "type": "STRING",
+                "value": "a"
+              },
+              {
+                "type": "STRING",
+                "value": "b"
+              },
+              {
+                "type": "STRING",
+                "value": "c"
+              },
+              {
+                "type": "STRING",
+                "value": "d"
+              },
+              {
+                "type": "STRING",
+                "value": "e"
+              },
+              {
+                "type": "STRING",
+                "value": "f"
+              },
+              {
+                "type": "STRING",
+                "value": "g"
+              },
+              {
+                "type": "STRING",
+                "value": "h"
+              },
+              {
+                "type": "STRING",
+                "value": "i"
+              },
+              {
+                "type": "STRING",
+                "value": "j"
+              },
+              {
+                "type": "STRING",
+                "value": "k"
+              },
+              {
+                "type": "STRING",
+                "value": "l"
+              },
+              {
+                "type": "STRING",
+                "value": "m"
+              },
+              {
+                "type": "STRING",
+                "value": "n"
+              },
+              {
+                "type": "STRING",
+                "value": "o"
+              },
+              {
+                "type": "STRING",
+                "value": "p"
+              },
+              {
+                "type": "STRING",
+                "value": "q"
+              },
+              {
+                "type": "STRING",
+                "value": "r"
+              },
+              {
+                "type": "STRING",
+                "value": "s"
+              },
+              {
+                "type": "STRING",
+                "value": "t"
+              },
+              {
+                "type": "STRING",
+                "value": "u"
+              },
+              {
+                "type": "STRING",
+                "value": "v"
+              },
+              {
+                "type": "STRING",
+                "value": "w"
+              },
+              {
+                "type": "STRING",
+                "value": "x"
+              },
+              {
+                "type": "STRING",
+                "value": "y"
+              },
+              {
+                "type": "STRING",
+                "value": "z"
               }
             ]
           },
@@ -4797,6 +5109,110 @@
                 },
                 {
                   "type": "STRING",
+                  "value": "a"
+                },
+                {
+                  "type": "STRING",
+                  "value": "b"
+                },
+                {
+                  "type": "STRING",
+                  "value": "c"
+                },
+                {
+                  "type": "STRING",
+                  "value": "d"
+                },
+                {
+                  "type": "STRING",
+                  "value": "e"
+                },
+                {
+                  "type": "STRING",
+                  "value": "f"
+                },
+                {
+                  "type": "STRING",
+                  "value": "g"
+                },
+                {
+                  "type": "STRING",
+                  "value": "h"
+                },
+                {
+                  "type": "STRING",
+                  "value": "i"
+                },
+                {
+                  "type": "STRING",
+                  "value": "j"
+                },
+                {
+                  "type": "STRING",
+                  "value": "k"
+                },
+                {
+                  "type": "STRING",
+                  "value": "l"
+                },
+                {
+                  "type": "STRING",
+                  "value": "m"
+                },
+                {
+                  "type": "STRING",
+                  "value": "n"
+                },
+                {
+                  "type": "STRING",
+                  "value": "o"
+                },
+                {
+                  "type": "STRING",
+                  "value": "p"
+                },
+                {
+                  "type": "STRING",
+                  "value": "q"
+                },
+                {
+                  "type": "STRING",
+                  "value": "r"
+                },
+                {
+                  "type": "STRING",
+                  "value": "s"
+                },
+                {
+                  "type": "STRING",
+                  "value": "t"
+                },
+                {
+                  "type": "STRING",
+                  "value": "u"
+                },
+                {
+                  "type": "STRING",
+                  "value": "v"
+                },
+                {
+                  "type": "STRING",
+                  "value": "w"
+                },
+                {
+                  "type": "STRING",
+                  "value": "x"
+                },
+                {
+                  "type": "STRING",
+                  "value": "y"
+                },
+                {
+                  "type": "STRING",
+                  "value": "z"
+                },
+                {
+                  "type": "STRING",
                   "value": "0"
                 },
                 {
@@ -4843,7 +5259,7 @@
     },
     "integer": {
       "type": "PATTERN",
-      "value": "[+-]?[0-9]([0-9 ]*[0-9])?"
+      "value": "[0-9]([0-9 ]*[0-9])?"
     },
     "string": {
       "type": "SEQ",

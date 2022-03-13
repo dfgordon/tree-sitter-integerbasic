@@ -43,7 +43,7 @@ Call
 
 (source_file
 	(line (linenum) (statement (statement_call) (integer)))
-	(line (linenum) (statement (statement_call) (integer)))
+	(line (linenum) (statement (statement_call) (unary_aexpr (op_unary_minus) (integer))))
 	(line (linenum) (statement (statement_call) (int_array (int_name) (open_int) (int_name) (close)))))
 
 ===================

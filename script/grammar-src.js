@@ -33,18 +33,19 @@ function regex_or(lst)
 
 // Do not set this flag manually, let `build.py` handle it
 const allow_lower_case = true;
-const language_name = allow_lower_case ? 'integerbasic' : 'integerbasiccasesens'
+const language_name = allow_lower_case ? 'integerbasic' : 'integerbasiccasesens';
 
 const
 	DIGIT = /[0-9]/,
 	LETTER = /[A-Za-z]/,
-	LETTER_SEQ = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'],
 	NUMBER_SEQ = [...'0123456789'],
-	INTEGER = /[+-]?[0-9]([0-9 ]*[0-9])?/,
+	POS_INTEGER = /[0-9]([0-9 ]*[0-9])?/,
 	QUOTE = /"/,
 	SPACE = / /,
 	SPCHAR = /[+\-*\/^=<>(),.:;%$#?&'@!\[\]{}\\|_`~\x01-\x09\x0b\x0c\x0e-\x1f]/,
-	SCHAR = regex_or([LETTER,DIGIT,SPCHAR,SPACE])
+	SCHAR = regex_or([LETTER,DIGIT,SPCHAR,SPACE]);
+
+const LETTER_SEQ = allow_lower_case ? [...'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'] : [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 
 // Tree-sitter grammar definition
 
@@ -200,7 +201,7 @@ module.exports = grammar({
 
 		// Literals
 
-		integer: $ => INTEGER,
+		integer: $ => POS_INTEGER,
 		string: $ => seq($.quote,repeat(SCHAR),$.unquote)
 	}
 });
