@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-integerbasic",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "parser for integer basic",
   "main": "bindings/node",
   "scripts": {
@@ -16,7 +16,7 @@
     "lexer"
   ],
   "author": "Daniel Gordon",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dfgordon/tree-sitter-integerbasic/issues"
   },

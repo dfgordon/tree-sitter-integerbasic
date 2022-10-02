@@ -1,5 +1,5 @@
 '''This program performs automatic edits to the sources for the parser.
-This is automatically invoked by running `build.py`.
+This is automatically invoked by running `script/build.py`.
 Inputs:
 `token_list.txt` - file with the A2ROM tokens
 `allow_lower_case` - command line argument defined below
@@ -17,7 +17,7 @@ import pathlib
 import json
 
 def Usage():
-    print('Usage: python token_processor.py --allow-lower-case <bool> [--help]')
+    print('Usage: python script/token_processor.py --allow-lower-case <bool> [--help]')
     print('<bool> = 0 : build parser to forbid lower case in tokens and variable names')
     print('<bool> = 1 : build parser to allow lower case in tokens and variable names')
 
