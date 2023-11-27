@@ -5,21 +5,9 @@ Parser for Integer BASIC
 
 This is a comprehensive language description and fast parser for Integer BASIC built using the [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) system.  Bindings are available for several languages.  The following pre-built packages are available:
 
-* [Parsing Integer with JavaScript](https://www.npmjs.com/package/tree-sitter-integerbasic)
 * [Parsing Integer with Rust](https://crates.io/crates/tree-sitter-integerbasic)
 
-Language Extensions
--------------------
-
-This parser is the basis of language extensions for:
-
-* [Code](https://code.visualstudio.com/), see [vscode-language-integerbasic](https://github.com/dfgordon/vscode-language-integerbasic)
-    - highlights, hovers, completions, diagnostics
-* [Neovim](https://neovim.io), see [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-    - highlights only
-    - language must be [manually installed](https://github.com/nvim-treesitter/nvim-treesitter#advanced-setup)
-
-The Tree-sitter command line interface can highlight a file, see [Tree-sitter highlighting](https://tree-sitter.github.io/tree-sitter/syntax-highlighting).
+Dependents include [vscode-language-integerbasic](https://github.com/dfgordon/vscode-language-integerbasic) and [a2kit](https://github.com/dfgordon/a2kit)
 
 Tokenization
 -----------------
@@ -42,8 +30,6 @@ will produce the S expression
       (sep_print_null [0, 13] - [0, 14]))))
 ```
 Then, one can apply a simple one-one mapping to produce the tokens.  Notice the lookahead dependence of the `PRINT` and `;` tokens is already resolved.
-
-This is the basis of the tokenization command in the [Code extension](https://github.com/dfgordon/vscode-language-integerbasic)
 
 Emulation
 ---------------

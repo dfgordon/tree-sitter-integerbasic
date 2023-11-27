@@ -232,15 +232,15 @@ module.exports = grammar({
 		statement_inn: $ => seq(choice('I','i'),choice('N','n'),'#'),
 
 		op_error: $ => prec(1,choice(
-			/[Ff] *[Oo] *[Rr]/,
-			/[Aa] *[Nn] *[Dd]/,
-			/[Tt] *[Hh] *[Ee] *[Nn]/,
-			/[Gg] *[Oo] *[Tt] *[Oo]/,
 			/[Ss] *[Tt] *[Ee] *[Pp]/,
-			/[Oo] *[Rr]/,
-			/[Mm] *[Oo] *[Dd]/,
-			/[Tt] *[Oo]/,
+			/[Aa] *[Nn] *[Dd]/,
+			/[Gg] *[Oo] *[Tt] *[Oo]/,
 			seq(choice('A','a'),choice('T','t')),
+			/[Ff] *[Oo] *[Rr]/,
+			/[Tt] *[Oo]/,
+			/[Mm] *[Oo] *[Dd]/,
+			/[Oo] *[Rr]/,
+			/[Tt] *[Hh] *[Ee] *[Nn]/,
 		)),
 
 		// Statements

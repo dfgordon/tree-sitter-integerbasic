@@ -2,6 +2,11 @@ test
 examples
 build
 script
-.travis.yml
+.github
 .gitattributes
 target
+*.wasm
+parser.exp
+parser.lib
+parser.obj
+scanner.obj

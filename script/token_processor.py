@@ -17,7 +17,7 @@ import pathlib
 import json
 
 def Usage():
-    print('Usage: python script/token_processor.py --allow-lower-case <bool> [--help]')
+    print('Usage: python token_processor.py --allow-lower-case <bool> [--help]')
     print('<bool> = 0 : build parser to forbid lower case in tokens and variable names')
     print('<bool> = 1 : build parser to allow lower case in tokens and variable names')
 
@@ -38,8 +38,7 @@ while (arg_idx<len(sys.argv)):
 if allow_lower_case==None:
     raise ValueError('--allow-lower-case flag was not set')
 
-proj_path = pathlib.Path.cwd()
-script_path = proj_path / 'script'
+proj_path = pathlib.Path.cwd().parent
 query_path = proj_path / 'queries'
 test_path = proj_path / 'test' / 'corpus'
 
@@ -73,7 +72,7 @@ illegal_var_postalpha_only = illegal_var_postalpha - illegal_var_postnum
 
 tokens = []
 
-with open(script_path / 'token_list.txt','r') as f:
+with open('token_list.txt','r') as f:
     for line in f:
         dat = line.split()
         tokens += [{}]
@@ -243,7 +242,7 @@ conflict_string += '\t\t[$.op_not,$.str_name,$.int_name]\n'
 
 # Create the grammar from the working file
 
-with open(script_path / 'grammar-src.js','r') as f:
+with open('grammar-src.js','r') as f:
     grammar = f.read()
     # Multiple sweeps, order matters
     # First sweep substitutes rules that are specific to a statement or fcall
@@ -333,7 +332,7 @@ with open(query_path / 'highlights.scm','w') as f:
 
 # Write out the token data for use elsewhere
 
-with open(script_path / 'token_list.json','w') as f:
+with open('token_list.json','w') as f:
     f.write(json.dumps(tokens,sort_keys=True,indent=4))
 
 # Write out the illegal variable tests

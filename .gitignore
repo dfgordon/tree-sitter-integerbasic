@@ -2,5 +2,9 @@ Cargo.lock
 node_modules
 build
 *.log
+package-lock.json
 target
 *.wasm
+parser.exp
+parser.lib
+parser.obj
