@@ -218,6 +218,66 @@
     "fields": {}
   },
   {
+    "type": "com_auto",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_clr",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_con",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_del",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_himem",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_load",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_lomem",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_man",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_new",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_run",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_run_line",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "com_save",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "dollar",
     "named": true,
     "fields": {}
@@ -627,6 +687,16 @@
     "fields": {}
   },
   {
+    "type": "sep_auto",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "sep_del",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "sep_dim_int",
     "named": true,
     "fields": {}
@@ -761,6 +831,54 @@
           "named": true
         },
         {
+          "type": "com_auto",
+          "named": true
+        },
+        {
+          "type": "com_clr",
+          "named": true
+        },
+        {
+          "type": "com_con",
+          "named": true
+        },
+        {
+          "type": "com_del",
+          "named": true
+        },
+        {
+          "type": "com_himem",
+          "named": true
+        },
+        {
+          "type": "com_load",
+          "named": true
+        },
+        {
+          "type": "com_lomem",
+          "named": true
+        },
+        {
+          "type": "com_man",
+          "named": true
+        },
+        {
+          "type": "com_new",
+          "named": true
+        },
+        {
+          "type": "com_run",
+          "named": true
+        },
+        {
+          "type": "com_run_line",
+          "named": true
+        },
+        {
+          "type": "com_save",
+          "named": true
+        },
+        {
           "type": "comment_text",
           "named": true
         },
@@ -814,6 +932,14 @@
         },
         {
           "type": "open_dim_str",
+          "named": true
+        },
+        {
+          "type": "sep_auto",
+          "named": true
+        },
+        {
+          "type": "sep_del",
           "named": true
         },
         {

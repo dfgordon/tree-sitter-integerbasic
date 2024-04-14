@@ -2,20 +2,20 @@
 0x01 eol
 0x02 internal
 0x03 :      sep_statement
-0x04 load
-0x05 save
-0x06 con
-0x07 run    run_line command.run  this.linenum
-0x08 run    run command.run  this
-0x09 del
-0x0a ,      sep_del command.del  linenum.this.linenum
-0x0b new
-0x0c clr
-0x0d auto
-0x0e ,      sep_auto command.auto  linenum.this.linenum
-0x0f man
-0x10 himem:
-0x11 lomem:
+0x04 load   com_load
+0x05 save   com_save
+0x06 con    com_con
+0x07 run    com_run_line statement.run this.linenum
+0x08 run    com_run statement.run this.'\n'
+0x09 del    com_del
+0x0a ,      sep_del statement.del  linenum.this.linenum
+0x0b new    com_new
+0x0c clr    com_clr
+0x0d auto   com_auto
+0x0e ,      sep_auto statement.auto  linenum.this.linenum
+0x0f man    com_man
+0x10 himem: com_himem
+0x11 lomem: com_lomem
 0x12 +      op_plus binary_aexpr  _aexpr.this._aexpr
 0x13 -      op_minus binary_aexpr  _aexpr.this._aexpr
 0x14 *      op_times

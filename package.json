@@ -1,11 +1,14 @@
 {
   "name": "tree-sitter-integerbasic",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "parser for integer basic",
   "main": "bindings/node",
+  "types": "bindings/node",
   "scripts": {
     "test": "tree-sitter test",
-    "test-windows": "tree-sitter test"
+    "test-windows": "tree-sitter test",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
   },
   "repository": {
     "type": "git",
@@ -14,6 +17,14 @@
   "keywords": [
     "parser",
     "lexer"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
   ],
   "author": "Daniel Gordon",
   "license": "MIT",
@@ -30,13 +41,24 @@
         "I"
       ],
       "first-line-regex": "[0-9]+\\s*.*",
-      "content-regex": "NODSP"
+      "content-regex": "NODSP",
+      "highlights": "queries/highlights.scm"
     }
   ],
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.8"
+    "prebuildify": "^6.0.0",
+    "tree-sitter-cli": "^0.22.4"
   },
   "dependencies": {
-    "nan": "^2.18.0"
+    "node-gyp-build": "^4.8.0",
+    "node-addon-api": "^7.1.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
   }
 }

@@ -5,32 +5,82 @@
         "rule id": "sep_statement"
     },
     {
+        "code": "0x04",
+        "lexeme": "load",
+        "rule id": "com_load"
+    },
+    {
+        "code": "0x05",
+        "lexeme": "save",
+        "rule id": "com_save"
+    },
+    {
+        "code": "0x06",
+        "lexeme": "con",
+        "rule id": "com_con"
+    },
+    {
         "code": "0x07",
-        "enclosing rule": "command.run",
+        "enclosing rule": "statement.run",
         "lexeme": "run",
         "pattern": "this.linenum",
-        "rule id": "run_line"
+        "rule id": "com_run_line"
     },
     {
         "code": "0x08",
-        "enclosing rule": "command.run",
+        "enclosing rule": "statement.run",
         "lexeme": "run",
-        "pattern": "this",
-        "rule id": "run"
+        "pattern": "this.'\\n'",
+        "rule id": "com_run"
+    },
+    {
+        "code": "0x09",
+        "lexeme": "del",
+        "rule id": "com_del"
     },
     {
         "code": "0x0a",
-        "enclosing rule": "command.del",
+        "enclosing rule": "statement.del",
         "lexeme": ",",
         "pattern": "linenum.this.linenum",
         "rule id": "sep_del"
     },
     {
+        "code": "0x0b",
+        "lexeme": "new",
+        "rule id": "com_new"
+    },
+    {
+        "code": "0x0c",
+        "lexeme": "clr",
+        "rule id": "com_clr"
+    },
+    {
+        "code": "0x0d",
+        "lexeme": "auto",
+        "rule id": "com_auto"
+    },
+    {
         "code": "0x0e",
-        "enclosing rule": "command.auto",
+        "enclosing rule": "statement.auto",
         "lexeme": ",",
         "pattern": "linenum.this.linenum",
         "rule id": "sep_auto"
+    },
+    {
+        "code": "0x0f",
+        "lexeme": "man",
+        "rule id": "com_man"
+    },
+    {
+        "code": "0x10",
+        "lexeme": "himem:",
+        "rule id": "com_himem"
+    },
+    {
+        "code": "0x11",
+        "lexeme": "lomem:",
+        "rule id": "com_lomem"
     },
     {
         "code": "0x12",

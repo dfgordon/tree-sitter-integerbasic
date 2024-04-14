@@ -1,4 +1,5 @@
-'''This program performs automatic edits to the sources for the parser.
+'''This program performs automatic edits to the sources for the parser,
+and creates many of the unit tests.
 This is automatically invoked by running `script/build.py`.
 Inputs:
 `token_list.txt` - file with the A2ROM tokens
@@ -43,15 +44,15 @@ query_path = proj_path / 'queries'
 test_path = proj_path / 'test' / 'corpus'
 
 # Assigning the following is a syntax error according to Virtual II
-illegal_var = set(['end','for','goto','gr','list','notrace','pop','print','return','text','trace'])
+illegal_var = set(['auto','end','for','goto','gr','list','notrace','pop','print','return','text','trace'])
 # Assigning the following with leading Z is a syntax error according to Virtual II
-illegal_var_end = set(['and','at','for','goto','mod','or','step','then','to'])
+illegal_var_end = set(['auto','and','at','for','goto','mod','or','step','then','to'])
 # Assigning the following with trailing alpha is a syntax error according to Virtual II
-illegal_var_postalpha = set(['dsp','end','for','gr','input','list','next','nodsp','notrace','pop','return','text','trace'])
+illegal_var_postalpha = set(['auto','dsp','end','for','gr','input','list','next','nodsp','notrace','pop','return','text','trace'])
 # Assigning the following with trailing number is a syntax error according to Virtual II
-illegal_var_postnum = set(['end','for','gr','list','notrace','pop','return','text','trace'])
+illegal_var_postnum = set(['auto','end','for','gr','list','notrace','pop','return','text','trace'])
 # Assigning the following as string with trailing number is a syntax error
-illegal_str_postnum = illegal_var_postnum | set(['goto','print'])
+illegal_str_postnum = illegal_var_postnum | set(['auto','goto','print'])
 
 # Following are lexical tokens (rule will be regex)
 lexical_tokens = illegal_var_end | (illegal_var & illegal_var_postalpha & illegal_var_postnum)
@@ -70,7 +71,8 @@ illegal_var_postalpha_only = illegal_var_postalpha - illegal_var_postnum
 # First step is to gather and check the tokens
 # Each row becomes a single dictionary describing the token
 
-tokens = []
+tokens = [] # list of dictionaries for all tokens
+commands = set() # all lexemes restricted to immediate mode
 
 with open('token_list.txt','r') as f:
     for line in f:
@@ -81,6 +83,8 @@ with open('token_list.txt','r') as f:
             tokens[-1]['lexeme'] = dat[1]
         if len(dat)>2:
             tokens[-1]['rule id'] = dat[2]
+            if dat[2][:3]=='com':
+                commands.add(dat[1])
         if len(dat)>3:
             tokens[-1]['enclosing rule'] = dat[3]
         if len(dat)>4:
@@ -199,47 +203,6 @@ for lx in illegal_var_end:
         token_rule_string += '\t\t\t' + tok_regex_js(lx) + ',\n'
 token_rule_string += '\t\t)),'
 
-# Form string of conflicts for the JavaScript grammar
-
-conflict_string = 'conflicts: $ => [\n'
-statement_groups = {}
-sep_groups = {}
-
-for t in tokens:
-    if t['rule id']!=None:
-        rule_parts = t['rule id'].split('_')
-        if rule_parts[0]=='statement' or rule_parts[0]=='fcall':
-            grp = rule_parts[0] + '_' + rule_parts[1]
-            if grp in statement_groups:
-                statement_groups[grp] += [t['rule id']]
-            else:
-                statement_groups[grp] = [t['rule id']]
-        if rule_parts[0]=='sep':
-            grp = rule_parts[0] + '_' + rule_parts[1]
-            if grp in sep_groups:
-                sep_groups[grp] += [t['rule id']]
-            else:
-                sep_groups[grp] = [t['rule id']]
-for c in statement_groups:
-    ln = '\t\t['
-    for r in statement_groups[c]:
-        if '_null' not in r:
-            ln += '$.'+r+','
-    if len(statement_groups[c])>1:
-        conflict_string += ln[:-1] + '],\n'
-    conflict_string += ln + '$.str_name,$.int_name],\n'
-for c in sep_groups:
-    ln = '\t\t['
-    for r in sep_groups[c]:
-        if '_null' not in r:
-            ln += '$.'+r+','
-    if len(sep_groups[c])>1:
-        conflict_string += ln[:-1] + '],\n'
-conflict_string += '\t\t[$.str_name,$.int_name],\n'
-conflict_string += '\t\t[$.statement_print_str,$.statement_print_int,$.statement_print_null,$.str_name,$.int_name],\n'
-conflict_string += '\t\t[$.open_slice,$.open_str],\n'
-conflict_string += '\t\t[$.op_not,$.str_name,$.int_name]\n'
-
 # Create the grammar from the working file
 
 with open('grammar-src.js','r') as f:
@@ -300,7 +263,6 @@ with open('grammar-src.js','r') as f:
                         grammar = re.sub(patt,repl,grammar)
     grammar = grammar.replace('\t\t// token rules go here DO NOT EDIT this line',token_rule_string)
     grammar = re.sub('allow_lower_case\s*=\s*\w+','allow_lower_case = '+str(allow_lower_case).lower(),grammar)
-    grammar = re.sub('conflicts:\s*\$\s*=>\s*\[',conflict_string,grammar)
 with open(proj_path / 'grammar.js','w') as f:
     f.write(grammar)
 
@@ -325,6 +287,8 @@ for t in tokens:
                 highlights += '('+t['rule id']+') @punctuation.delimiter\n'
         if 'statement_' in t['rule id']:
             highlights += '('+t['rule id']+') @keyword.builtin\n'
+        if 'com_' in t['rule id']:
+            highlights += '('+t['rule id']+') @keyword.builtin\n'
         if 'fcall_' in t['rule id']:
             highlights += '('+t['rule id']+') @function.builtin\n'
 with open(query_path / 'highlights.scm','w') as f:
@@ -337,105 +301,53 @@ with open('token_list.json','w') as f:
 
 # Write out the illegal variable tests
 
-def test_heading(s):
-    return '==========\n' + s + '\n==========\n\n'
+def lx2rule(s):
+    return 'com_' + s if s in commands else 'statement_' + s
+def test_heading(s,expect_err=False):
+    if expect_err:
+        return '==========\n' + s + '\n:error\n==========\n\n'
+    else:
+        return '==========\n' + s + '\n==========\n\n'
 test_code = ''
 
 for i,l in enumerate(illegal_var):
-    test_code += test_heading('Standalone int '+l)
+    test_code += test_heading('Standalone int '+l,True)
     test_code += '10 ' + l.upper() + ' = 1\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    if l=='print':
-        test_code += '(line (linenum) (statement (statement_print_int) (binary_aexpr (int_name (MISSING "R")) (op_aeq) (integer)) )))\n\n'
-    elif l=='goto':
-        test_code += '(line (linenum) (statement (statement_goto) (binary_aexpr (int_name (MISSING "R")) (op_aeq) (integer)) )))\n\n'
-    elif l=='for':
-        test_code += '(ERROR (linenum) (statement_for) (int_name (MISSING "R")) (op_eq_for) (integer)))\n\n'
-    else:
-        test_code += '(line (linenum) (statement (statement_' + l + ')) (ERROR)))\n\n'
 
-    test_code += test_heading('Standalone str '+l)
+    test_code += test_heading('Standalone str '+l,True)
     test_code += '10 ' + l.upper() + '$ = "1"\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    if l=='print':
-        test_code += '(ERROR (linenum) (statement_print_int) (ERROR) (string (quote) (unquote))))\n\n'
-    elif l=='goto':
-        test_code += '(ERROR (linenum) (statement_goto) (ERROR) (string (quote) (unquote))))\n\n'
-    elif l=='for':
-        test_code += '(ERROR (linenum) (statement_for)))\n\n'
-    else:
-        test_code += '(line (linenum) (statement (statement_' + l + ')) (ERROR)))\n\n'
 
 for i,l in enumerate(illegal_var_postnum):
-    test_code += test_heading('Postnumber int '+l)
+    test_code += test_heading('Postnumber int '+l,True)
     test_code += '10 ' + l.upper() + '1 = 1\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    if l=='list':
-        test_code += '(line (linenum) (statement (statement_list_line) (linenum)) (ERROR)))\n\n'
-    elif l=='for':
-        test_code += '(ERROR (linenum) (statement_for) (integer)))\n\n'
-    else:
-        test_code += '(line (linenum) (statement (statement_' + l + ')) (ERROR)))\n\n'
 
 for i,l in enumerate(illegal_str_postnum):
-    test_code += test_heading('Postnumber str '+l)
+    test_code += test_heading('Postnumber str '+l,True)
     test_code += '10 ' + l.upper() + '1$ = "1"\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    if l=='list':
-        test_code += '(line (linenum) (statement (statement_list_line) (linenum)) (ERROR)))\n\n'
-    elif l=='for':
-        test_code += '(ERROR (linenum) (statement_for) (integer)))\n\n'
-    elif l=='goto':
-        test_code += '(line (linenum) (statement (statement_goto) (integer)) (ERROR (op_aeq) (string (quote) (unquote)))))\n\n'
-    elif l=='print':
-        test_code += '(line (linenum) (statement (statement_print_int) (integer)) (ERROR (op_aeq) (string (quote) (unquote)))))\n\n'
-    else:
-        test_code += '(line (linenum) (statement (statement_' + l + ')) (ERROR)))\n\n'
 
 for i,l in enumerate(illegal_var_postalpha - illegal_var_postalpha_only):
-    test_code += test_heading('Postalpha int '+l)
+    test_code += test_heading('Postalpha int '+l,True)
     test_code += '10 ' + l.upper() + 'A = 1\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    if l=='for':
-        test_code += '(ERROR (linenum) (statement_for) (int_name) (op_eq_for) (integer)))\n\n'
-    else:
-        test_code += '(line (linenum) (ERROR (statement (statement_' + l + '))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))\n\n'
 
-    test_code += test_heading('Postalpha str '+l)
+    test_code += test_heading('Postalpha str '+l,True)
     test_code += '10 ' + l.upper() + 'A$ = "1"\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    if l=='for':
-        test_code += '(ERROR (linenum) (statement_for) (int_name) (ERROR) (op_eq_for) (string (quote) (unquote))))\n\n'
-    else:
-        test_code += '(line (linenum) (ERROR (statement (statement_' + l + '))) '
-        test_code += '(statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))\n\n'
 
 for i,l in enumerate(illegal_var_end):
-    test_code += test_heading('Within int '+l)
+    test_code += test_heading('Within int '+l,True)
     test_code += '10 Z' + l.upper() + 'Z = 1: Z' + l.upper() + ' = 1\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    test_code += '''(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))\n\n'''
 
-    test_code += test_heading('Within str '+l)
+    test_code += test_heading('Within str '+l,True)
     test_code += '10 Z' + l.upper() + 'Z$ = "1": Z' + l.upper() + '$ = "1"\n'
     test_code += '\n---\n\n'
-    test_code += '(source_file\n'
-    test_code += '''(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))\n\n'''
 
-with open(test_path / 'vars-illegal.txt', 'w') as f:
+with open(test_path / 'vars-illegal.txt', 'w', newline="\n") as f:
     f.write(test_code)
 
 # Write out the legal variable tests
@@ -536,5 +448,5 @@ for i,l in enumerate(alphatokens - illegal_var_end):
     (sep_statement)
     (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))\n\n'''
 
-with open(test_path / 'vars-legal.txt', 'w') as f:
+with open(test_path / 'vars-legal.txt', 'w', newline="\n") as f:
     f.write(test_code)

@@ -4,8 +4,8 @@ Parser for Integer BASIC
 This is the rust binding for [tree-sitter-integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic).  To use the parser, include the following in your package's `Cargo.toml`:
 ```toml
 [dependencies]
-tree-sitter = "0.20.10"
-tree-sitter-integerbasic = "1.0.3"
+tree-sitter = "0.22.4"
+tree-sitter-integerbasic = "1.1.0"
 ```
 Here is a trivial `main.rs` example:
 ```rust

@@ -1,912 +1,774 @@
 ==========
-Standalone int text
-==========
-
-10 TEXT = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_text)) (ERROR)))
-
-==========
-Standalone str text
-==========
-
-10 TEXT$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_text)) (ERROR)))
-
-==========
-Standalone int pop
-==========
-
-10 POP = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_pop)) (ERROR)))
-
-==========
-Standalone str pop
-==========
-
-10 POP$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_pop)) (ERROR)))
-
-==========
-Standalone int return
-==========
-
-10 RETURN = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_return)) (ERROR)))
-
-==========
-Standalone str return
-==========
-
-10 RETURN$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_return)) (ERROR)))
-
-==========
-Standalone int goto
-==========
-
-10 GOTO = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_goto) (binary_aexpr (int_name (MISSING "R")) (op_aeq) (integer)) )))
-
-==========
-Standalone str goto
-==========
-
-10 GOTO$ = "1"
-
----
-
-(source_file
-(ERROR (linenum) (statement_goto) (ERROR) (string (quote) (unquote))))
-
-==========
-Standalone int for
-==========
-
-10 FOR = 1
-
----
-
-(source_file
-(ERROR (linenum) (statement_for) (int_name (MISSING "R")) (op_eq_for) (integer)))
-
-==========
-Standalone str for
-==========
-
-10 FOR$ = "1"
-
----
-
-(source_file
-(ERROR (linenum) (statement_for)))
-
-==========
-Standalone int gr
-==========
-
-10 GR = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_gr)) (ERROR)))
-
-==========
-Standalone str gr
-==========
-
-10 GR$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_gr)) (ERROR)))
-
-==========
-Standalone int list
-==========
-
-10 LIST = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_list)) (ERROR)))
-
-==========
-Standalone str list
-==========
-
-10 LIST$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_list)) (ERROR)))
-
-==========
 Standalone int trace
+:error
 ==========
 
 10 TRACE = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_trace)) (ERROR)))
-
 ==========
 Standalone str trace
+:error
 ==========
 
 10 TRACE$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_trace)) (ERROR)))
+==========
+Standalone int for
+:error
+==========
+
+10 FOR = 1
+
+---
+
+==========
+Standalone str for
+:error
+==========
+
+10 FOR$ = "1"
+
+---
+
+==========
+Standalone int pop
+:error
+==========
+
+10 POP = 1
+
+---
+
+==========
+Standalone str pop
+:error
+==========
+
+10 POP$ = "1"
+
+---
+
+==========
+Standalone int list
+:error
+==========
+
+10 LIST = 1
+
+---
+
+==========
+Standalone str list
+:error
+==========
+
+10 LIST$ = "1"
+
+---
 
 ==========
 Standalone int notrace
+:error
 ==========
 
 10 NOTRACE = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_notrace)) (ERROR)))
-
 ==========
 Standalone str notrace
+:error
 ==========
 
 10 NOTRACE$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_notrace)) (ERROR)))
+==========
+Standalone int text
+:error
+==========
+
+10 TEXT = 1
+
+---
+
+==========
+Standalone str text
+:error
+==========
+
+10 TEXT$ = "1"
+
+---
+
+==========
+Standalone int auto
+:error
+==========
+
+10 AUTO = 1
+
+---
+
+==========
+Standalone str auto
+:error
+==========
+
+10 AUTO$ = "1"
+
+---
 
 ==========
 Standalone int end
+:error
 ==========
 
 10 END = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_end)) (ERROR)))
-
 ==========
 Standalone str end
+:error
 ==========
 
 10 END$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_end)) (ERROR)))
+==========
+Standalone int goto
+:error
+==========
+
+10 GOTO = 1
+
+---
+
+==========
+Standalone str goto
+:error
+==========
+
+10 GOTO$ = "1"
+
+---
+
+==========
+Standalone int return
+:error
+==========
+
+10 RETURN = 1
+
+---
+
+==========
+Standalone str return
+:error
+==========
+
+10 RETURN$ = "1"
+
+---
 
 ==========
 Standalone int print
+:error
 ==========
 
 10 PRINT = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_print_int) (binary_aexpr (int_name (MISSING "R")) (op_aeq) (integer)) )))
-
 ==========
 Standalone str print
+:error
 ==========
 
 10 PRINT$ = "1"
 
 ---
 
-(source_file
-(ERROR (linenum) (statement_print_int) (ERROR) (string (quote) (unquote))))
-
 ==========
-Postnumber int pop
+Standalone int gr
+:error
 ==========
 
-10 POP1 = 1
+10 GR = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_pop)) (ERROR)))
-
 ==========
-Postnumber int return
+Standalone str gr
+:error
 ==========
 
-10 RETURN1 = 1
+10 GR$ = "1"
 
 ---
-
-(source_file
-(line (linenum) (statement (statement_return)) (ERROR)))
-
-==========
-Postnumber int for
-==========
-
-10 FOR1 = 1
-
----
-
-(source_file
-(ERROR (linenum) (statement_for) (integer)))
-
-==========
-Postnumber int gr
-==========
-
-10 GR1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_gr)) (ERROR)))
-
-==========
-Postnumber int list
-==========
-
-10 LIST1 = 1
-
----
-
-(source_file
-(line (linenum) (statement (statement_list_line) (linenum)) (ERROR)))
 
 ==========
 Postnumber int trace
+:error
 ==========
 
 10 TRACE1 = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_trace)) (ERROR)))
+==========
+Postnumber int for
+:error
+==========
+
+10 FOR1 = 1
+
+---
+
+==========
+Postnumber int pop
+:error
+==========
+
+10 POP1 = 1
+
+---
+
+==========
+Postnumber int list
+:error
+==========
+
+10 LIST1 = 1
+
+---
 
 ==========
 Postnumber int notrace
+:error
 ==========
 
 10 NOTRACE1 = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_notrace)) (ERROR)))
+==========
+Postnumber int auto
+:error
+==========
+
+10 AUTO1 = 1
+
+---
 
 ==========
 Postnumber int end
+:error
 ==========
 
 10 END1 = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_end)) (ERROR)))
+==========
+Postnumber int return
+:error
+==========
+
+10 RETURN1 = 1
+
+---
 
 ==========
 Postnumber int text
+:error
 ==========
 
 10 TEXT1 = 1
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_text)) (ERROR)))
-
 ==========
-Postnumber str pop
+Postnumber int gr
+:error
 ==========
 
-10 POP1$ = "1"
+10 GR1 = 1
 
 ---
-
-(source_file
-(line (linenum) (statement (statement_pop)) (ERROR)))
-
-==========
-Postnumber str return
-==========
-
-10 RETURN1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_return)) (ERROR)))
 
 ==========
 Postnumber str print
+:error
 ==========
 
 10 PRINT1$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_print_int) (integer)) (ERROR (op_aeq) (string (quote) (unquote)))))
-
-==========
-Postnumber str goto
-==========
-
-10 GOTO1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_goto) (integer)) (ERROR (op_aeq) (string (quote) (unquote)))))
-
-==========
-Postnumber str for
-==========
-
-10 FOR1$ = "1"
-
----
-
-(source_file
-(ERROR (linenum) (statement_for) (integer)))
-
-==========
-Postnumber str gr
-==========
-
-10 GR1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_gr)) (ERROR)))
-
-==========
-Postnumber str list
-==========
-
-10 LIST1$ = "1"
-
----
-
-(source_file
-(line (linenum) (statement (statement_list_line) (linenum)) (ERROR)))
-
 ==========
 Postnumber str trace
+:error
 ==========
 
 10 TRACE1$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_trace)) (ERROR)))
+==========
+Postnumber str for
+:error
+==========
+
+10 FOR1$ = "1"
+
+---
+
+==========
+Postnumber str pop
+:error
+==========
+
+10 POP1$ = "1"
+
+---
+
+==========
+Postnumber str list
+:error
+==========
+
+10 LIST1$ = "1"
+
+---
 
 ==========
 Postnumber str notrace
+:error
 ==========
 
 10 NOTRACE1$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_notrace)) (ERROR)))
+==========
+Postnumber str auto
+:error
+==========
+
+10 AUTO1$ = "1"
+
+---
 
 ==========
 Postnumber str end
+:error
 ==========
 
 10 END1$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_end)) (ERROR)))
+==========
+Postnumber str return
+:error
+==========
+
+10 RETURN1$ = "1"
+
+---
+
+==========
+Postnumber str goto
+:error
+==========
+
+10 GOTO1$ = "1"
+
+---
 
 ==========
 Postnumber str text
+:error
 ==========
 
 10 TEXT1$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (statement (statement_text)) (ERROR)))
-
 ==========
-Postalpha int return
+Postnumber str gr
+:error
 ==========
 
-10 RETURNA = 1
+10 GR1$ = "1"
 
 ---
-
-(source_file
-(line (linenum) (ERROR (statement (statement_return))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str return
-==========
-
-10 RETURNA$ = "1"
-
----
-
-(source_file
-(line (linenum) (ERROR (statement (statement_return))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int pop
-==========
-
-10 POPA = 1
-
----
-
-(source_file
-(line (linenum) (ERROR (statement (statement_pop))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str pop
-==========
-
-10 POPA$ = "1"
-
----
-
-(source_file
-(line (linenum) (ERROR (statement (statement_pop))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int for
-==========
-
-10 FORA = 1
-
----
-
-(source_file
-(ERROR (linenum) (statement_for) (int_name) (op_eq_for) (integer)))
-
-==========
-Postalpha str for
-==========
-
-10 FORA$ = "1"
-
----
-
-(source_file
-(ERROR (linenum) (statement_for) (int_name) (ERROR) (op_eq_for) (string (quote) (unquote))))
-
-==========
-Postalpha int gr
-==========
-
-10 GRA = 1
-
----
-
-(source_file
-(line (linenum) (ERROR (statement (statement_gr))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str gr
-==========
-
-10 GRA$ = "1"
-
----
-
-(source_file
-(line (linenum) (ERROR (statement (statement_gr))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Postalpha int list
-==========
-
-10 LISTA = 1
-
----
-
-(source_file
-(line (linenum) (ERROR (statement (statement_list))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
-==========
-Postalpha str list
-==========
-
-10 LISTA$ = "1"
-
----
-
-(source_file
-(line (linenum) (ERROR (statement (statement_list))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
 Postalpha int trace
+:error
 ==========
 
 10 TRACEA = 1
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_trace))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
 ==========
 Postalpha str trace
+:error
 ==========
 
 10 TRACEA$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_trace))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+==========
+Postalpha int for
+:error
+==========
+
+10 FORA = 1
+
+---
+
+==========
+Postalpha str for
+:error
+==========
+
+10 FORA$ = "1"
+
+---
+
+==========
+Postalpha int pop
+:error
+==========
+
+10 POPA = 1
+
+---
+
+==========
+Postalpha str pop
+:error
+==========
+
+10 POPA$ = "1"
+
+---
+
+==========
+Postalpha int list
+:error
+==========
+
+10 LISTA = 1
+
+---
+
+==========
+Postalpha str list
+:error
+==========
+
+10 LISTA$ = "1"
+
+---
 
 ==========
 Postalpha int notrace
+:error
 ==========
 
 10 NOTRACEA = 1
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_notrace))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
 ==========
 Postalpha str notrace
+:error
 ==========
 
 10 NOTRACEA$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_notrace))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+==========
+Postalpha int auto
+:error
+==========
+
+10 AUTOA = 1
+
+---
+
+==========
+Postalpha str auto
+:error
+==========
+
+10 AUTOA$ = "1"
+
+---
 
 ==========
 Postalpha int end
+:error
 ==========
 
 10 ENDA = 1
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_end))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
 ==========
 Postalpha str end
+:error
 ==========
 
 10 ENDA$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_end))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+==========
+Postalpha int return
+:error
+==========
+
+10 RETURNA = 1
+
+---
+
+==========
+Postalpha str return
+:error
+==========
+
+10 RETURNA$ = "1"
+
+---
 
 ==========
 Postalpha int text
+:error
 ==========
 
 10 TEXTA = 1
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_text))) (statement (assignment_int (int_name) (op_eq_assign_int) (integer)))))
-
 ==========
 Postalpha str text
+:error
 ==========
 
 10 TEXTA$ = "1"
 
 ---
 
-(source_file
-(line (linenum) (ERROR (statement (statement_text))) (statement (assignment_str (str_name (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
 ==========
-Within int step
+Postalpha int gr
+:error
 ==========
 
-10 ZSTEPZ = 1: ZSTEP = 1
+10 GRA = 1
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
 ==========
-Within str step
+Postalpha str gr
+:error
 ==========
 
-10 ZSTEPZ$ = "1": ZSTEP$ = "1"
+10 GRA$ = "1"
 
 ---
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int and
-==========
-
-10 ZANDZ = 1: ZAND = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
-==========
-Within str and
-==========
-
-10 ZANDZ$ = "1": ZAND$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int goto
-==========
-
-10 ZGOTOZ = 1: ZGOTO = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
-==========
-Within str goto
-==========
-
-10 ZGOTOZ$ = "1": ZGOTO$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int at
-==========
-
-10 ZATZ = 1: ZAT = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
-==========
-Within str at
-==========
-
-10 ZATZ$ = "1": ZAT$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
 Within int for
+:error
 ==========
 
 10 ZFORZ = 1: ZFOR = 1
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
 ==========
 Within str for
+:error
 ==========
 
 10 ZFORZ$ = "1": ZFOR$ = "1"
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
 ==========
-Within int to
+Within int step
+:error
 ==========
 
-10 ZTOZ = 1: ZTO = 1
+10 ZSTEPZ = 1: ZSTEP = 1
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
 ==========
-Within str to
+Within str step
+:error
 ==========
 
-10 ZTOZ$ = "1": ZTO$ = "1"
+10 ZSTEPZ$ = "1": ZSTEP$ = "1"
 
 ---
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
-
-==========
-Within int mod
-==========
-
-10 ZMODZ = 1: ZMOD = 1
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
-==========
-Within str mod
-==========
-
-10 ZMODZ$ = "1": ZMOD$ = "1"
-
----
-
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
 
 ==========
 Within int or
+:error
 ==========
 
 10 ZORZ = 1: ZOR = 1
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
 ==========
 Within str or
+:error
 ==========
 
 10 ZORZ$ = "1": ZOR$ = "1"
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+==========
+Within int at
+:error
+==========
+
+10 ZATZ = 1: ZAT = 1
+
+---
+
+==========
+Within str at
+:error
+==========
+
+10 ZATZ$ = "1": ZAT$ = "1"
+
+---
+
+==========
+Within int auto
+:error
+==========
+
+10 ZAUTOZ = 1: ZAUTO = 1
+
+---
+
+==========
+Within str auto
+:error
+==========
+
+10 ZAUTOZ$ = "1": ZAUTO$ = "1"
+
+---
+
+==========
+Within int goto
+:error
+==========
+
+10 ZGOTOZ = 1: ZGOTO = 1
+
+---
+
+==========
+Within str goto
+:error
+==========
+
+10 ZGOTOZ$ = "1": ZGOTO$ = "1"
+
+---
+
+==========
+Within int and
+:error
+==========
+
+10 ZANDZ = 1: ZAND = 1
+
+---
+
+==========
+Within str and
+:error
+==========
+
+10 ZANDZ$ = "1": ZAND$ = "1"
+
+---
 
 ==========
 Within int then
+:error
 ==========
 
 10 ZTHENZ = 1: ZTHEN = 1
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_int (int_name (ERROR (op_error))) (op_eq_assign_int) (integer)))
-    (sep_statement)
-    (statement (assignment_int (int_name) (ERROR (op_error)) (op_eq_assign_int) (integer)))))
-
 ==========
 Within str then
+:error
 ==========
 
 10 ZTHENZ$ = "1": ZTHEN$ = "1"
 
 ---
 
-(source_file
-(line (linenum)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))
-    (sep_statement)
-    (statement (assignment_str (str_name (ERROR (op_error)) (dollar)) (op_eq_assign_str) (string (quote) (unquote))))))
+==========
+Within int mod
+:error
+==========
+
+10 ZMODZ = 1: ZMOD = 1
+
+---
+
+==========
+Within str mod
+:error
+==========
+
+10 ZMODZ$ = "1": ZMOD$ = "1"
+
+---
+
+==========
+Within int to
+:error
+==========
+
+10 ZTOZ = 1: ZTO = 1
+
+---
+
+==========
+Within str to
+:error
+==========
+
+10 ZTOZ$ = "1": ZTO$ = "1"
+
+---
 

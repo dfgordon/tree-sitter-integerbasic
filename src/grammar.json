@@ -67,7 +67,165 @@
         }
       ]
     },
-    "run_line": {
+    "com_load": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "L"
+            },
+            {
+              "type": "STRING",
+              "value": "l"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "O"
+            },
+            {
+              "type": "STRING",
+              "value": "o"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "A"
+            },
+            {
+              "type": "STRING",
+              "value": "a"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "D"
+            },
+            {
+              "type": "STRING",
+              "value": "d"
+            }
+          ]
+        }
+      ]
+    },
+    "com_save": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "S"
+            },
+            {
+              "type": "STRING",
+              "value": "s"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "A"
+            },
+            {
+              "type": "STRING",
+              "value": "a"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "V"
+            },
+            {
+              "type": "STRING",
+              "value": "v"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "E"
+            },
+            {
+              "type": "STRING",
+              "value": "e"
+            }
+          ]
+        }
+      ]
+    },
+    "com_con": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "C"
+            },
+            {
+              "type": "STRING",
+              "value": "c"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "O"
+            },
+            {
+              "type": "STRING",
+              "value": "o"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "N"
+            },
+            {
+              "type": "STRING",
+              "value": "n"
+            }
+          ]
+        }
+      ]
+    },
+    "com_run_line": {
       "type": "SEQ",
       "members": [
         {
@@ -111,7 +269,7 @@
         }
       ]
     },
-    "run": {
+    "com_run": {
       "type": "SEQ",
       "members": [
         {
@@ -150,6 +308,50 @@
             {
               "type": "STRING",
               "value": "n"
+            }
+          ]
+        }
+      ]
+    },
+    "com_del": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "D"
+            },
+            {
+              "type": "STRING",
+              "value": "d"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "E"
+            },
+            {
+              "type": "STRING",
+              "value": "e"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "L"
+            },
+            {
+              "type": "STRING",
+              "value": "l"
             }
           ]
         }
@@ -164,12 +366,296 @@
         }
       ]
     },
+    "com_new": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "N"
+            },
+            {
+              "type": "STRING",
+              "value": "n"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "E"
+            },
+            {
+              "type": "STRING",
+              "value": "e"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "W"
+            },
+            {
+              "type": "STRING",
+              "value": "w"
+            }
+          ]
+        }
+      ]
+    },
+    "com_clr": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "C"
+            },
+            {
+              "type": "STRING",
+              "value": "c"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "L"
+            },
+            {
+              "type": "STRING",
+              "value": "l"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "R"
+            },
+            {
+              "type": "STRING",
+              "value": "r"
+            }
+          ]
+        }
+      ]
+    },
+    "com_auto": {
+      "type": "PATTERN",
+      "value": "[Aa] *[Uu] *[Tt] *[Oo]"
+    },
     "sep_auto": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
           "value": ","
+        }
+      ]
+    },
+    "com_man": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "M"
+            },
+            {
+              "type": "STRING",
+              "value": "m"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "A"
+            },
+            {
+              "type": "STRING",
+              "value": "a"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "N"
+            },
+            {
+              "type": "STRING",
+              "value": "n"
+            }
+          ]
+        }
+      ]
+    },
+    "com_himem": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "H"
+            },
+            {
+              "type": "STRING",
+              "value": "h"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "I"
+            },
+            {
+              "type": "STRING",
+              "value": "i"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "M"
+            },
+            {
+              "type": "STRING",
+              "value": "m"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "E"
+            },
+            {
+              "type": "STRING",
+              "value": "e"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "M"
+            },
+            {
+              "type": "STRING",
+              "value": "m"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        }
+      ]
+    },
+    "com_lomem": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "L"
+            },
+            {
+              "type": "STRING",
+              "value": "l"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "O"
+            },
+            {
+              "type": "STRING",
+              "value": "o"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "M"
+            },
+            {
+              "type": "STRING",
+              "value": "m"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "E"
+            },
+            {
+              "type": "STRING",
+              "value": "e"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "M"
+            },
+            {
+              "type": "STRING",
+              "value": "m"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ":"
         }
       ]
     },
@@ -2671,15 +3157,15 @@
         "members": [
           {
             "type": "PATTERN",
+            "value": "[Ff] *[Oo] *[Rr]"
+          },
+          {
+            "type": "PATTERN",
             "value": "[Ss] *[Tt] *[Ee] *[Pp]"
           },
           {
             "type": "PATTERN",
-            "value": "[Aa] *[Nn] *[Dd]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
+            "value": "[Oo] *[Rr]"
           },
           {
             "type": "SEQ",
@@ -2714,11 +3200,19 @@
           },
           {
             "type": "PATTERN",
-            "value": "[Ff] *[Oo] *[Rr]"
+            "value": "[Aa] *[Uu] *[Tt] *[Oo]"
           },
           {
             "type": "PATTERN",
-            "value": "[Tt] *[Oo]"
+            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Aa] *[Nn] *[Dd]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Tt] *[Hh] *[Ee] *[Nn]"
           },
           {
             "type": "PATTERN",
@@ -2726,11 +3220,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[Oo] *[Rr]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Tt] *[Hh] *[Ee] *[Nn]"
+            "value": "[Tt] *[Oo]"
           }
         ]
       }
@@ -2738,6 +3228,141 @@
     "statement": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "SYMBOL",
+          "name": "com_load"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "com_save"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "com_con"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "com_run"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "com_run_line"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "linenum"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "com_del"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "linenum"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "sep_del"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "linenum"
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "com_new"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "com_clr"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "com_auto"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "linenum"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "sep_auto"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "linenum"
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "com_man"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "com_himem"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_aexpr"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "com_lomem"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_aexpr"
+            }
+          ]
+        },
         {
           "type": "SEQ",
           "members": [
@@ -5290,14 +5915,59 @@
   ],
   "conflicts": [
     [
-      "statement_then_line",
-      "statement_then"
+      "com_load",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_save",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_con",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_run_line",
+      "com_run",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_del",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_new",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_clr",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_man",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_himem",
+      "str_name",
+      "int_name"
+    ],
+    [
+      "com_lomem",
+      "str_name",
+      "int_name"
     ],
     [
       "statement_then_line",
-      "statement_then",
-      "str_name",
-      "int_name"
+      "statement_then"
     ],
     [
       "fcall_peek",
@@ -5340,16 +6010,6 @@
       "int_name"
     ],
     [
-      "statement_text",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_gr",
-      "str_name",
-      "int_name"
-    ],
-    [
       "statement_call",
       "str_name",
       "int_name"
@@ -5370,11 +6030,6 @@
       "int_name"
     ],
     [
-      "statement_end",
-      "str_name",
-      "int_name"
-    ],
-    [
       "statement_input_str",
       "statement_input_prompt",
       "statement_input_int"
@@ -5387,17 +6042,7 @@
       "int_name"
     ],
     [
-      "statement_for",
-      "str_name",
-      "int_name"
-    ],
-    [
       "statement_next",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_return",
       "str_name",
       "int_name"
     ],
@@ -5407,17 +6052,7 @@
       "int_name"
     ],
     [
-      "statement_rem",
-      "str_name",
-      "int_name"
-    ],
-    [
       "statement_let",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_goto",
       "str_name",
       "int_name"
     ],
@@ -5431,18 +6066,7 @@
       "statement_print_int"
     ],
     [
-      "statement_print_str",
-      "statement_print_int",
-      "str_name",
-      "int_name"
-    ],
-    [
       "statement_poke",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_coloreq",
       "str_name",
       "int_name"
     ],
@@ -5467,21 +6091,6 @@
       "int_name"
     ],
     [
-      "statement_list_line",
-      "statement_list"
-    ],
-    [
-      "statement_list_line",
-      "statement_list",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_pop",
-      "str_name",
-      "int_name"
-    ],
-    [
       "statement_nodsp_str",
       "statement_nodsp_int"
     ],
@@ -5492,32 +6101,12 @@
       "int_name"
     ],
     [
-      "statement_notrace",
-      "str_name",
-      "int_name"
-    ],
-    [
       "statement_dsp_str",
       "statement_dsp_int"
     ],
     [
       "statement_dsp_str",
       "statement_dsp_int",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_trace",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_prn",
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_inn",
       "str_name",
       "int_name"
     ],
@@ -5538,17 +6127,6 @@
       "sep_tab_int"
     ],
     [
-      "str_name",
-      "int_name"
-    ],
-    [
-      "statement_print_str",
-      "statement_print_int",
-      "statement_print_null",
-      "str_name",
-      "int_name"
-    ],
-    [
       "open_slice",
       "open_str"
     ],
@@ -5563,4 +6141,3 @@
   "inline": [],
   "supertypes": []
 }
-
