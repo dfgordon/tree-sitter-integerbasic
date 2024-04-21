@@ -5,7 +5,7 @@ This is the rust binding for [tree-sitter-integerbasic](https://github.com/dfgor
 ```toml
 [dependencies]
 tree-sitter = "0.22.4"
-tree-sitter-integerbasic = "1.1.0"
+tree-sitter-integerbasic = "1.1.1"
 ```
 Here is a trivial `main.rs` example:
 ```rust
@@ -15,7 +15,7 @@ use tree_sitter_integerbasic;
 fn main() {
     let code = "10 GOTO 10\n";
     let mut parser = tree_sitter::Parser::new();
-    parser.set_language(tree_sitter_integerbasic::language())
+    parser.set_language(&tree_sitter_integerbasic::language())
       .expect("Error loading Integer BASIC grammar");
     let tree = parser.parse(code,None).unwrap();
 

@@ -5,35 +5,21 @@ Parser for Integer BASIC
 
 This is a parser for Integer BASIC intended for use with language servers.  It is built using the [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) system.  Bindings are available for several languages.  The following pre-built packages are available:
 
+* [Parsing Integer with C++](https://github.com/dfgordon/tree-sitter-integerbasic/releases)
 * [Parsing Integer with Rust](https://crates.io/crates/tree-sitter-integerbasic)
 * [Parsing Integer with WASM](https://github.com/dfgordon/tree-sitter-integerbasic/releases)
+* [Parsing Integer with Node](https://www.npmjs.com/package/tree-sitter-integerbasic)
 
-Tokenization
------------------
+For details on parser usage and design see the [wiki](https://github.com/dfgordon/tree-sitter-integerbasic/wiki).
 
-The parser is designed to make tokenization easy by assigning to each integer BASIC token a distinct, named node in the syntax tree.  For example,
-```bas
-10 PRINT A$;A;
-```
-will produce the S expression
-```s
-(source_file [0, 0] - [1, 0]
-  (line [0, 0] - [1, 0]
-    (linenum [0, 0] - [0, 3])
-    (statement [0, 3] - [0, 14]
-      (statement_print_str [0, 3] - [0, 8])
-      (str_name [0, 9] - [0, 11]
-        (dollar [0, 10] - [0, 11]))
-      (sep_print_int [0, 11] - [0, 12])
-      (int_name [0, 12] - [0, 13])
-      (sep_print_null [0, 13] - [0, 14]))))
-```
-Then, one can apply a simple one-one mapping to produce the tokens.  Notice the lookahead dependence of the `PRINT` and `;` tokens is already resolved.
+Build Process
+-------------
 
-Emulation
----------------
+The build products are generated using `script/build.py, see docstring within for dependencies.
 
-The parser is intended to emulate the behavior of the Apple ][ ROM (A2ROM).  A large number of tests have been constructed to verify this.  The known exception is that the A2ROM forbids assignment (without `LET`) to variables that begin with `DSP`, `NODSP`, `NEXT`, and `INPUT`, while this parser allows such assignments.  Downstream tools can easily check `int_name` and `str_name` nodes to correct for this.
+This is a cascaded build.  The starting files are `token_list.txt` and `grammar-src.js`.  These are used by `token_processor.py` to produce `grammar.js`.  These are used by `tree-sitter generate` to produce `src/parser.c` and, in turn, the bindings for various languages.  These are used by `tree-sitter build` to produce the WASM parser.
+
+The `build.py` script produces a case insensitive parser, but can be easily modified to produce a case sensitive one.
 
 References
 -----------

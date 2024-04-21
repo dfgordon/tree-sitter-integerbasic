@@ -3157,11 +3157,15 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "[Ff] *[Oo] *[Rr]"
+            "value": "[Tt] *[Hh] *[Ee] *[Nn]"
           },
           {
             "type": "PATTERN",
-            "value": "[Ss] *[Tt] *[Ee] *[Pp]"
+            "value": "[Mm] *[Oo] *[Dd]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Ff] *[Oo] *[Rr]"
           },
           {
             "type": "PATTERN",
@@ -3204,23 +3208,19 @@
           },
           {
             "type": "PATTERN",
-            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
-          },
-          {
-            "type": "PATTERN",
             "value": "[Aa] *[Nn] *[Dd]"
           },
           {
             "type": "PATTERN",
-            "value": "[Tt] *[Hh] *[Ee] *[Nn]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Mm] *[Oo] *[Dd]"
+            "value": "[Ss] *[Tt] *[Ee] *[Pp]"
           },
           {
             "type": "PATTERN",
             "value": "[Tt] *[Oo]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
           }
         ]
       }

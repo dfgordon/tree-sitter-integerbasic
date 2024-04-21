@@ -1,19 +1,18 @@
 '''Update the parser and build the WASM files
-The Docker daemon must be running.
-Run from script directory.
-
-On Windows you may have better luck with `build.ps1`.'''
+The emscripten SDK must be activated: `emsdk activate latest`,
+or else the Docker daemon must be running.
+Run from project directory: `python script/build.py`'''
 
 import subprocess
 import pathlib
 import os
 
-script_dir = pathlib.Path.cwd()
-root_dir = script_dir.parent
+root_dir = pathlib.Path.cwd()
+script_dir =  root_dir / 'script'
 
 os.chdir(script_dir)
 subprocess.run(['python','token_processor.py','--allow-lower-case','1']).check_returncode()
 os.chdir(root_dir)
-subprocess.run(['tree-sitter','generate']).check_returncode()
-subprocess.run(['tree-sitter','test']).check_returncode()
-subprocess.run(['tree-sitter','build','--wasm','.']).check_returncode()
+subprocess.run('npx tree-sitter generate', shell=True).check_returncode()
+subprocess.run('npx tree-sitter test', shell=True).check_returncode()
+subprocess.run('npx tree-sitter build --wasm .', shell=True).check_returncode()

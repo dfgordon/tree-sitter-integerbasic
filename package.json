@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-integerbasic",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "parser for integer basic",
   "main": "bindings/node",
   "types": "bindings/node",
@@ -8,7 +8,8 @@
     "test": "tree-sitter test",
     "test-windows": "tree-sitter test",
     "install": "node-gyp-build",
-    "prebuildify": "prebuildify --napi --strip"
+    "prebuildify": "prebuildify --napi --strip",
+    "build": "tree-sitter generate --no-bindings"
   },
   "repository": {
     "type": "git",
@@ -42,16 +43,19 @@
       ],
       "first-line-regex": "[0-9]+\\s*.*",
       "content-regex": "NODSP",
-      "highlights": "queries/highlights.scm"
-    }
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    } 
   ],
   "devDependencies": {
     "prebuildify": "^6.0.0",
     "tree-sitter-cli": "^0.22.4"
   },
   "dependencies": {
+    "node-gyp": "^10.1.0",
     "node-gyp-build": "^4.8.0",
-    "node-addon-api": "^7.1.0"
+    "node-addon-api": "^8.0.0"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.0"
