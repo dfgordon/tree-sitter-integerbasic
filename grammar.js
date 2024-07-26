@@ -232,16 +232,16 @@ module.exports = grammar({
 		statement_inn: $ => seq(choice('I','i'),choice('N','n'),'#'),
 
 		op_error: $ => prec(1,choice(
-			/[Tt] *[Hh] *[Ee] *[Nn]/,
-			/[Mm] *[Oo] *[Dd]/,
-			/[Ff] *[Oo] *[Rr]/,
-			/[Oo] *[Rr]/,
-			seq(choice('A','a'),choice('T','t')),
-			/[Aa] *[Uu] *[Tt] *[Oo]/,
 			/[Aa] *[Nn] *[Dd]/,
-			/[Ss] *[Tt] *[Ee] *[Pp]/,
-			/[Tt] *[Oo]/,
 			/[Gg] *[Oo] *[Tt] *[Oo]/,
+			/[Mm] *[Oo] *[Dd]/,
+			/[Tt] *[Hh] *[Ee] *[Nn]/,
+			/[Tt] *[Oo]/,
+			/[Oo] *[Rr]/,
+			/[Aa] *[Uu] *[Tt] *[Oo]/,
+			seq(choice('A','a'),choice('T','t')),
+			/[Ff] *[Oo] *[Rr]/,
+			/[Ss] *[Tt] *[Ee] *[Pp]/,
 		)),
 
 		// Statements, immediate mode commands are included, but will get special prefix `com`.

@@ -3157,7 +3157,11 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "[Tt] *[Hh] *[Ee] *[Nn]"
+            "value": "[Aa] *[Nn] *[Dd]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
           },
           {
             "type": "PATTERN",
@@ -3165,11 +3169,19 @@
           },
           {
             "type": "PATTERN",
-            "value": "[Ff] *[Oo] *[Rr]"
+            "value": "[Tt] *[Hh] *[Ee] *[Nn]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Tt] *[Oo]"
           },
           {
             "type": "PATTERN",
             "value": "[Oo] *[Rr]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Aa] *[Uu] *[Tt] *[Oo]"
           },
           {
             "type": "SEQ",
@@ -3204,23 +3216,11 @@
           },
           {
             "type": "PATTERN",
-            "value": "[Aa] *[Uu] *[Tt] *[Oo]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Aa] *[Nn] *[Dd]"
+            "value": "[Ff] *[Oo] *[Rr]"
           },
           {
             "type": "PATTERN",
             "value": "[Ss] *[Tt] *[Ee] *[Pp]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Tt] *[Oo]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
           }
         ]
       }

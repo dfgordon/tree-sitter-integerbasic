@@ -19,7 +19,7 @@ Here is a sample `package.json`:
   "dependencies": {
     "node-gyp": "^10.1.0",
     "tree-sitter": "^0.21.1",
-    "tree-sitter-integerbasic": "^1.1.1"
+    "tree-sitter-integerbasic": "^2.0.0"
   }
 }
 ```

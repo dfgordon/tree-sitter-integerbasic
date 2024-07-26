@@ -5,7 +5,7 @@ This is the rust binding for [tree-sitter-integerbasic](https://github.com/dfgor
 ```toml
 [dependencies]
 tree-sitter = "0.22.4"
-tree-sitter-integerbasic = "1.1.1"
+tree-sitter-integerbasic = "2.0.0"
 ```
 Here is a trivial `main.rs` example:
 ```rust
