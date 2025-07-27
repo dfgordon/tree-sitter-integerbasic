@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "integerbasic",
   "rules": {
     "source_file": {
@@ -59,13 +60,8 @@
       "value": "\\r?\\n"
     },
     "sep_statement": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ":"
-        }
-      ]
+      "type": "STRING",
+      "value": ":"
     },
     "com_load": {
       "type": "SEQ",
@@ -358,13 +354,8 @@
       ]
     },
     "sep_del": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "com_new": {
       "type": "SEQ",
@@ -459,13 +450,8 @@
       "value": "[Aa] *[Uu] *[Tt] *[Oo]"
     },
     "sep_auto": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "com_man": {
       "type": "SEQ",
@@ -660,58 +646,28 @@
       ]
     },
     "op_plus": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "+"
-        }
-      ]
+      "type": "STRING",
+      "value": "+"
     },
     "op_minus": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "-"
-        }
-      ]
+      "type": "STRING",
+      "value": "-"
     },
     "op_times": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "*"
-        }
-      ]
+      "type": "STRING",
+      "value": "*"
     },
     "op_div": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "/"
-        }
-      ]
+      "type": "STRING",
+      "value": "/"
     },
     "op_aeq": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "="
-        }
-      ]
+      "type": "STRING",
+      "value": "="
     },
     "op_aneq": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "#"
-        }
-      ]
+      "type": "STRING",
+      "value": "#"
     },
     "op_gtreq": {
       "type": "SEQ",
@@ -727,13 +683,8 @@
       ]
     },
     "op_gtr": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ">"
-        }
-      ]
+      "type": "STRING",
+      "value": ">"
     },
     "op_lesseq": {
       "type": "SEQ",
@@ -762,13 +713,8 @@
       ]
     },
     "op_less": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "<"
-        }
-      ]
+      "type": "STRING",
+      "value": "<"
     },
     "op_and": {
       "type": "PATTERN",
@@ -783,31 +729,16 @@
       "value": "[Mm] *[Oo] *[Dd]"
     },
     "op_pow": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "^"
-        }
-      ]
+      "type": "STRING",
+      "value": "^"
     },
     "open_dim_str": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "("
-        }
-      ]
+      "type": "STRING",
+      "value": "("
     },
     "sep_slice": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "statement_then_line": {
       "type": "PATTERN",
@@ -818,58 +749,28 @@
       "value": "[Tt] *[Hh] *[Ee] *[Nn]"
     },
     "sep_input_str": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "sep_input_int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "quote": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\""
-        }
-      ]
+      "type": "STRING",
+      "value": "\""
     },
     "unquote": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\""
-        }
-      ]
+      "type": "STRING",
+      "value": "\""
     },
     "open_slice": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "("
-        }
-      ]
+      "type": "STRING",
+      "value": "("
     },
     "open_int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "("
-        }
-      ]
+      "type": "STRING",
+      "value": "("
     },
     "fcall_peek": {
       "type": "SEQ",
@@ -1105,31 +1006,16 @@
       ]
     },
     "open_dim_int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "("
-        }
-      ]
+      "type": "STRING",
+      "value": "("
     },
     "op_unary_plus": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "+"
-        }
-      ]
+      "type": "STRING",
+      "value": "+"
     },
     "op_unary_minus": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "-"
-        }
-      ]
+      "type": "STRING",
+      "value": "-"
     },
     "op_not": {
       "type": "SEQ",
@@ -1176,31 +1062,16 @@
       ]
     },
     "open_aexpr": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "("
-        }
-      ]
+      "type": "STRING",
+      "value": "("
     },
     "op_seq": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "="
-        }
-      ]
+      "type": "STRING",
+      "value": "="
     },
     "op_sneq": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "#"
-        }
-      ]
+      "type": "STRING",
+      "value": "#"
     },
     "fcall_lenp": {
       "type": "SEQ",
@@ -1360,112 +1231,52 @@
       ]
     },
     "sep_scrn": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "open_fcall": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "("
-        }
-      ]
+      "type": "STRING",
+      "value": "("
     },
     "dollar": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "$"
-        }
-      ]
+      "type": "STRING",
+      "value": "$"
     },
     "open_str": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "("
-        }
-      ]
+      "type": "STRING",
+      "value": "("
     },
     "sep_dim_str": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "sep_dim_int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "sep_print_str": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ";"
-        }
-      ]
+      "type": "STRING",
+      "value": ";"
     },
     "sep_print_int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ";"
-        }
-      ]
+      "type": "STRING",
+      "value": ";"
     },
     "sep_print_null": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ";"
-        }
-      ]
+      "type": "STRING",
+      "value": ";"
     },
     "sep_tab_str": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "sep_tab_int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "sep_tab_null": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "statement_text": {
       "type": "PATTERN",
@@ -1883,13 +1694,8 @@
       "value": "[Ff] *[Oo] *[Rr]"
     },
     "op_eq_for": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "="
-        }
-      ]
+      "type": "STRING",
+      "value": "="
     },
     "op_to": {
       "type": "PATTERN",
@@ -1957,13 +1763,8 @@
       ]
     },
     "sep_next": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "statement_return": {
       "type": "PATTERN",
@@ -2446,13 +2247,8 @@
       ]
     },
     "sep_poke": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "statement_coloreq": {
       "type": "PREC",
@@ -2590,13 +2386,8 @@
       ]
     },
     "sep_plot": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "statement_hlin": {
       "type": "SEQ",
@@ -2656,13 +2447,8 @@
       ]
     },
     "sep_hlin": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "op_hlin_at": {
       "type": "PATTERN",
@@ -2726,13 +2512,8 @@
       ]
     },
     "sep_vlin": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "op_vlin_at": {
       "type": "PATTERN",
@@ -2796,44 +2577,24 @@
       ]
     },
     "op_eq_assign_str": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "="
-        }
-      ]
+      "type": "STRING",
+      "value": "="
     },
     "op_eq_assign_int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "="
-        }
-      ]
+      "type": "STRING",
+      "value": "="
     },
     "close": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ")"
-        }
-      ]
+      "type": "STRING",
+      "value": ")"
     },
     "statement_list_line": {
       "type": "PATTERN",
       "value": "[Ll] *[Ii] *[Ss] *[Tt]"
     },
     "sep_list": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": ","
-        }
-      ]
+      "type": "STRING",
+      "value": ","
     },
     "statement_list": {
       "type": "PATTERN",
@@ -3157,23 +2918,15 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "[Aa] *[Nn] *[Dd]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[Mm] *[Oo] *[Dd]"
-          },
-          {
-            "type": "PATTERN",
             "value": "[Tt] *[Hh] *[Ee] *[Nn]"
           },
           {
             "type": "PATTERN",
-            "value": "[Tt] *[Oo]"
+            "value": "[Ff] *[Oo] *[Rr]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Aa] *[Nn] *[Dd]"
           },
           {
             "type": "PATTERN",
@@ -3181,7 +2934,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[Aa] *[Uu] *[Tt] *[Oo]"
+            "value": "[Ss] *[Tt] *[Ee] *[Pp]"
           },
           {
             "type": "SEQ",
@@ -3216,11 +2969,19 @@
           },
           {
             "type": "PATTERN",
-            "value": "[Ff] *[Oo] *[Rr]"
+            "value": "[Mm] *[Oo] *[Dd]"
           },
           {
             "type": "PATTERN",
-            "value": "[Ss] *[Tt] *[Ee] *[Pp]"
+            "value": "[Gg] *[Oo] *[Tt] *[Oo]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Aa] *[Uu] *[Tt] *[Oo]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[Tt] *[Oo]"
           }
         ]
       }
@@ -6139,5 +5900,6 @@
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }

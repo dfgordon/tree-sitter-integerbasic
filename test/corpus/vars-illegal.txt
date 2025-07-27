@@ -1,18 +1,36 @@
 ==========
-Standalone int print
+Standalone int text
 :error
 ==========
 
-10 PRINT = 1
+10 TEXT = 1
 
 ---
 
 ==========
-Standalone str print
+Standalone str text
 :error
 ==========
 
-10 PRINT$ = "1"
+10 TEXT$ = "1"
+
+---
+
+==========
+Standalone int list
+:error
+==========
+
+10 LIST = 1
+
+---
+
+==========
+Standalone str list
+:error
+==========
+
+10 LIST$ = "1"
 
 ---
 
@@ -53,110 +71,20 @@ Standalone str return
 ---
 
 ==========
-Standalone int end
+Standalone int gr
 :error
 ==========
 
-10 END = 1
+10 GR = 1
 
 ---
 
 ==========
-Standalone str end
+Standalone str gr
 :error
 ==========
 
-10 END$ = "1"
-
----
-
-==========
-Standalone int text
-:error
-==========
-
-10 TEXT = 1
-
----
-
-==========
-Standalone str text
-:error
-==========
-
-10 TEXT$ = "1"
-
----
-
-==========
-Standalone int notrace
-:error
-==========
-
-10 NOTRACE = 1
-
----
-
-==========
-Standalone str notrace
-:error
-==========
-
-10 NOTRACE$ = "1"
-
----
-
-==========
-Standalone int goto
-:error
-==========
-
-10 GOTO = 1
-
----
-
-==========
-Standalone str goto
-:error
-==========
-
-10 GOTO$ = "1"
-
----
-
-==========
-Standalone int auto
-:error
-==========
-
-10 AUTO = 1
-
----
-
-==========
-Standalone str auto
-:error
-==========
-
-10 AUTO$ = "1"
-
----
-
-==========
-Standalone int list
-:error
-==========
-
-10 LIST = 1
-
----
-
-==========
-Standalone str list
-:error
-==========
-
-10 LIST$ = "1"
+10 GR$ = "1"
 
 ---
 
@@ -179,24 +107,6 @@ Standalone str trace
 ---
 
 ==========
-Standalone int gr
-:error
-==========
-
-10 GR = 1
-
----
-
-==========
-Standalone str gr
-:error
-==========
-
-10 GR$ = "1"
-
----
-
-==========
 Standalone int for
 :error
 ==========
@@ -211,6 +121,114 @@ Standalone str for
 ==========
 
 10 FOR$ = "1"
+
+---
+
+==========
+Standalone int goto
+:error
+==========
+
+10 GOTO = 1
+
+---
+
+==========
+Standalone str goto
+:error
+==========
+
+10 GOTO$ = "1"
+
+---
+
+==========
+Standalone int notrace
+:error
+==========
+
+10 NOTRACE = 1
+
+---
+
+==========
+Standalone str notrace
+:error
+==========
+
+10 NOTRACE$ = "1"
+
+---
+
+==========
+Standalone int auto
+:error
+==========
+
+10 AUTO = 1
+
+---
+
+==========
+Standalone str auto
+:error
+==========
+
+10 AUTO$ = "1"
+
+---
+
+==========
+Standalone int print
+:error
+==========
+
+10 PRINT = 1
+
+---
+
+==========
+Standalone str print
+:error
+==========
+
+10 PRINT$ = "1"
+
+---
+
+==========
+Standalone int end
+:error
+==========
+
+10 END = 1
+
+---
+
+==========
+Standalone str end
+:error
+==========
+
+10 END$ = "1"
+
+---
+
+==========
+Postnumber int text
+:error
+==========
+
+10 TEXT1 = 1
+
+---
+
+==========
+Postnumber int list
+:error
+==========
+
+10 LIST1 = 1
 
 ---
 
@@ -233,20 +251,29 @@ Postnumber int return
 ---
 
 ==========
-Postnumber int end
+Postnumber int gr
 :error
 ==========
 
-10 END1 = 1
+10 GR1 = 1
 
 ---
 
 ==========
-Postnumber int text
+Postnumber int trace
 :error
 ==========
 
-10 TEXT1 = 1
+10 TRACE1 = 1
+
+---
+
+==========
+Postnumber int for
+:error
+==========
+
+10 FOR1 = 1
 
 ---
 
@@ -269,47 +296,29 @@ Postnumber int auto
 ---
 
 ==========
-Postnumber int list
+Postnumber int end
 :error
 ==========
 
-10 LIST1 = 1
+10 END1 = 1
 
 ---
 
 ==========
-Postnumber int trace
+Postnumber str text
 :error
 ==========
 
-10 TRACE1 = 1
+10 TEXT1$ = "1"
 
 ---
 
 ==========
-Postnumber int gr
+Postnumber str list
 :error
 ==========
 
-10 GR1 = 1
-
----
-
-==========
-Postnumber int for
-:error
-==========
-
-10 FOR1 = 1
-
----
-
-==========
-Postnumber str print
-:error
-==========
-
-10 PRINT1$ = "1"
+10 LIST1$ = "1"
 
 ---
 
@@ -332,56 +341,11 @@ Postnumber str return
 ---
 
 ==========
-Postnumber str end
+Postnumber str gr
 :error
 ==========
 
-10 END1$ = "1"
-
----
-
-==========
-Postnumber str text
-:error
-==========
-
-10 TEXT1$ = "1"
-
----
-
-==========
-Postnumber str notrace
-:error
-==========
-
-10 NOTRACE1$ = "1"
-
----
-
-==========
-Postnumber str goto
-:error
-==========
-
-10 GOTO1$ = "1"
-
----
-
-==========
-Postnumber str auto
-:error
-==========
-
-10 AUTO1$ = "1"
-
----
-
-==========
-Postnumber str list
-:error
-==========
-
-10 LIST1$ = "1"
+10 GR1$ = "1"
 
 ---
 
@@ -395,20 +359,110 @@ Postnumber str trace
 ---
 
 ==========
-Postnumber str gr
-:error
-==========
-
-10 GR1$ = "1"
-
----
-
-==========
 Postnumber str for
 :error
 ==========
 
 10 FOR1$ = "1"
+
+---
+
+==========
+Postnumber str goto
+:error
+==========
+
+10 GOTO1$ = "1"
+
+---
+
+==========
+Postnumber str notrace
+:error
+==========
+
+10 NOTRACE1$ = "1"
+
+---
+
+==========
+Postnumber str auto
+:error
+==========
+
+10 AUTO1$ = "1"
+
+---
+
+==========
+Postnumber str print
+:error
+==========
+
+10 PRINT1$ = "1"
+
+---
+
+==========
+Postnumber str end
+:error
+==========
+
+10 END1$ = "1"
+
+---
+
+==========
+Postalpha int text
+:error
+==========
+
+10 TEXTA = 1
+
+---
+
+==========
+Postalpha str text
+:error
+==========
+
+10 TEXTA$ = "1"
+
+---
+
+==========
+Postalpha int pop
+:error
+==========
+
+10 POPA = 1
+
+---
+
+==========
+Postalpha str pop
+:error
+==========
+
+10 POPA$ = "1"
+
+---
+
+==========
+Postalpha int list
+:error
+==========
+
+10 LISTA = 1
+
+---
+
+==========
+Postalpha str list
+:error
+==========
+
+10 LISTA$ = "1"
 
 ---
 
@@ -431,38 +485,56 @@ Postalpha str return
 ---
 
 ==========
-Postalpha int end
+Postalpha int gr
 :error
 ==========
 
-10 ENDA = 1
+10 GRA = 1
 
 ---
 
 ==========
-Postalpha str end
+Postalpha str gr
 :error
 ==========
 
-10 ENDA$ = "1"
+10 GRA$ = "1"
 
 ---
 
 ==========
-Postalpha int text
+Postalpha int trace
 :error
 ==========
 
-10 TEXTA = 1
+10 TRACEA = 1
 
 ---
 
 ==========
-Postalpha str text
+Postalpha str trace
 :error
 ==========
 
-10 TEXTA$ = "1"
+10 TRACEA$ = "1"
+
+---
+
+==========
+Postalpha int for
+:error
+==========
+
+10 FORA = 1
+
+---
+
+==========
+Postalpha str for
+:error
+==========
+
+10 FORA$ = "1"
 
 ---
 
@@ -503,146 +575,20 @@ Postalpha str auto
 ---
 
 ==========
-Postalpha int list
+Postalpha int end
 :error
 ==========
 
-10 LISTA = 1
+10 ENDA = 1
 
 ---
 
 ==========
-Postalpha str list
+Postalpha str end
 :error
 ==========
 
-10 LISTA$ = "1"
-
----
-
-==========
-Postalpha int for
-:error
-==========
-
-10 FORA = 1
-
----
-
-==========
-Postalpha str for
-:error
-==========
-
-10 FORA$ = "1"
-
----
-
-==========
-Postalpha int trace
-:error
-==========
-
-10 TRACEA = 1
-
----
-
-==========
-Postalpha str trace
-:error
-==========
-
-10 TRACEA$ = "1"
-
----
-
-==========
-Postalpha int gr
-:error
-==========
-
-10 GRA = 1
-
----
-
-==========
-Postalpha str gr
-:error
-==========
-
-10 GRA$ = "1"
-
----
-
-==========
-Postalpha int pop
-:error
-==========
-
-10 POPA = 1
-
----
-
-==========
-Postalpha str pop
-:error
-==========
-
-10 POPA$ = "1"
-
----
-
-==========
-Within int and
-:error
-==========
-
-10 ZANDZ = 1: ZAND = 1
-
----
-
-==========
-Within str and
-:error
-==========
-
-10 ZANDZ$ = "1": ZAND$ = "1"
-
----
-
-==========
-Within int goto
-:error
-==========
-
-10 ZGOTOZ = 1: ZGOTO = 1
-
----
-
-==========
-Within str goto
-:error
-==========
-
-10 ZGOTOZ$ = "1": ZGOTO$ = "1"
-
----
-
-==========
-Within int mod
-:error
-==========
-
-10 ZMODZ = 1: ZMOD = 1
-
----
-
-==========
-Within str mod
-:error
-==========
-
-10 ZMODZ$ = "1": ZMOD$ = "1"
+10 ENDA$ = "1"
 
 ---
 
@@ -665,20 +611,38 @@ Within str then
 ---
 
 ==========
-Within int to
+Within int for
 :error
 ==========
 
-10 ZTOZ = 1: ZTO = 1
+10 ZFORZ = 1: ZFOR = 1
 
 ---
 
 ==========
-Within str to
+Within str for
 :error
 ==========
 
-10 ZTOZ$ = "1": ZTO$ = "1"
+10 ZFORZ$ = "1": ZFOR$ = "1"
+
+---
+
+==========
+Within int and
+:error
+==========
+
+10 ZANDZ = 1: ZAND = 1
+
+---
+
+==========
+Within str and
+:error
+==========
+
+10 ZANDZ$ = "1": ZAND$ = "1"
 
 ---
 
@@ -701,20 +665,20 @@ Within str or
 ---
 
 ==========
-Within int auto
+Within int step
 :error
 ==========
 
-10 ZAUTOZ = 1: ZAUTO = 1
+10 ZSTEPZ = 1: ZSTEP = 1
 
 ---
 
 ==========
-Within str auto
+Within str step
 :error
 ==========
 
-10 ZAUTOZ$ = "1": ZAUTO$ = "1"
+10 ZSTEPZ$ = "1": ZSTEP$ = "1"
 
 ---
 
@@ -737,38 +701,74 @@ Within str at
 ---
 
 ==========
-Within int for
+Within int mod
 :error
 ==========
 
-10 ZFORZ = 1: ZFOR = 1
+10 ZMODZ = 1: ZMOD = 1
 
 ---
 
 ==========
-Within str for
+Within str mod
 :error
 ==========
 
-10 ZFORZ$ = "1": ZFOR$ = "1"
+10 ZMODZ$ = "1": ZMOD$ = "1"
 
 ---
 
 ==========
-Within int step
+Within int goto
 :error
 ==========
 
-10 ZSTEPZ = 1: ZSTEP = 1
+10 ZGOTOZ = 1: ZGOTO = 1
 
 ---
 
 ==========
-Within str step
+Within str goto
 :error
 ==========
 
-10 ZSTEPZ$ = "1": ZSTEP$ = "1"
+10 ZGOTOZ$ = "1": ZGOTO$ = "1"
+
+---
+
+==========
+Within int auto
+:error
+==========
+
+10 ZAUTOZ = 1: ZAUTO = 1
+
+---
+
+==========
+Within str auto
+:error
+==========
+
+10 ZAUTOZ$ = "1": ZAUTO$ = "1"
+
+---
+
+==========
+Within int to
+:error
+==========
+
+10 ZTOZ = 1: ZTO = 1
+
+---
+
+==========
+Within str to
+:error
+==========
+
+10 ZTOZ$ = "1": ZTO$ = "1"
 
 ---
 

@@ -213,11 +213,6 @@
     }
   },
   {
-    "type": "close",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "com_auto",
     "named": true,
     "fields": {}
@@ -274,11 +269,6 @@
   },
   {
     "type": "com_save",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "dollar",
     "named": true,
     "fields": {}
   },
@@ -522,11 +512,6 @@
     "fields": {}
   },
   {
-    "type": "op_div",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "op_eq_assign_int",
     "named": true,
     "fields": {}
@@ -602,11 +587,6 @@
     "fields": {}
   },
   {
-    "type": "op_pow",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "op_seq",
     "named": true,
     "fields": {}
@@ -618,11 +598,6 @@
   },
   {
     "type": "op_step",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "op_times",
     "named": true,
     "fields": {}
   },
@@ -794,6 +769,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -1567,19 +1543,7 @@
     "named": false
   },
   {
-    "type": "$",
-    "named": false
-  },
-  {
     "type": "(",
-    "named": false
-  },
-  {
-    "type": ")",
-    "named": false
-  },
-  {
-    "type": "*",
     "named": false
   },
   {
@@ -1592,10 +1556,6 @@
   },
   {
     "type": "-",
-    "named": false
-  },
-  {
-    "type": "/",
     "named": false
   },
   {
@@ -1763,10 +1723,6 @@
     "named": false
   },
   {
-    "type": "^",
-    "named": false
-  },
-  {
     "type": "a",
     "named": false
   },
@@ -1779,12 +1735,20 @@
     "named": false
   },
   {
+    "type": "close",
+    "named": true
+  },
+  {
     "type": "comment_text",
     "named": true
   },
   {
     "type": "d",
     "named": false
+  },
+  {
+    "type": "dollar",
+    "named": true
   },
   {
     "type": "e",
@@ -1837,6 +1801,18 @@
   {
     "type": "o",
     "named": false
+  },
+  {
+    "type": "op_div",
+    "named": true
+  },
+  {
+    "type": "op_pow",
+    "named": true
+  },
+  {
+    "type": "op_times",
+    "named": true
   },
   {
     "type": "p",

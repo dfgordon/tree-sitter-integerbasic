@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "integerbasic",
+      "camelcase": "IntegerBASIC",
+      "title": "Integer BASIC",
+      "scope": "source.integerbasic",
+      "file-types": [
+        "bas",
+        "ibas"
+      ],
+      "injection-regex": "^integerbasic$",
+      "class-name": "TreeSitterIntegerbasic",
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "3.0.0",
+    "license": "MIT",
+    "description": "parser for integer basic",
+    "authors": [
+      {
+        "name": "Daniel Gordon"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/dfgordon/tree-sitter-integerbasic"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}

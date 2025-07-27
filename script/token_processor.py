@@ -163,7 +163,8 @@ def tok_ts_js(tok):
     for c in tok[:-1]:
         ans += allow_ts(c) + ","
     ans += allow_ts(tok[-1])
-    ans = 'seq(' + ans + ')'
+    if len(tok) > 1:
+        ans = 'seq(' + ans + ')'
     return ans
 
 # Form a token rule as regex for TextMate (JSON)
